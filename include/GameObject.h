@@ -1,4 +1,5 @@
 #pragma once
+#include "macros.h"
 
 class GameObject
 {
@@ -7,7 +8,7 @@ public:
 	~GameObject();
 
 private:
-
+	
 };
 
 GameObject::GameObject()

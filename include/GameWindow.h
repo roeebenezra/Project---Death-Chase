@@ -10,10 +10,10 @@ private:
 
 };
 
-Window::GameWindow()
+GameWindow::GameWindow()
 {
 }
 
-Window::GameWindow()
+GameWindow::GameWindow()
 {
 }

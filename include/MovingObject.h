@@ -6,6 +6,7 @@ class MovingObject :public GameObject
 public:
 	MovingObject();
 	~MovingObject();
+	void move(){}
 
 private:
 
