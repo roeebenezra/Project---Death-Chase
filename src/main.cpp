@@ -1,8 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "box2d/box2d.h"
 
-int main()
-{
+int main() {
     auto window = sf::RenderWindow(sf::VideoMode(1000, 1000), "Box2D");
 
     // Define the gravity vector
@@ -20,7 +19,7 @@ int main()
     // Call the body factory which allocates memory for the ground body
     // from a pool and creates the ground box shape (also from a pool).
     // The body is also added to the world
-    b2Body* groundBody = world->CreateBody(&groundBodyDef);
+    b2Body *groundBody = world->CreateBody(&groundBodyDef);
 
     // Define the ground box shape
     b2PolygonShape groundBox;
@@ -35,7 +34,7 @@ int main()
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(0.0f, 4.0f);
-    b2Body* body = world->CreateBody(&bodyDef);
+    b2Body *body = world->CreateBody(&bodyDef);
 
     // Define another box shape for our dynamic body
     b2PolygonShape dynamicBox;
@@ -70,19 +69,17 @@ int main()
     // represents the whole object.
     // Note that we use 1:40 scale here, as box2d should be handled in single
     // pixel resolution
-    auto rect = sf::RectangleShape({ 40.f, 40.f });
+    auto rect = sf::RectangleShape({40.f, 40.f});
     rect.setFillColor(sf::Color::Green);
 
     auto worldStepCounter = 60;
 
     window.setFramerateLimit(60);
 
-    while (window.isOpen())
-    {
+    while (window.isOpen()) {
         window.clear();
 
-        if (worldStepCounter--)
-        {
+        if (worldStepCounter--) {
             // First, cause the world to be updated to the next step
             world->Step(timeStep, velocityIterations, positionIterations);
 
@@ -102,13 +99,11 @@ int main()
         window.draw(rect);
         window.display();
 
-        for (auto event = sf::Event {}; window.pollEvent(event); )
-        {
-            switch (event.type)
-            {
-            case sf::Event::Closed:
-                window.close();
-                break;
+        for (auto event = sf::Event{}; window.pollEvent(event);) {
+            switch (event.type) {
+                case sf::Event::Closed:
+                    window.close();
+                    break;
             }
         }
     }
