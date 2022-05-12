@@ -46,11 +46,15 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     )
 endif ()
 
-add_executable (${CMAKE_PROJECT_NAME} src/Controller.cpp include/macros.h)
+add_executable (${CMAKE_PROJECT_NAME} src/Controller.cpp include/macros.h "include/GameObject.h" "include/MovingObject.h" "include/GameWindow.h" "include/StaticObject.h")
+
+target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
 
 add_subdirectory (include)
 add_subdirectory (src)
 add_subdirectory (rcs)
+add_subdirectory (external/box2d/src)
 
 if (MSVC)
     set (SFML_STATIC_LIBRARIES TRUE)
@@ -62,5 +66,6 @@ find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
 set_target_properties (sfml-system sfml-window sfml-graphics sfml-audio sfml-network PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
+target_link_libraries (${CMAKE_PROJECT_NAME} box2d)
 
 include_directories(${SFML_INCLUDE_DIRS})

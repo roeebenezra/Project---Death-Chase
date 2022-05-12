@@ -1,1 +1,2 @@
 target_include_directories (${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_sources (${CMAKE_PROJECT_NAME} PRIVATE  "Controller.h" "GameObject.h" "MovingObject.h" "StaticObject.h" "GameWindow.h" "macros.h")

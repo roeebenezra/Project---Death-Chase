@@ -5,8 +5,10 @@ Controller::Controller()
     {}
 
 //___________________
-void Controller::run() {
-    while (m_gameWindow.isOpen()){
+void Controller::run() 
+{
+    while (m_gameWindow.isOpen())
+    {
         handleEvents();
         m_gameWindow.clear();
         m_gameWindow.display();
