@@ -12,8 +12,9 @@ target_sources (${CMAKE_PROJECT_NAME} PRIVATE  "Controller.h"
 												"Barrel.h"
 
 												"GameWindow.h"
-												"ChooseCarWindow.h"
-												"MenuWindow"
+												"ChooseVehicleWindow.h"
+												"MenuWindow.h"
+												"GameWindow.h"
 
 												"Resources.h"
-												"macros.h")
+												"macros.h" )
