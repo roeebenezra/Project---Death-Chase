@@ -5,7 +5,6 @@ class MovingObject :public GameObject
 {
 public:
 	MovingObject();
-	~MovingObject();
 	void move(){}
 
 private:
@@ -13,9 +12,5 @@ private:
 };
 
 MovingObject::MovingObject()
-{
-}
-
-MovingObject::~MovingObject()
 {
 }

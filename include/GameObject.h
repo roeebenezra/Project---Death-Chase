@@ -5,16 +5,14 @@ class GameObject
 {
 public:
 	GameObject();
-	~GameObject();
+
+	void draw() {}
+	void collision(){}
 
 private:
 	
 };
 
 GameObject::GameObject()
-{
-}
-
-GameObject::~GameObject()
 {
 }

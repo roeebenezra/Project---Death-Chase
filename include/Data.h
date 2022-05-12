@@ -1,20 +1,19 @@
 #pragma once
+#include "MovingObject.h"
+#include "StaticObject.h"
 #include "macros.h"
 
 class Data
 {
 public:
 	Data();
-	~Data();
 
 private:
-
+	std::vector<MovingObject> m_moving;
+	std::vector<StaticObject> m_static;
 };
 
 Data::Data()
 {
 }
 
-Data::~Data()
-{
-}
