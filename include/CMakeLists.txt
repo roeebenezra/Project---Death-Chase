@@ -1,20 +1,20 @@
 target_include_directories (${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 target_sources (${CMAKE_PROJECT_NAME} PRIVATE  "Controller.h"
 												"Data.h"
-												"GameObject.h"
+												"IncObjects/GameObject.h"
 												
-												"MovingObject.h"
-												"UserCar.h"
-												"ComputerCar.h"
+												"IncObjects/MovingObject.h"
+												"IncObjects/UserCar.h"
+												"IncObjects/ComputerCar.h"
 
-												"StaticObject.h"
-												"Cone.h"
-												"Barrel.h"
+												"IncObjects/StaticObject.h"
+												"IncObjects/Cone.h"
+												"IncObjects/Barrel.h"
 
-												"GameWindow.h"
-												"ChooseVehicleWindow.h"
-												"MenuWindow.h"
-												"GameWindow.h"
+												"IncWindows/GameWindow.h"
+												"IncWindows/ChooseVehicleWindow.h"
+												"IncWindows/MenuWindow.h"
+												"IncWindows/GameWindow.h"
 
 												"Resources.h"
 												"macros.h" )

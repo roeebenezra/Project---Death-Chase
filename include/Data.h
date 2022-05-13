@@ -1,19 +1,22 @@
 #pragma once
-#include "MovingObject.h"
-#include "StaticObject.h"
+
+#include "IncObjects/MovingObject.h"
+#include "IncObjects/StaticObject.h"
 #include "macros.h"
 
-class Data
-{
+class Data {
+
 public:
-	Data();
+    Data();
+
+    sf::Vector2f getUserPosition() const { return m_moving[0].getPosition(); }
+
+    void moveData(const sf::Event &);
+
+    void drawData(sf::RenderWindow &);
 
 private:
-	std::vector<MovingObject> m_moving;
-	std::vector<StaticObject> m_static;
+    std::vector<MovingObject> m_moving;
+    std::vector<StaticObject> m_static;
 };
-
-Data::Data()
-{
-}
 

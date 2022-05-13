@@ -1,17 +1,28 @@
 #pragma once
+
 #include "macros.h"
+#include "Data.h"
 
+class Controller {
 
-class Controller{
 public:
     Controller();
+
     void run();
-    void handleEvents();
-    void mouseEventPressed(const Event&);
-    void mouseEventMoved(const Event&);
-    void exitGame(const Event&);
 
 private:
-    RenderWindow m_gameWindow = {VideoMode(1200, 950), "Death Chase", Style::Close | Style::Resize};
+    void handleEvents();
+
+    void mouseEventPressed(const Event &);
+
+    void mouseEventMoved(const Event &);
+
+    void draw();
+
+    void exitGame(const Event &);
+
+    RenderWindow m_gameWindow = {VideoMode(1200, 950), "Death Chase", Style::Close | Style::Resize | sf::Style::Fullscreen};
+    sf::Sprite m_gameImage;
     View m_view;
+    Data m_data;
 };

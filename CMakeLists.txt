@@ -46,7 +46,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     )
 endif ()
 
-add_executable (${CMAKE_PROJECT_NAME} src/Controller.cpp include/macros.h "include/GameObject.h" "include/MovingObject.h" "include/GameWindow.h" "include/StaticObject.h" "include/UserCar.h" "include/ChooseVehicleWindow.h" "include/Data.h" "include/MenuWindow.h" "include/Cone.h" "include/Barrel.h" "include/Resources.h" "include/ComputerCar.h")
+add_executable (${CMAKE_PROJECT_NAME} src/Controller.cpp include/macros.h "include/IncObjects/GameObject.h" "include/IncObjects/MovingObject.h" "include/IncWindows/GameWindow.h" "include/IncObjects/StaticObject.h" "include/IncObjects/UserCar.h" "include/IncWindows/ChooseVehicleWindow.h" "include/Data.h" "include/IncWindows/MenuWindow.h" "include/IncObjects/Cone.h" "include/IncObjects/Barrel.h" "include/Resources.h" "include/IncObjects/ComputerCar.h")
 
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
 target_link_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)

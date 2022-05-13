@@ -1,16 +1,21 @@
 #include "Controller.h"
 
+//______________________
 Controller::Controller()
-    :m_view(Vector2f (0.0f, 0.0f), Vector2f (VIEW_HEIGHT, VIEW_WIDTH))
-    {}
+        : m_view(Vector2f(0.0f, 0.0f), Vector2f(VIEW_HEIGHT, VIEW_WIDTH)) {
+    m_gameImage.setTexture(Resources::instance().getTexture(0));
+    m_gameImage.setScale(4, 4);
+    auto view = m_gameWindow.getView();
+    view.setCenter(m_data.getUserPosition());
+    m_gameWindow.setView(view);
+}
 
 //___________________
-void Controller::run() 
-{
-    while (m_gameWindow.isOpen())
-    {
+void Controller::run() {
+    while (m_gameWindow.isOpen()) {
         handleEvents();
         m_gameWindow.clear();
+        draw();
         m_gameWindow.display();
     }
 }
@@ -26,6 +31,13 @@ void Controller::handleEvents() {
             case sf::Event::MouseMoved:
                 mouseEventMoved(event);
                 break;
+            case sf::Event::KeyPressed: {
+                auto view = m_gameWindow.getView();
+                m_data.moveData(event);
+                view.setCenter(m_data.getUserPosition());
+                m_gameWindow.setView(view);
+                break;
+            }
             default:
                 exitGame(event);
                 break;
@@ -49,4 +61,10 @@ void Controller::exitGame(const Event &event) {
     if (event.key.code == sf::Keyboard::Escape ||
         event.type == sf::Event::Closed)
         m_gameWindow.close();
+}
+
+//_____________________
+void Controller::draw() {
+    m_gameWindow.draw(m_gameImage);
+    m_data.drawData(m_gameWindow);
 }
