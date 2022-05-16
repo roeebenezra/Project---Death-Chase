@@ -5,10 +5,6 @@
 class UserCar : public MovingObject {
 
 public:
-    UserCar();
-
-    ~UserCar();
-
-private:
-
+    UserCar(const int);
+    void move(const sf::Event &) override;
 };

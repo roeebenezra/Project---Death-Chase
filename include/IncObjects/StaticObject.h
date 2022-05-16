@@ -5,10 +5,5 @@
 class StaticObject : public GameObject {
 
 public:
-    StaticObject();
-
-    ~StaticObject() {}
-
-private:
-
+    StaticObject(const int);
 };

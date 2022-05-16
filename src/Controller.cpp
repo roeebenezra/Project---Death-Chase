@@ -2,11 +2,12 @@
 
 //______________________
 Controller::Controller()
-        : m_view(Vector2f(0.0f, 0.0f), Vector2f(VIEW_HEIGHT, VIEW_WIDTH)) {
-    m_gameImage.setTexture(Resources::instance().getTexture(0));
-    m_gameImage.setScale(4, 4);
+        : m_view(Vector2f(0.0f, 0.0f), Vector2f(VIEW_HEIGHT, VIEW_WIDTH)),
+          m_userMoved(false) {
+    m_gameImage.setTexture(Resources::instance().getTexture(Background));
+    m_gameImage.setScale(4, 2.5);
     auto view = m_gameWindow.getView();
-    view.setCenter(m_data.getUserPosition());
+//    view.setCenter(m_data.getUserPosition().x+1000, m_data.getUserPosition().y+1500);
     m_gameWindow.setView(view);
 }
 
@@ -31,18 +32,16 @@ void Controller::handleEvents() {
             case sf::Event::MouseMoved:
                 mouseEventMoved(event);
                 break;
-            case sf::Event::KeyPressed: {
-                auto view = m_gameWindow.getView();
-                m_data.moveData(event);
-                view.setCenter(m_data.getUserPosition());
-                m_gameWindow.setView(view);
+            case sf::Event::KeyPressed:
+                keyboardPressed(event);
                 break;
-            }
             default:
                 exitGame(event);
                 break;
         }
     }
+    if (m_userMoved)
+        m_data.moveComputerCars(event);
 }
 
 //_________________________________________________
@@ -53,7 +52,15 @@ void Controller::mouseEventMoved(const Event &event) {
 //___________________________________________________
 void Controller::mouseEventPressed(const Event &event) {
     auto location = m_gameWindow.mapPixelToCoords({event.mouseButton.x, event.mouseButton.y});
+}
 
+//______________________________________________________
+void Controller::keyboardPressed(const sf::Event &event) {
+    m_userMoved = true;
+    auto view = m_gameWindow.getView();
+    m_data.moveUserCar(event);
+    view.setCenter(m_data.getUserPosition());
+    m_gameWindow.setView(view);
 }
 
 //__________________________________________

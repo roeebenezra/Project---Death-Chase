@@ -5,16 +5,5 @@
 class Barrel : public StaticObject {
 
 public:
-    Barrel();
-
-    ~Barrel();
-
-private:
-
+    Barrel(const int);
 };
-
-Barrel::Barrel() {
-}
-
-Barrel::~Barrel() {
-}

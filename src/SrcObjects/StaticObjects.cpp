@@ -1,4 +1,4 @@
 #include "IncObjects/StaticObject.h"
 
-//___________________________________________
-StaticObject::StaticObject() : GameObject(0) {}
+//________________________________________
+StaticObject::StaticObject(const int name) : GameObject(name) {}

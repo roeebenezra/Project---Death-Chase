@@ -3,8 +3,8 @@
 //_____________________________________
 GameObject::GameObject(const int name) {
     m_shape.setTexture(Resources::instance().getTexture(name));
-    m_shape.setPosition(200, 200);
-    m_shape.setScale(-0.2, 0.2);
+    m_shape.setPosition(1000, 1500);
+    m_shape.setScale(0.8, 0.8);
 }
 
 //____________________________________________________
