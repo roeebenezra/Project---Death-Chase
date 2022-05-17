@@ -17,7 +17,7 @@ public:
 
     sf::Vector2f getUserPosition() const { return m_moving[User]->getPosition(); }
 
-    void setObject(std::string &);
+    void setObject(std::string &, const sf::Vector2f&, const sf::Vector2f&);
 
     void moveUserCar(const sf::Event &);
 

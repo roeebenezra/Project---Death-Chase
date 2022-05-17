@@ -1,10 +1,12 @@
 #include "IncObjects/GameObject.h"
 
 //_____________________________________
-GameObject::GameObject(const int name) {
+GameObject::GameObject(const int name,
+                       const sf::Vector2f& postion,
+                       const sf::Vector2f& scale) {
     m_shape.setTexture(Resources::instance().getTexture(name));
-    m_shape.setPosition(1000, 1500);
-//    m_shape.setScale(1, 1);
+    m_shape.setPosition(postion);
+    m_shape.setScale(scale);
 }
 
 //____________________________________________________
