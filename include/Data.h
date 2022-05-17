@@ -6,6 +6,7 @@
 #include "IncObjects/ComputerCar.h"
 #include "IncObjects/Barrel.h"
 #include "FactoryObject.h"
+#include "Map.h"
 #include "macros.h"
 #include <memory>
 
@@ -16,12 +17,16 @@ public:
 
     sf::Vector2f getUserPosition() const { return m_moving[User]->getPosition(); }
 
+    void setObject(std::string &);
+
     void moveUserCar(const sf::Event &);
+
     void moveComputerCars(const sf::Event &);
 
     void drawData(sf::RenderWindow &);
 
 private:
+    Map m_map;
     std::vector<std::unique_ptr<MovingObject>> m_moving;
     std::vector<std::unique_ptr<StaticObject>> m_static;
 };

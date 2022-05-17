@@ -12,6 +12,7 @@ public:
     using pFnc = std::unique_ptr<T>(*)();
     static std::unique_ptr<T> create(const std::string&);
     static bool registerIt(const std::string&, pFnc);
+    bool checkIfNameInMap(const std::string& name) const { return FactoryObject::getMap().count(name) > 0;}
 private:
     static auto& getMap(){
         static std::map<std::string, pFnc> m_map;

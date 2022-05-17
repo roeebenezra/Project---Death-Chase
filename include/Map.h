@@ -4,18 +4,21 @@
 #include "FactoryObject.h"
 #include <fstream>
 
+class Data;
+
 class Map {
 public:
-    Map();
-    void readBoardFile();
-    bool checkEndOfFile() const;
-    void sendBoardKeysToObjects();
-    void clearBoard();
-
+    Map(std::istream& istream1) : m_istr(istream1){}
+    void readMapFile(Data&);
 
 private:
-    std::ifstream m_mapFile;
-    std::vector<std::string> m_level;
-    std::vector<std::string> m_levelTime;
-    std::vector<std::vector<std::string>> m_levels;
+    using OpenFile = std::ifstream;
+
+    OpenFile openFile();
+
+    bool checkIfFileOpened(std::ifstream &);
+
+    void sendObjectsFromMap(Data&, Map&);
+
+    std::istream& m_istr;
 };

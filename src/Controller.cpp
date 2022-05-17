@@ -5,7 +5,7 @@ Controller::Controller()
         : m_view(Vector2f(0.0f, 0.0f), Vector2f(VIEW_HEIGHT, VIEW_WIDTH)),
           m_userMoved(false) {
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
-    m_gameImage.setScale(4, 2.5);
+//    m_gameImage.setScale(4, 2.5);
     auto view = m_gameWindow.getView();
 //    view.setCenter(m_data.getUserPosition().x+1000, m_data.getUserPosition().y+1500);
     m_gameWindow.setView(view);
