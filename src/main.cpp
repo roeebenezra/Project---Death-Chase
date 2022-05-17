@@ -3,7 +3,6 @@
 #include "Controller.h"
 
 int main() {
-
     auto controller = Controller();
     controller.run();
 //    auto window = sf::RenderWindow(sf::VideoMode(1000, 1000), "Box2D");

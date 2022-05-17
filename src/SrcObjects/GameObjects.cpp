@@ -4,7 +4,7 @@
 GameObject::GameObject(const int name) {
     m_shape.setTexture(Resources::instance().getTexture(name));
     m_shape.setPosition(1000, 1500);
-    m_shape.setScale(0.8, 0.8);
+//    m_shape.setScale(1, 1);
 }
 
 //____________________________________________________
