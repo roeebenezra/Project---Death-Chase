@@ -39,3 +39,11 @@ void Map::sendObjectsFromMap(Data &data, Map &readMap) {
         data.setObject(typeOfObject, position, scale);
     }
 }
+
+//ground_2 0 2000 3 1
+//ground_3 9000 2000 3 1
+
+//ground_6 1800 1300 1 1
+//ground_7 1900 1300 1 1
+//ground_8 2000 1300 1 1
+//ground_9 2100 1300 1 1

@@ -5,7 +5,7 @@ Data::Data() : m_map(std::cin) {
     m_map.readMapFile(*this);
 }
 
-//________________________________________
+//______________________________________
 void Data::setObject(std::string &name,
                      const sf::Vector2f &position,
                      const sf::Vector2f &scale) {
