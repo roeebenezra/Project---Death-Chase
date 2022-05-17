@@ -1,14 +1,16 @@
 #pragma once
 
 #include "MovingObject.h"
+#include "FactoryObject.h"
+#include "macros.h"
+#include <memory>
 
 class UserCar : public MovingObject {
 
 public:
-    UserCar();
+    UserCar(const int);
 
-    ~UserCar();
+    void move(const sf::Event &) override;
 
-private:
-
+    static bool m_registerIt;
 };

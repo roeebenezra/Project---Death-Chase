@@ -57,7 +57,7 @@ int main() {
 //    // Add the shape to the body
 //    body->CreateFixture(&fixtureDef);
 //
-//    // Prepare for simulation. Typically we use a time step of 1/60 of a
+//    // Prepare for simulation. Typically, we use a time step of 1/60 of a
 //    // second (60Hz) and 10 iterations. This provides a high quality simulation
 //    // in most game scenarios
 //    float timeStep = 1.0f / 60.0f;

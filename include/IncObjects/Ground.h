@@ -2,11 +2,10 @@
 
 #include "StaticObject.h"
 #include "FactoryObject.h"
-#include "macros.h"
 
-class Barrel : public StaticObject {
+class Ground : public StaticObject {
 
 public:
-    Barrel(const int);
+    Ground(const int);
     static bool m_registerIt;
 };

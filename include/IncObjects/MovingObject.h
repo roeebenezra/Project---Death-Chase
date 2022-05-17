@@ -5,10 +5,32 @@
 class MovingObject : public GameObject {
 
 public:
+//    MovingObject() = default;
+
     MovingObject(const int);
 
-    void move(const sf::Event &);
+//    virtual ~MovingObject() = default;
 
-private:
+    virtual void move(const sf::Event &) {}
 
 };
+
+//________
+namespace {
+    sf::Vector2f keyToDirection(sf::Keyboard::Key key) {
+        switch (key) {
+            case sf::Keyboard::Left:
+                return {-1, 0};
+            case sf::Keyboard::Right:
+                return {1, 0};
+            case sf::Keyboard::Up:
+                return {0, -1};
+            case sf::Keyboard::Down:
+                return {0, 1};
+            default:
+                return {0, 0};
+        }
+    }
+
+    const auto moveSpeed = 200.f;
+}

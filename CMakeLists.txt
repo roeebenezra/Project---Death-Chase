@@ -1,6 +1,6 @@
-cmake_minimum_required (VERSION 3.20)
+cmake_minimum_required(VERSION 3.20)
 
-project (Project)
+project(Project)
 
 # New CMake versions map C++20 to /std:c++20 instead of c++latest, so <format>
 # and other unstable ABI features aren't supported. Use C++23 for such versions
@@ -9,10 +9,10 @@ if (MSVC AND CMAKE_VERSION VERSION_GREATER_EQUAL 3.21)
 else ()
     set(CMAKE_CXX_STANDARD 20)
 endif ()
-set (CMAKE_CXX_STANDARD_REQUIRED ON)
-set (CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 if (MSVC)
-    add_compile_options (/W4 /permissive- /Zc:externConstexpr /Zc:inline /analyze
+    add_compile_options(/W4 /permissive- /Zc:externConstexpr /Zc:inline /analyze
             /w14242 # 'identifier': conversion from 'type1' to 'type1', possible loss of data
             /w14263 # 'function': member function does not override any base class virtual member function
             /w14265 # 'classname': class has virtual functions, but destructor is not virtual instances of this class may not
@@ -30,7 +30,7 @@ if (MSVC)
             /w14928 # illegal copy-initialization; more than one user-defined conversion has been implicitly applied
             )
 elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
-    add_compile_options (
+    add_compile_options(
             -Wall
             -Wextra # reasonable and standard
             -Wshadow # warn the user if a variable declaration shadows one from a parent context
@@ -46,26 +46,26 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     )
 endif ()
 
-add_executable (${CMAKE_PROJECT_NAME} src/Controller.cpp include/macros.h "include/IncObjects/GameObject.h" "include/IncObjects/MovingObject.h" "include/IncWindows/GameWindow.h" "include/IncObjects/StaticObject.h" "include/IncObjects/UserCar.h" "include/IncWindows/ChooseVehicleWindow.h" "include/Data.h" "include/IncWindows/MenuWindow.h" "include/IncObjects/Cone.h" "include/IncObjects/Barrel.h" "include/Resources.h" "include/IncObjects/ComputerCar.h")
+add_executable(${CMAKE_PROJECT_NAME} src/Controller.cpp include/macros.h "include/IncObjects/GameObject.h" "include/IncObjects/MovingObject.h" "include/IncWindows/GameWindow.h" "include/IncObjects/StaticObject.h" "include/IncObjects/UserCar.h" "include/IncWindows/ChooseVehicleWindow.h" "include/Data.h" "include/IncWindows/MenuWindow.h" "include/IncObjects/Cone.h" "include/IncObjects/Barrel.h" "include/Resources.h" "include/IncObjects/ComputerCar.h")
 
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
 target_link_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
 
-add_subdirectory (include)
-add_subdirectory (src)
-add_subdirectory (rcs)
-add_subdirectory (external/box2d/src)
+add_subdirectory(include)
+add_subdirectory(src)
+add_subdirectory(rcs)
+add_subdirectory(external/box2d/src)
 
 if (MSVC)
-    set (SFML_STATIC_LIBRARIES TRUE)
-    set (SFML_DIR "C:/SFML/SFML-2.5.1/lib/cmake/SFML")
+    set(SFML_STATIC_LIBRARIES TRUE)
+    set(SFML_DIR "C:/SFML/SFML-2.5.1/lib/cmake/SFML")
 endif ()
 
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
 
-set_target_properties (sfml-system sfml-window sfml-graphics sfml-audio sfml-network PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
+set_target_properties(sfml-system sfml-window sfml-graphics sfml-audio sfml-network PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
-target_link_libraries (${CMAKE_PROJECT_NAME} box2d)
+target_link_libraries(${CMAKE_PROJECT_NAME} box2d)
 
 include_directories(${SFML_INCLUDE_DIRS})
