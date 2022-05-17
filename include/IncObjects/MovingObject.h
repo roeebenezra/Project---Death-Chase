@@ -5,7 +5,11 @@
 class MovingObject : public GameObject {
 
 public:
+//    MovingObject() = default;
+
     MovingObject(const int);
+
+//    virtual ~MovingObject() = default;
 
     virtual void move(const sf::Event &) {}
 

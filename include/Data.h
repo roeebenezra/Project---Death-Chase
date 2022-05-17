@@ -2,8 +2,9 @@
 
 #include "IncObjects/MovingObject.h"
 #include "IncObjects/StaticObject.h"
-//#include "IncObjects/UserCar.h"
-//#include "IncObjects/ComputerCar.h"
+#include "IncObjects/UserCar.h"
+#include "IncObjects/ComputerCar.h"
+#include "IncObjects/Barrel.h"
 #include "FactoryObject.h"
 #include "macros.h"
 #include <memory>

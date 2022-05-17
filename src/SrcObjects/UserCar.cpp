@@ -1,5 +1,9 @@
 #include "IncObjects/UserCar.h"
 
+
+bool UserCar::m_registerIt = FactoryObject<MovingObject>::registerIt("userCar",
+                                                       []()-> std::unique_ptr<MovingObject> { return std::make_unique<UserCar>(userCar); });
+
 //________________________________
 UserCar::UserCar(const int name) :
         MovingObject(name) {}
