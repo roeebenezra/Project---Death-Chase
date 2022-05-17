@@ -2,9 +2,9 @@
 #include "Data.h"
 
 //________________________________
-void Map::readMapFile(Data& data) {
+void Map::readMapFile(Data &data) {
     std::ifstream file = openFile();
-    if(!checkIfFileOpened(file))
+    if (!checkIfFileOpened(file))
         return;
     auto readMap = Map(file);
     sendObjectsFromMap(data, readMap);
@@ -27,12 +27,15 @@ bool Map::checkIfFileOpened(std::ifstream &file) {
 }
 
 //_____________________________________________________
-void Map::sendObjectsFromMap(Data& data, Map& readMap){
+void Map::sendObjectsFromMap(Data &data, Map &readMap) {
 
     std::string typeOfObject;
-    while(!readMap.m_istr.eof())
-    {
+    sf::Vector2f position;
+    sf::Vector2f scale;
+    while (!readMap.m_istr.eof()) {
         readMap.m_istr >> typeOfObject;
-        data.setObject(typeOfObject);
+        readMap.m_istr >> position.x >> position.y;
+        readMap.m_istr >> scale.x >> scale.y;
+        data.setObject(typeOfObject, position, scale);
     }
 }

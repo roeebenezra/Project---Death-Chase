@@ -5,7 +5,7 @@
 class GameObject {
 
 public:
-    GameObject(const int);
+    GameObject(const int, const sf::Vector2f&, const sf::Vector2f&);
 
     void draw(sf::RenderWindow &) const;
 
