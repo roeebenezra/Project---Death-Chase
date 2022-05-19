@@ -5,12 +5,11 @@
 class MovingObject : public GameObject {
 
 public:
-    MovingObject(const int, const sf::Vector2f&, const sf::Vector2f&);
+    MovingObject(const int, const sf::Vector2f &, const sf::Vector2f &);
 
     virtual ~MovingObject() = default;
 
     virtual void move(const sf::Event &) {}
-
 };
 
 //________

@@ -2,13 +2,33 @@
 #include "box2d/box2d.h"
 #include "Controller.h"
 
+namespace {
+    b2Vec2 Direction(sf::Keyboard::Key key) {
+        switch (key) {
+            case sf::Keyboard::Left:
+                return {-1, 0};
+            case sf::Keyboard::Right:
+                return {1, 0};
+            case sf::Keyboard::Up:
+                return {0, -1};
+            case sf::Keyboard::Down:
+                return {0, 1};
+            default:
+                return {0, 0};
+        }
+    }
+
+    const auto Speed = 50.f;
+}
+
 int main() {
     auto controller = Controller();
     controller.run();
 //    auto window = sf::RenderWindow(sf::VideoMode(1000, 1000), "Box2D");
 //
 //    // Define the gravity vector
-//    b2Vec2 gravity(0.0f, -10.0f);
+//    b2Vec2 gravity(0.0f, 10.0f);
+////    b2Vec2 gravity(0.0f, -10.0f);
 //
 //    // Construct a world object, which will hold and simulate the rigid bodies.
 //    // Use dynamic allocation as this is a big object, and allocating it on the
@@ -17,7 +37,7 @@ int main() {
 //
 //    // Define the ground body
 //    b2BodyDef groundBodyDef;
-//    groundBodyDef.position.Set(0.0f, -10.0f);
+//    groundBodyDef.position.Set(0.0f, 15.0f);
 //
 //    // Call the body factory which allocates memory for the ground body
 //    // from a pool and creates the ground box shape (also from a pool).
@@ -26,9 +46,8 @@ int main() {
 //
 //    // Define the ground box shape
 //    b2PolygonShape groundBox;
-//
 //    // The extents are the half-widths of the box
-//    groundBox.SetAsBox(50.0f, 10.0f);
+//    groundBox.SetAsBox(50.0f, 5.0f);
 //
 //    // Add the ground fixture to the ground body
 //    groundBody->CreateFixture(&groundBox, 0.0f);
@@ -36,7 +55,7 @@ int main() {
 //    // Define the dynamic body. We set its position and call the body factory
 //    b2BodyDef bodyDef;
 //    bodyDef.type = b2_dynamicBody;
-//    bodyDef.position.Set(0.0f, 4.0f);
+//    bodyDef.position.Set(3.0f, 4.0f);
 //    b2Body *body = world->CreateBody(&bodyDef);
 //
 //    // Define another box shape for our dynamic body
@@ -63,8 +82,8 @@ int main() {
 //    int32 velocityIterations = 6;
 //    int32 positionIterations = 2;
 //
-//    b2Vec2 position = body->GetPosition();
-//    float angle = body->GetAngle();
+//    b2Vec2 position;
+//    float angle;
 //
 //    // Create SFML object for the graphical representation of the box.
 //    // Note: In real code, the various box2d entities above and the SFML object
@@ -75,39 +94,40 @@ int main() {
 //    auto rect = sf::RectangleShape({40.f, 40.f});
 //    rect.setFillColor(sf::Color::Green);
 //
-//    auto worldStepCounter = 60;
-//
 //    window.setFramerateLimit(60);
 //
 //    while (window.isOpen()) {
 //        window.clear();
-//
-//        if (worldStepCounter--) {
-//            // First, cause the world to be updated to the next step
-//            world->Step(timeStep, velocityIterations, positionIterations);
-//
-//            // Then, get the new position and angle from box2d object ...
-//            position = body->GetPosition();
-//            // (box2d numbers are not in pixels, so we need some scaling here)
-//            position *= 100.f;
-//            angle = body->GetAngle();
-//
-//            // ... and update the SFML object with this info
-//            // Note: again, in real code, this data flow should be part of a
-//            // proper member function of the class representation the whole
-//            // object, not handled by main/controller or any similar class
-//            rect.setPosition(position.x, position.y);
-//            rect.setRotation(angle);
-//        }
-//        window.draw(rect);
-//        window.display();
-//
+//        // First, cause the world to be updated to the next step
+//        world->Step(timeStep, velocityIterations, positionIterations);
 //        for (auto event = sf::Event{}; window.pollEvent(event);) {
 //            switch (event.type) {
 //                case sf::Event::Closed:
 //                    window.close();
 //                    break;
+//                case sf::Event::KeyPressed: {
+//                    body->SetLinearVelocity(
+//                            b2Vec2(float(Direction(event.key.code).x * 2.5), float(Direction(event.key.code).y * 2.5)));
+//                    break;
+//                }
 //            }
+//            if (event.key.code == sf::Keyboard::Escape ||
+//                event.type == sf::Event::Closed)
+//                window.close();
 //        }
+//        // Then, get the new position and angle from box2d object ...
+//        position = body->GetPosition();
+//        // (box2d numbers are not in pixels, so we need some scaling here)
+//        position *= 100.f;
+//        angle = body->GetAngle();
+//
+//        // ... and update the SFML object with this info
+//        // Note: again, in real code, this data flow should be part of a
+//        // proper member function of the class representation the whole
+//        // object, not handled by main/controller or any similar class
+//        rect.setPosition(position.x, position.y);
+//        rect.setRotation(angle);
+//        window.draw(rect);
+//        window.display();
 //    }
 }

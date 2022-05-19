@@ -7,7 +7,7 @@ Controller::Controller()
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
     m_gameImage.setScale(3, 1);
     auto view = m_gameWindow.getView();
-//    view.setCenter(m_data.getUserPosition().x+1000, m_data.getUserPosition().y+1500);
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
     m_gameWindow.setView(view);
 }
 
@@ -58,8 +58,10 @@ void Controller::mouseEventPressed(const Event &event) {
 void Controller::keyboardPressed(const sf::Event &event) {
     m_userMoved = true;
     auto view = m_gameWindow.getView();
-    m_data.moveUserCar(event);
-    view.setCenter(m_data.getUserPosition());
+    if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
+        m_data.moveUserCar(event);
+    std::cout << m_data.getUserPosition().y << "\n";
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
     m_gameWindow.setView(view);
 }
 

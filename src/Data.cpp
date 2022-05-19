@@ -1,7 +1,7 @@
 #include "Data.h"
 
 //__________
-Data::Data() : m_map(std::cin) {
+Data::Data() {
     m_map.readMapFile(*this);
 }
 
