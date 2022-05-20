@@ -7,13 +7,15 @@ Controller::Controller()
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
     m_gameImage.setScale(3, 1);
     auto view = m_gameWindow.getView();
-    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
     m_gameWindow.setView(view);
 }
 
 //___________________
 void Controller::run() {
     while (m_gameWindow.isOpen()) {
+        m_data.setWorldStep();
         handleEvents();
         m_gameWindow.clear();
         draw();
@@ -40,8 +42,8 @@ void Controller::handleEvents() {
                 break;
         }
     }
-    if (m_userMoved)
-        m_data.moveComputerCars(event);
+//    if (m_userMoved)
+//        m_data.moveComputerCars(event);
 }
 
 //_________________________________________________
@@ -60,8 +62,8 @@ void Controller::keyboardPressed(const sf::Event &event) {
     auto view = m_gameWindow.getView();
     if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
         m_data.moveUserCar(event);
-    std::cout << m_data.getUserPosition().y << "\n";
-    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
     m_gameWindow.setView(view);
 }
 

@@ -6,7 +6,9 @@
 class Ground : public StaticObject {
 
 public:
-    Ground(const int, const sf::Vector2f&, const sf::Vector2f&);
+    Ground(const int,
+           const sf::Vector2f&,
+           const sf::Vector2f&);
 
     static bool m_registerGround_1;
     static bool m_registerGround_2;

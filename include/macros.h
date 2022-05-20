@@ -25,6 +25,8 @@ const std::vector NAMES = {"background.png", "truck.png", "redCar.png", "greenCa
 
 const int User = 0;
 
+const float Scale = 100.f;
+
 enum rcsNames {
     Background = 0,
     userCar,

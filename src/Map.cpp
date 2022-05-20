@@ -43,3 +43,11 @@ void Map::sendObjectsFromMap(Data &data, std::ifstream & file) {
 //ground_7 1900 1300 1 1
 //ground_8 2000 1300 1 1
 //ground_9 2100 1300 1 1
+
+
+//ground_2 0 900 3 1
+//ground_3 9000 900 3 1
+//ground_4 5000 2000 1 3
+//ground_5 0 2000 3 1
+//ground_2 20000 300 1 1.8
+//ground_3 23000 300 1 1.8

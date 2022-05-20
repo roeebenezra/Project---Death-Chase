@@ -18,5 +18,5 @@ UserCar::UserCar(const int name,
 
 //__________________________________________
 void UserCar::move(const sf::Event &event) {
-    setMove(keyToDirection(event.key.code) * moveSpeed);
+    setMove(keyToDirection(event.key.code));
 }

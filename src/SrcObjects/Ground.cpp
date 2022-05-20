@@ -42,5 +42,7 @@ bool Ground::m_registerGround_9 = FactoryObject<StaticObject>::registerIt("groun
     return std::make_unique<Ground>(ground_9, position, scale);
 });
 
-Ground::Ground(const int name, const sf::Vector2f &position, const sf::Vector2f &scale) : StaticObject(name, position,
-                                                                                                       scale) {}
+Ground::Ground(const int name,
+               const sf::Vector2f &position,
+               const sf::Vector2f &scale)
+               : StaticObject(name, position, scale) {}

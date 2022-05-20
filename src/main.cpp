@@ -28,7 +28,7 @@ int main() {
 //
 //    // Define the gravity vector
 //    b2Vec2 gravity(0.0f, 10.0f);
-////    b2Vec2 gravity(0.0f, -10.0f);
+////    b2Vec2 gravity(0.0f, -10.0f); // gravity when the ground is up
 //
 //    // Construct a world object, which will hold and simulate the rigid bodies.
 //    // Use dynamic allocation as this is a big object, and allocating it on the

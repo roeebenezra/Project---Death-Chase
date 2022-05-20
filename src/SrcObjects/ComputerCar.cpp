@@ -19,5 +19,5 @@ ComputerCar::ComputerCar(const int name,
 
 //_____________________________________________
 void ComputerCar::move(const sf::Event &event) {
-    setMove(sf::Vector2f(1, 0) * (2.f));
+    setMove(b2Vec2(1, 0));
 }
