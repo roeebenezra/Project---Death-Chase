@@ -9,9 +9,12 @@
 template<typename T>
 class FactoryObject {
 public:
-    using pFnc = std::unique_ptr<T>(*)(const sf::Vector2f &, const sf::Vector2f &);
+    using pFnc = std::unique_ptr<T>(*)(const sf::Vector2f &,
+                                       const sf::Vector2f &);
 
-    static std::unique_ptr<T> create(const std::string &, const sf::Vector2f &, const sf::Vector2f &);
+    static std::unique_ptr<T> create(const std::string &,
+                                     const sf::Vector2f &,
+                                     const sf::Vector2f &);
 
     static bool registerIt(const std::string &, pFnc);
 

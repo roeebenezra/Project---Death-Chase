@@ -1,8 +1,32 @@
 #include "Data.h"
 
 //__________
-Data::Data() : m_map(std::cin) {
+Data::Data() : m_map() {
     m_map.readMapFile(*this);
+    setWorld();
+    for (auto &moving: m_moving)
+        moving->setB2d(m_world);
+
+    for (auto &statics: m_static)
+        statics->setB2d(m_world);
+}
+
+//__________________
+void Data::setWorld() {
+    b2Vec2 gravity(0.0f, 10.0f);
+    auto world = std::make_unique<b2World>(gravity);
+    m_world = std::move(world);
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0.0f, 0.0f);
+    m_groundBody = m_world->CreateBody(&groundBodyDef);
+    b2PolygonShape groundBox;
+    groundBox.SetAsBox(1000.0f, 1000.0f);
+    m_groundBody->CreateFixture(&groundBox, 0.0f);
+}
+
+//________________________
+void Data:: setWorldStep() {
+    m_world->Step(m_timeStep, m_velocityIterations, m_positionIterations);
 }
 
 //______________________________________

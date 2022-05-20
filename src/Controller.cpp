@@ -7,13 +7,15 @@ Controller::Controller()
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
     m_gameImage.setScale(3, 1);
     auto view = m_gameWindow.getView();
-//    view.setCenter(m_data.getUserPosition().x+1000, m_data.getUserPosition().y+1500);
+//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
     m_gameWindow.setView(view);
 }
 
 //___________________
 void Controller::run() {
     while (m_gameWindow.isOpen()) {
+        m_data.setWorldStep();
         handleEvents();
         m_gameWindow.clear();
         draw();
@@ -40,8 +42,8 @@ void Controller::handleEvents() {
                 break;
         }
     }
-    if (m_userMoved)
-        m_data.moveComputerCars(event);
+//    if (m_userMoved)
+//        m_data.moveComputerCars(event);
 }
 
 //_________________________________________________
@@ -58,8 +60,10 @@ void Controller::mouseEventPressed(const Event &event) {
 void Controller::keyboardPressed(const sf::Event &event) {
     m_userMoved = true;
     auto view = m_gameWindow.getView();
-    m_data.moveUserCar(event);
-    view.setCenter(m_data.getUserPosition());
+    if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
+        m_data.moveUserCar(event);
+//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
     m_gameWindow.setView(view);
 }
 

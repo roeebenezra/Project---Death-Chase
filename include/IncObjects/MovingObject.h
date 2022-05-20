@@ -5,17 +5,18 @@
 class MovingObject : public GameObject {
 
 public:
-    MovingObject(const int, const sf::Vector2f&, const sf::Vector2f&);
+    MovingObject(const int,
+                 const sf::Vector2f &,
+                 const sf::Vector2f &);
 
     virtual ~MovingObject() = default;
 
     virtual void move(const sf::Event &) {}
-
 };
 
 //________
 namespace {
-    sf::Vector2f keyToDirection(sf::Keyboard::Key key) {
+    b2Vec2 keyToDirection(sf::Keyboard::Key key) {
         switch (key) {
             case sf::Keyboard::Left:
                 return {-1, 0};

@@ -7,6 +7,8 @@
 class Barrel : public StaticObject {
 
 public:
-    Barrel(const int, const sf::Vector2f&, const sf::Vector2f&);
+    Barrel(const int,
+           const sf::Vector2f&,
+           const sf::Vector2f&);
     static bool m_registerIt;
 };

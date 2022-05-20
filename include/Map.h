@@ -7,9 +7,11 @@
 class Data;
 
 class Map {
+
 public:
-    Map(std::istream& istream1) : m_istr(istream1){}
-    void readMapFile(Data&);
+    Map() {}
+
+    void readMapFile(Data &);
 
 private:
     using OpenFile = std::ifstream;
@@ -18,7 +20,6 @@ private:
 
     bool checkIfFileOpened(std::ifstream &);
 
-    void sendObjectsFromMap(Data&, Map&);
+    void sendObjectsFromMap(Data &, std::ifstream &);
 
-    std::istream& m_istr;
 };

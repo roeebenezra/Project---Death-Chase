@@ -1,7 +1,9 @@
 userCar 1000 1500 1 1
-redCar 100 1700 1 1
-greenCar 1000 1800 1 1
+redCar 2000 1550 1 1
+greenCar 100 1500 1 1
 barrel 1100 1200 1.5 1.5
-ground_1 0 19000 3 1
-ground_4 5000 2000 1 3
-ground_5 0 2000 3 1
+ground_1 0 900 3 1
+ground_1 9000 900 3 1
+ground_1 18000 900 3 1
+ground_1 27000 900 3 1
+ground_1 36000 900 3 1
