@@ -2,12 +2,11 @@
 
 #include "macros.h"
 
+
 class GameObject {
 
 public:
-    GameObject(const int,
-               const sf::Vector2f &,
-               const sf::Vector2f &);
+    GameObject(const int, const sf::Vector2f &, const sf::Vector2f &);
 
     void draw(sf::RenderWindow &) const;
 
@@ -23,10 +22,12 @@ private:
                    const sf::Vector2f &,
                    const sf::Vector2f &);
 
+    //b2BodyDef m_bodyDef;
 
-    b2Body *m_body;
-    b2BodyDef m_bodyDef;
+    b2Body *m_body = nullptr ;
+    b2Fixture *m_fixture = nullptr;
     b2PolygonShape m_dynamicBox;
-    b2FixtureDef m_fixtureDef;
+    
+    //b2FixtureDef m_fixtureDef;
     sf::Sprite m_shape;
 };

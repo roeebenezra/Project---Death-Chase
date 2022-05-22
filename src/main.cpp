@@ -17,13 +17,16 @@ namespace {
                 return {0, 0};
         }
     }
-
+    
     const auto Speed = 50.f;
 }
 
-int main() {
+
+int main() 
+{
     auto controller = Controller();
     controller.run();
+
 //    auto window = sf::RenderWindow(sf::VideoMode(1000, 1000), "Box2D");
 //
 //    // Define the gravity vector
@@ -45,6 +48,7 @@ int main() {
 //    b2Body *groundBody = world->CreateBody(&groundBodyDef);
 //
 //    // Define the ground box shape
+//
 //    b2PolygonShape groundBox;
 //    // The extents are the half-widths of the box
 //    groundBox.SetAsBox(50.0f, 5.0f);

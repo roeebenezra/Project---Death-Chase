@@ -1,20 +1,21 @@
 #include "Controller.h"
 
-//______________________
+//____________________
 Controller::Controller()
-        : m_view(Vector2f(0.0f, 0.0f), Vector2f(VIEW_HEIGHT, VIEW_WIDTH)),
-          m_userMoved(false) {
+        : m_userMoved(false)
+{
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
     m_gameImage.setScale(3, 1);
     auto view = m_gameWindow.getView();
-//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
     m_gameWindow.setView(view);
 }
 
 //___________________
-void Controller::run() {
-    while (m_gameWindow.isOpen()) {
+void Controller::run() 
+{
+    while (m_gameWindow.isOpen()) 
+    {
         m_data.setWorldStep();
         handleEvents();
         m_gameWindow.clear();
@@ -24,9 +25,11 @@ void Controller::run() {
 }
 
 //____________________________
-void Controller::handleEvents() {
+void Controller::handleEvents() 
+{
     auto event = sf::Event();
-    while (m_gameWindow.pollEvent(event)) {
+    while (m_gameWindow.pollEvent(event))
+    {
         switch (event.type) {
             case sf::Event::MouseButtonPressed:
                 mouseEventPressed(event);
@@ -47,7 +50,8 @@ void Controller::handleEvents() {
 }
 
 //_________________________________________________
-void Controller::mouseEventMoved(const Event &event) {
+void Controller::mouseEventMoved(const Event &event) 
+{
     auto location = Vector2f(float(event.mouseMove.x), float(event.mouseMove.y));
 }
 
@@ -56,26 +60,28 @@ void Controller::mouseEventPressed(const Event &event) {
     auto location = m_gameWindow.mapPixelToCoords({event.mouseButton.x, event.mouseButton.y});
 }
 
-//______________________________________________________
-void Controller::keyboardPressed(const sf::Event &event) {
+//____________________________________________________
+void Controller::keyboardPressed(const sf::Event &event) 
+{
     m_userMoved = true;
     auto view = m_gameWindow.getView();
     if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
         m_data.moveUserCar(event);
-//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
     view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
     m_gameWindow.setView(view);
 }
 
 //__________________________________________
-void Controller::exitGame(const Event &event) {
+void Controller::exitGame(const Event &event) 
+{
     if (event.key.code == sf::Keyboard::Escape ||
         event.type == sf::Event::Closed)
         m_gameWindow.close();
 }
 
-//_____________________
-void Controller::draw() {
+//___________________
+void Controller::draw() 
+{
     m_gameWindow.draw(m_gameImage);
     m_data.drawData(m_gameWindow);
 }

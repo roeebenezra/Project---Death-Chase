@@ -1,0 +1,3 @@
+C:/Users/roibe/source/repos/Project---Death-Chase/external/box2d/src/out/build/x64-Debug/CMakeFiles/box2d.dir
+C:/Users/roibe/source/repos/Project---Death-Chase/external/box2d/src/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/roibe/source/repos/Project---Death-Chase/external/box2d/src/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
