@@ -38,15 +38,12 @@ void Data:: setWorldStep()
 //__________________________________
 void Data::setObject(std::string &name,
                      const sf::Vector2f &position,
-                     const sf::Vector2f &scale) 
-{
-    FactoryObject<MovingObject> m;
-    if (m.checkIfNameInMap(name)) {
+                     const sf::Vector2f &scale) {
+    if (FactoryObject<MovingObject>::checkIfNameInMap(name)) {
         m_moving.push_back(FactoryObject<MovingObject>::create(name, position, scale));
         return;
     }
-    FactoryObject<StaticObject> s;
-    if (s.checkIfNameInMap(name)) {
+    if (FactoryObject<StaticObject>::checkIfNameInMap(name)) {
         m_static.push_back(FactoryObject<StaticObject>::create(name, position, scale));
         return;
     }
