@@ -5,9 +5,11 @@
 class MovingObject : public GameObject {
 
 public:
-    MovingObject(const int,
+    MovingObject(int,
+                 std::unique_ptr<b2World> &,
                  const sf::Vector2f &,
-                 const sf::Vector2f &);
+                 const sf::Vector2f &,
+                 b2BodyType);
 
     virtual ~MovingObject() = default;
 

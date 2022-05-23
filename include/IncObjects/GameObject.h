@@ -6,28 +6,31 @@
 class GameObject {
 
 public:
-    GameObject(const int, const sf::Vector2f &, const sf::Vector2f &);
+    GameObject(int,
+               std::unique_ptr<b2World> &,
+               const sf::Vector2f &,
+               const sf::Vector2f &,
+               b2BodyType);
 
-    void draw(sf::RenderWindow &) const;
+    void draw(sf::RenderWindow &);
 
     sf::Vector2f getPosition() const { return m_shape.getPosition(); }
 
     void setMove(const b2Vec2 &);
 
-    void setB2d(std::unique_ptr<b2World> &);
+    void setB2d(std::unique_ptr<b2World> &, b2BodyType);
 
+
+protected:
+    b2Body *m_body = nullptr;
 private:
-    std:: string m_name;
-    void setSprite(const int,
+    std::string m_name;
+
+    void setSprite(int,
                    const sf::Vector2f &,
                    const sf::Vector2f &);
 
-    //b2BodyDef m_bodyDef;
-
-    b2Body *m_body = nullptr ;
     b2Fixture *m_fixture = nullptr;
     b2PolygonShape m_dynamicBox;
-    
-    //b2FixtureDef m_fixtureDef;
     sf::Sprite m_shape;
 };

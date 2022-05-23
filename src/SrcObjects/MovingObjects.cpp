@@ -1,7 +1,8 @@
 #include "IncObjects/MovingObject.h"
 
-//________________________________________
-MovingObject::MovingObject(const int name,
+//________________________________
+MovingObject::MovingObject(int name,
+                           std::unique_ptr<b2World> &world,
                            const sf::Vector2f &position,
-                           const sf::Vector2f &scale)
-        : GameObject(name, position, scale) {}
+                           const sf::Vector2f &scale, b2BodyType bodyType)
+        : GameObject(name, world, position, scale, bodyType) {}

@@ -1,12 +1,14 @@
 #include "Controller.h"
+#include "DebugDraw.h"
 
 //____________________
 Controller::Controller()
+{
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
-    m_gameImage.setScale(3, 1);
     auto view = m_gameWindow.getView();
     view.setCenter(m_data.getUserPosition().x + 500, 1000);
     m_gameWindow.setView(view);
+
 //    const auto viewSize = sf::Vector2f(m_gameWindow.getSize().x, m_gameWindow.getSize().y);
 //    m_views.emplace_back(sf::Vector2f{0, 0}, viewSize);
 //    m_views.back().setViewport({0.f, 0.f, 1.f, 1.f});
@@ -25,9 +27,13 @@ Controller::Controller()
 //    m_views.back().setViewport({ 0.5f, 0.f, 0.5f, 1.f });
 }
 
-//___________________
+//__________________
 void Controller::run() 
 {
+    DebugDraw d(m_gameWindow);
+    uint32 flags = b2Draw::e_shapeBit;
+    d.SetFlags(flags);
+    m_data.getWorld()->SetDebugDraw(&d);
     while (m_gameWindow.isOpen()) 
     {
         m_data.setWorldStep();
@@ -38,7 +44,7 @@ void Controller::run()
     }
 }
 
-//____________________________
+//___________________________
 void Controller::handleEvents() 
 {
     auto event = sf::Event();
@@ -87,19 +93,20 @@ void Controller::keyboardPressed(const sf::Event &event)
 //        view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
 }
 
-//__________________________________________
+//_________________________________________
 void Controller::exitGame(const Event &event) 
 {
     if (event.key.code == sf::Keyboard::Escape ||
         event.type == sf::Event::Closed)
         m_gameWindow.close();
 }
-//_____________________
+//______________________
 void Controller::draw() {
     for (const auto &view: m_views) {
         m_gameWindow.setView(view);
         break;
     }
+    m_data.getWorld()->DebugDraw();
     m_gameWindow.draw(m_gameImage);
     m_data.drawData(m_gameWindow);
 }

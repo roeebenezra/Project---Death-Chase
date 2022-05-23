@@ -1,11 +1,13 @@
 #include "IncObjects/GameObject.h"
 
-//_____________________________________
-GameObject::GameObject(const int name,
+//__________________________
+GameObject::GameObject(int name,
+                       std::unique_ptr<b2World>& world,
                        const sf::Vector2f &position,
-                       const sf::Vector2f &scale) {
+                       const sf::Vector2f &scale,
+                       b2BodyType bodyType) {
     setSprite(name, position, scale);
-    //setB2d()
+    setB2d(world, bodyType);
 }
 
 //_______________________________________
@@ -17,42 +19,43 @@ void GameObject::setSprite(const int name,
     m_shape.setScale(scale);
 }
 
-//_______________________
-void GameObject::setB2d(std::unique_ptr<b2World> &world) 
+//________________________________________________________________________
+void GameObject::setB2d(std::unique_ptr<b2World> &world, b2BodyType bodyType)
 {
     // BodyDef
     b2BodyDef bodyDef;
-    bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(m_shape.getPosition().y / Scale, m_shape.getPosition().x / Scale);
+    bodyDef.type = bodyType;
+    bodyDef.position.Set(m_shape.getPosition().x ,m_shape.getPosition().y );
     m_body = world->CreateBody(&bodyDef);
-    
+
     // BoxShape
     b2PolygonShape BoxShape;
-    BoxShape.SetAsBox(1.0f, 1.0f);
+    BoxShape.SetAsBox(float (m_shape.getTexture()->getSize().x) / 30.f  , float (m_shape.getTexture()->getSize().y) / 30.f );
 
     // FixtureDef
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &BoxShape;
-    fixtureDef.density = 1.0f;
-    fixtureDef.friction = 0.3f;
-    m_fixture = m_body->CreateFixture(&fixtureDef);
-
+    if (bodyType == b2_dynamicBody)
+    {
+        fixtureDef.density = 1.0f;
+        fixtureDef.friction = 1.0f;
+    }
+    m_body->CreateFixture(&fixtureDef);
 }
 
-//____________________________________________________
-void GameObject::draw(sf::RenderWindow &window) const {
+//_____________________________________________
+void GameObject::draw(sf::RenderWindow &window) {
+    b2Vec2 position = m_body->GetPosition();
+   // position *= Scale;
+    m_shape.setPosition(position.x, position.y);
+    float angle = m_body->GetAngle();
+    m_shape.setRotation(angle);
     window.draw(m_shape);
 }
 
-//________________________________________________
-void GameObject::setMove(const b2Vec2 &dir) 
+//______________________________________
+void GameObject::setMove(const b2Vec2 &dir)
 {
-    //std::cout << "m_shape.getPosition().x " <<  m_shape.getPosition().x << " " << "m_shape.getPosition().y " << m_shape.getPosition().y << "\n";
-    //std::cout << "m_body->GetPosition().x " <<  m_body->GetPosition().x << " " << "m_body->GetPosition().y " << m_body->GetPosition().y << "\n";
-    m_body->SetLinearVelocity(b2Vec2(dir.x * 2, dir.y * 2));
-    b2Vec2 position = m_body->GetPosition();
-    position *= Scale;
-    m_shape.setPosition(position.y, position.x);
-    float angle = m_body->GetAngle();
-    m_shape.setRotation(angle);
+    float impulse = m_body->GetMass() * 10;
+    m_body->ApplyLinearImpulse( b2Vec2(impulse,0), m_body->GetWorldCenter(),true );
 }

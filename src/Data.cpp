@@ -1,21 +1,16 @@
 #include "Data.h"
 
-//___________________
-Data::Data() : m_map() 
+//__________
+Data::Data()
 {
-    m_map.readMapFile(*this);
     setWorld();
-    for (auto &moving: m_moving)
-        moving->setB2d(m_world);
-
-    for (auto &statics: m_static)
-        statics->setB2d(m_world);
+    m_map.readMapFile(*this);
 }
 
 //__________________
 void Data::setWorld() 
 {
-    b2Vec2 gravity(0.0f, 10.0f);
+    b2Vec2 gravity(0.0f, 9.8f);
     m_world = std::make_unique<b2World>(gravity);
 
     //Make the ground
@@ -40,11 +35,11 @@ void Data::setObject(std::string &name,
                      const sf::Vector2f &position,
                      const sf::Vector2f &scale) {
     if (FactoryObject<MovingObject>::checkIfNameInMap(name)) {
-        m_moving.push_back(FactoryObject<MovingObject>::create(name, position, scale));
+        m_moving.push_back(FactoryObject<MovingObject>::create(m_world, name, position, scale));
         return;
     }
     if (FactoryObject<StaticObject>::checkIfNameInMap(name)) {
-        m_static.push_back(FactoryObject<StaticObject>::create(name, position, scale));
+        m_static.push_back(FactoryObject<StaticObject>::create(m_world, name, position, scale));
         return;
     }
 }

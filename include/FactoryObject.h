@@ -9,10 +9,12 @@
 template<typename T>
 class FactoryObject {
 public:
-    using pFnc = std::unique_ptr<T>(*)(const sf::Vector2f &,
-                                       const sf::Vector2f &);
+    using pFnc = std::unique_ptr<T>(*)(std::unique_ptr<b2World> &world,
+                                        const sf::Vector2f &,
+                                        const sf::Vector2f &);
 
-    static std::unique_ptr<T> create(const std::string &,
+    static std::unique_ptr<T> create(std::unique_ptr<b2World> &,
+                                      const std::string &,
                                      const sf::Vector2f &,
                                      const sf::Vector2f &);
 
@@ -28,19 +30,18 @@ private:
 };
 
 template<typename T>
-std::unique_ptr<T> FactoryObject<T>::create(const std::string &name,
+std::unique_ptr<T> FactoryObject<T>::create(std::unique_ptr<b2World> &world,
+                                            const std::string &name,
                                             const sf::Vector2f &position,
-                                            const sf::Vector2f &scale) 
-{
+                                            const sf::Vector2f &scale) {
     auto it = FactoryObject::getMap().find(name);
     if (it == FactoryObject::getMap().end())
         return nullptr;
-    return it->second(position, scale);
+    return it->second(world, position, scale);
 }
 
 template<typename T>
-bool FactoryObject<T>::registerIt(const std::string &name, pFnc f) 
-{
+bool FactoryObject<T>::registerIt(const std::string &name, pFnc f) {
     FactoryObject::getMap().emplace(name, f);
     return true;
 }

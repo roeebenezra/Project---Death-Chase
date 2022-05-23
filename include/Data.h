@@ -29,14 +29,16 @@ public:
 
     void setWorldStep();
 
+    std::unique_ptr<b2World>& getWorld(){return m_world;}
+
 private:
     void setWorld();
 
     std::unique_ptr<b2World> m_world;
-    b2Body *m_groundBody;
+    b2Body *m_groundBody = nullptr;
     float m_timeStep = 1.0f / 60.0f;
-    int32 m_velocityIterations = 6;
-    int32 m_positionIterations = 2;
+    int32 m_velocityIterations = 8;
+    int32 m_positionIterations = 3;
     Map m_map;
     std::vector<std::unique_ptr<MovingObject>> m_moving;
     std::vector<std::unique_ptr<StaticObject>> m_static;

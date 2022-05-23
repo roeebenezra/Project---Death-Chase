@@ -4,11 +4,12 @@
 #include "FactoryObject.h"
 
 class Ground : public StaticObject {
-
 public:
-    Ground(const int,
+    Ground(int,
+           std::unique_ptr<b2World> &,
            const sf::Vector2f&,
-           const sf::Vector2f&);
+           const sf::Vector2f&,
+           b2BodyType);
 
     static bool m_registerGround_1;
     static bool m_registerGround_2;
