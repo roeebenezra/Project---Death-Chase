@@ -2,14 +2,28 @@
 
 //______________________
 Controller::Controller()
-        : m_view(Vector2f(0.0f, 0.0f), Vector2f(VIEW_HEIGHT, VIEW_WIDTH)),
-          m_userMoved(false) {
+        : m_userMoved(false) {
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
     m_gameImage.setScale(3, 1);
     auto view = m_gameWindow.getView();
-//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
     m_gameWindow.setView(view);
+//    const auto viewSize = sf::Vector2f(m_gameWindow.getSize().x, m_gameWindow.getSize().y);
+//    m_views.emplace_back(sf::Vector2f{0, 0}, viewSize);
+//    m_views.back().setViewport({0.f, 0.f, 1.f, 1.f});
+//    m_views.back().setCenter(m_data.getUserPosition().x + 500, 1000);
+//
+//    m_views.emplace_back(sf::Vector2f{0, 0}, sf::Vector2f(100, 100));
+//    m_views.back().setCenter(m_data.getUserPosition().x + 500, 1000);
+//    m_views.back().setViewport({0.f, 0.8f, 0.2f, 0.2f});
+
+//    const auto viewSize = sf::Vector2f(m_gameWindow.getSize().x / 2.f, m_gameWindow.getSize().y * 1.f);
+//    m_views.emplace_back(sf::Vector2f{ 0,0 }, viewSize);
+//    m_views.back().setViewport({ 0.f, 0.f, 0.5f, 1.f });
+//    auto viewCenter = m_views.back().getCenter();
+//    viewCenter.x += viewSize.x;
+//    m_views.emplace_back(viewCenter, viewSize);
+//    m_views.back().setViewport({ 0.5f, 0.f, 0.5f, 1.f });
 }
 
 //___________________
@@ -62,9 +76,10 @@ void Controller::keyboardPressed(const sf::Event &event) {
     auto view = m_gameWindow.getView();
     if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
         m_data.moveUserCar(event);
-//    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
     m_gameWindow.setView(view);
+//    for (auto &view: m_views)
+//        view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
 }
 
 //__________________________________________
@@ -76,6 +91,10 @@ void Controller::exitGame(const Event &event) {
 
 //_____________________
 void Controller::draw() {
+    for (const auto &view: m_views) {
+        m_gameWindow.setView(view);
+        break;
+    }
     m_gameWindow.draw(m_gameImage);
     m_data.drawData(m_gameWindow);
 }

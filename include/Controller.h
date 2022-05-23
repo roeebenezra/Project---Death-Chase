@@ -27,7 +27,7 @@ private:
     RenderWindow m_gameWindow = {VideoMode(1200, 950), "Death Chase",
                                  Style::Close | Style::Resize | sf::Style::Fullscreen};
     sf::Sprite m_gameImage;
-    View m_view;
+    std::vector<sf::View> m_views;
     Data m_data;
     std::unique_ptr<b2World> m_world;
     bool m_userMoved;

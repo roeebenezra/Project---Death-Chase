@@ -18,7 +18,7 @@ public:
 
     static bool registerIt(const std::string &, pFnc);
 
-    bool checkIfNameInMap(const std::string &name) const { return FactoryObject::getMap().count(name) > 0; }
+    static bool checkIfNameInMap(const std::string &name) { return FactoryObject::getMap().count(name) > 0; }
 
 private:
     static auto &getMap() {
