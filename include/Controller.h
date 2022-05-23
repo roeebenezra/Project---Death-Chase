@@ -24,8 +24,7 @@ private:
 
     void exitGame(const Event &);
 
-    RenderWindow m_gameWindow = {VideoMode(1200, 950), "Death Chase",
-                                 Style::Close | Style::Resize | sf::Style::Fullscreen};
+    RenderWindow m_gameWindow = {VideoMode(1200, 900), "Death Chase", Style::Close | Style::Resize | Style::Fullscreen};
     sf::Sprite m_gameImage;
     std::vector<sf::View> m_views;
     Data m_data;

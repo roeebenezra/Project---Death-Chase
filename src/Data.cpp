@@ -1,7 +1,8 @@
 #include "Data.h"
 
-//__________
-Data::Data() : m_map() {
+//___________________
+Data::Data() : m_map() 
+{
     m_map.readMapFile(*this);
     setWorld();
     for (auto &moving: m_moving)
@@ -12,24 +13,29 @@ Data::Data() : m_map() {
 }
 
 //__________________
-void Data::setWorld() {
+void Data::setWorld() 
+{
     b2Vec2 gravity(0.0f, 10.0f);
-    auto world = std::make_unique<b2World>(gravity);
-    m_world = std::move(world);
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, 0.0f);
-    m_groundBody = m_world->CreateBody(&groundBodyDef);
-    b2PolygonShape groundBox;
-    groundBox.SetAsBox(1000.0f, 1000.0f);
-    m_groundBody->CreateFixture(&groundBox, 0.0f);
-}
+    m_world = std::make_unique<b2World>(gravity);
 
-//________________________
-void Data:: setWorldStep() {
+    //Make the ground
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0.0f, 10.0f);
+    m_groundBody = m_world->CreateBody(&groundBodyDef);
+
+    //Make the ground fixture
+    b2PolygonShape groundBox;
+    groundBox.SetAsBox(50.0f, 10.0f);
+    m_groundBody->CreateFixture(&groundBox, 0.0f);
+} 
+
+//______________________
+void Data:: setWorldStep() 
+{
     m_world->Step(m_timeStep, m_velocityIterations, m_positionIterations);
 }
 
-//______________________________________
+//__________________________________
 void Data::setObject(std::string &name,
                      const sf::Vector2f &position,
                      const sf::Vector2f &scale) {
@@ -49,14 +55,16 @@ void Data::moveUserCar(const sf::Event &event) {
 }
 
 //_________________________________________________
-void Data::moveComputerCars(const sf::Event &event) {
+void Data::moveComputerCars(const sf::Event &event)
+{
     for (auto &moving: m_moving)
         if (moving != m_moving[User])
             moving->move(event);
 }
 
 //___________________________________________
-void Data::drawData(sf::RenderWindow &window) {
+void Data::drawData(sf::RenderWindow &window) 
+{
     for (auto &moving: m_moving)
         moving->draw(window);
 

@@ -30,7 +30,8 @@ private:
 template<typename T>
 std::unique_ptr<T> FactoryObject<T>::create(const std::string &name,
                                             const sf::Vector2f &position,
-                                            const sf::Vector2f &scale) {
+                                            const sf::Vector2f &scale) 
+{
     auto it = FactoryObject::getMap().find(name);
     if (it == FactoryObject::getMap().end())
         return nullptr;
@@ -38,7 +39,8 @@ std::unique_ptr<T> FactoryObject<T>::create(const std::string &name,
 }
 
 template<typename T>
-bool FactoryObject<T>::registerIt(const std::string &name, pFnc f) {
+bool FactoryObject<T>::registerIt(const std::string &name, pFnc f) 
+{
     FactoryObject::getMap().emplace(name, f);
     return true;
 }
