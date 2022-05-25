@@ -3,7 +3,6 @@
 #include "GameObject.h"
 
 class StaticObject : public GameObject {
-
 public:
     StaticObject(int,
                  std::unique_ptr<b2World> &,

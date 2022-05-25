@@ -64,28 +64,7 @@ bool Ground::m_registerGround_5 = FactoryObject<StaticObject>::registerIt("groun
                                                                                                               scale,
                                                                                                               b2_staticBody);
                                                                           });
-bool Ground::m_registerGround_6 = FactoryObject<StaticObject>::registerIt("ground_6",
-                                                                          [](std::unique_ptr<b2World> &world,
-                                                                             const sf::Vector2f &position,
-                                                                             const sf::Vector2f &scale)
-                                                                                  -> std::unique_ptr<StaticObject> {
-                                                                              return std::make_unique<Ground>(ground_6,
-                                                                                                              world,
-                                                                                                              position,
-                                                                                                              scale,
-                                                                                                              b2_staticBody);
-                                                                          });
-bool Ground::m_registerGround_7 = FactoryObject<StaticObject>::registerIt("ground_7",
-                                                                          [](std::unique_ptr<b2World> &world,
-                                                                             const sf::Vector2f &position,
-                                                                             const sf::Vector2f &scale)
-                                                                                  -> std::unique_ptr<StaticObject> {
-                                                                              return std::make_unique<Ground>(ground_7,
-                                                                                                              world,
-                                                                                                              position,
-                                                                                                              scale,
-                                                                                                              b2_staticBody);
-                                                                          });
+
 bool Ground::m_registerGround_8 = FactoryObject<StaticObject>::registerIt("ground_8",
                                                                           [](std::unique_ptr<b2World> &world,
                                                                              const sf::Vector2f &position,

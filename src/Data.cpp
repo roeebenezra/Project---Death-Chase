@@ -10,19 +10,24 @@ Data::Data()
 //__________________
 void Data::setWorld() 
 {
-    b2Vec2 gravity(0.0f, 9.8f);
+    //set gravity
+    b2Vec2 gravity(0.0f, 10.f);
     m_world = std::make_unique<b2World>(gravity);
 
-    //Make the ground
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, 10.0f);
-    m_groundBody = m_world->CreateBody(&groundBodyDef);
-
-    //Make the ground fixture
-    b2PolygonShape groundBox;
-    groundBox.SetAsBox(50.0f, 10.0f);
-    m_groundBody->CreateFixture(&groundBox, 0.0f);
-} 
+//    Make the ground
+//    b2BodyDef groundBodyDef;
+//    groundBodyDef.position.Set(200, 1600);
+//
+//    set ground in world
+//    m_groundBody = m_world->CreateBody(&groundBodyDef);
+//
+//    Make the ground fixture
+//    b2PolygonShape groundBox;
+//    groundBox.SetAsBox(20000, 10);
+//    auto fixture = m_groundBody->CreateFixture(&groundBox, 0.0f);
+//    fixture->SetDensity(10.f);
+//    fixture->SetFriction(10.f);
+}
 
 //______________________
 void Data:: setWorldStep() 

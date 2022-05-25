@@ -30,10 +30,12 @@ Controller::Controller()
 //__________________
 void Controller::run() 
 {
+    //DebugDraw.h
     DebugDraw d(m_gameWindow);
     uint32 flags = b2Draw::e_shapeBit;
     d.SetFlags(flags);
     m_data.getWorld()->SetDebugDraw(&d);
+
     while (m_gameWindow.isOpen()) 
     {
         m_data.setWorldStep();
@@ -84,11 +86,9 @@ void Controller::mouseEventPressed(const Event &event) {
 void Controller::keyboardPressed(const sf::Event &event) 
 {
     m_userMoved = true;
-    auto view = m_gameWindow.getView();
     if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
         m_data.moveUserCar(event);
-    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    m_gameWindow.setView(view);
+
 //    for (auto &view: m_views)
 //        view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
 }
@@ -102,11 +102,16 @@ void Controller::exitGame(const Event &event)
 }
 //______________________
 void Controller::draw() {
-    for (const auto &view: m_views) {
-        m_gameWindow.setView(view);
-        break;
-    }
-    m_data.getWorld()->DebugDraw();
+//    for (const auto &view: m_views) {
+//        m_gameWindow.setView(view);
+//        break;
+//    }
+    auto view = m_gameWindow.getView();
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+    m_gameWindow.setView(view);
+
     m_gameWindow.draw(m_gameImage);
     m_data.drawData(m_gameWindow);
+
+    m_data.getWorld()->DebugDraw();
 }

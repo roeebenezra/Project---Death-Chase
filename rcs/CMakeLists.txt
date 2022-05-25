@@ -19,8 +19,6 @@ configure_file ("rcsGround/ground_2.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsGround/ground_3.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsGround/ground_4.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsGround/ground_5.png" ${CMAKE_BINARY_DIR} COPYONLY)
-configure_file ("rcsGround/ground_6.png" ${CMAKE_BINARY_DIR} COPYONLY)
-configure_file ("rcsGround/ground_7.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsGround/ground_8.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsGround/ground_9.png" ${CMAKE_BINARY_DIR} COPYONLY)
 

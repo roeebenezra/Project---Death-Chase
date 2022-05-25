@@ -6,7 +6,10 @@ UserCar::UserCar(int name,
                  const sf::Vector2f &position,
                  const sf::Vector2f &scale,
                  b2BodyType bodyType) :
-        MovingObject(name, world, position, scale, bodyType) {}
+        MovingObject(name, world, position, scale, bodyType)
+{
+    m_body->SetFixedRotation(true);
+}
 
 //_________________________________________________________________
 bool UserCar::m_registerIt = FactoryObject<MovingObject>::registerIt("userCar",

@@ -4,7 +4,6 @@
 
 
 class GameObject {
-
 public:
     GameObject(int,
                std::unique_ptr<b2World> &,
@@ -14,23 +13,19 @@ public:
 
     void draw(sf::RenderWindow &);
 
-    sf::Vector2f getPosition() const { return m_shape.getPosition(); }
+    sf::Vector2f getPosition() const { return m_sprite.getPosition(); }
+
+    float getWidth() const { return m_sprite.getLocalBounds().width; }
+
+    float getHeight() const { return m_sprite.getLocalBounds().height; }
 
     void setMove(const b2Vec2 &);
-
-    void setB2d(std::unique_ptr<b2World> &, b2BodyType);
-
 
 protected:
     b2Body *m_body = nullptr;
 private:
+    void setSprite(int, const sf::Vector2f &, const sf::Vector2f &);
+    void setB2d(std::unique_ptr<b2World> &, b2BodyType);
     std::string m_name;
-
-    void setSprite(int,
-                   const sf::Vector2f &,
-                   const sf::Vector2f &);
-
-    b2Fixture *m_fixture = nullptr;
-    b2PolygonShape m_dynamicBox;
-    sf::Sprite m_shape;
+    sf::Sprite m_sprite;
 };
