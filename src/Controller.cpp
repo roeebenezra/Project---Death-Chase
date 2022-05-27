@@ -2,12 +2,10 @@
 #include "DebugDraw.h"
 
 //____________________
-Controller::Controller()
-{
+Controller::Controller() {
     m_gameImage.setTexture(Resources::instance().getTexture(Background));
-    auto view = m_gameWindow.getView();
-    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    m_gameWindow.setView(view);
+    m_gameImage.setScale(3,1);
+    setView();
 
 //    const auto viewSize = sf::Vector2f(m_gameWindow.getSize().x, m_gameWindow.getSize().y);
 //    m_views.emplace_back(sf::Vector2f{0, 0}, viewSize);
@@ -27,31 +25,38 @@ Controller::Controller()
 //    m_views.back().setViewport({ 0.5f, 0.f, 0.5f, 1.f });
 }
 
+//_________________________
+void Controller::setView() {
+    auto view = m_gameWindow.getView();
+    view.setCenter(m_data.getUserPosition().x + 500, 1000);
+    m_gameWindow.setView(view);
+}
+
 //__________________
-void Controller::run() 
-{
+void Controller::run() {
     //DebugDraw.h
     DebugDraw d(m_gameWindow);
     uint32 flags = b2Draw::e_shapeBit;
     d.SetFlags(flags);
     m_data.getWorld()->SetDebugDraw(&d);
 
-    while (m_gameWindow.isOpen()) 
-    {
+    MyContactListener myContactListenerInstance;
+
+    while (m_gameWindow.isOpen()) {
         m_data.setWorldStep();
+        m_data.getWorld()->SetContactListener(&myContactListenerInstance);
         handleEvents();
         m_gameWindow.clear();
+        setView();
         draw();
         m_gameWindow.display();
     }
 }
 
 //___________________________
-void Controller::handleEvents() 
-{
+void Controller::handleEvents() {
     auto event = sf::Event();
-    while (m_gameWindow.pollEvent(event))
-    {
+    while (m_gameWindow.pollEvent(event)) {
         switch (event.type) {
             case sf::Event::MouseButtonPressed:
                 mouseEventPressed(event);
@@ -72,8 +77,7 @@ void Controller::handleEvents()
 }
 
 //_________________________________________________
-void Controller::mouseEventMoved(const Event &event) 
-{
+void Controller::mouseEventMoved(const Event &event) {
     auto location = Vector2f(float(event.mouseMove.x), float(event.mouseMove.y));
 }
 
@@ -83,35 +87,27 @@ void Controller::mouseEventPressed(const Event &event) {
 }
 
 //____________________________________________________
-void Controller::keyboardPressed(const sf::Event &event) 
-{
+void Controller::keyboardPressed(const sf::Event &event) {
     m_userMoved = true;
     if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
         m_data.moveUserCar(event);
-
-//    for (auto &view: m_views)
-//        view.setCenter(m_data.getUserPosition().x + 500, m_data.getUserPosition().y - 500);
 }
 
 //_________________________________________
-void Controller::exitGame(const Event &event) 
-{
+void Controller::exitGame(const Event &event) {
     if (event.key.code == sf::Keyboard::Escape ||
         event.type == sf::Event::Closed)
         m_gameWindow.close();
 }
+
 //______________________
 void Controller::draw() {
-//    for (const auto &view: m_views) {
-//        m_gameWindow.setView(view);
-//        break;
-//    }
-    auto view = m_gameWindow.getView();
-    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    m_gameWindow.setView(view);
-
     m_gameWindow.draw(m_gameImage);
     m_data.drawData(m_gameWindow);
-
-    m_data.getWorld()->DebugDraw();
+//    Sprite s;
+//    s.setTexture(Resources::instance().getTexture(ground_1));
+//    s.setPosition(1000, 1700);
+//    s.setRotation(-20);
+//    m_gameWindow.draw(s);
+//    m_data.getWorld()->DebugDraw();
 }

@@ -25,7 +25,7 @@ bool ComputerCar::m_registerGreenCar = FactoryObject<MovingObject>::registerIt("
                                                                                [](std::unique_ptr<b2World> &world,
                                                                                   const sf::Vector2f &position,
                                                                                   const sf::Vector2f &scale) ->
-                                                                                  std::unique_ptr<MovingObject> {
+                                                                                       std::unique_ptr<MovingObject> {
                                                                                    return std::make_unique<ComputerCar>(
                                                                                            greenCar,
                                                                                            world,
@@ -36,5 +36,7 @@ bool ComputerCar::m_registerGreenCar = FactoryObject<MovingObject>::registerIt("
 
 //_____________________________________________
 void ComputerCar::move(const sf::Event &event) {
-    setMove(b2Vec2(1, 0));
+    b2Vec2 dir = b2Vec2(1, 0);
+    float impulse = m_body->GetMass() * 20;
+    m_body->ApplyLinearImpulse(b2Vec2(impulse * dir.x, impulse * dir.y), m_body->GetWorldCenter(), true);
 }

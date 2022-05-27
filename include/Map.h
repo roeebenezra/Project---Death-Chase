@@ -2,7 +2,6 @@
 
 #include "macros.h"
 #include "FactoryObject.h"
-#include <fstream>
 
 class Data;
 

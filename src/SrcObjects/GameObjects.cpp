@@ -1,6 +1,6 @@
 #include "IncObjects/GameObject.h"
 
-//__________________________
+//______________________________
 GameObject::GameObject(int name,
                        std::unique_ptr<b2World> &world,
                        const sf::Vector2f &position,
@@ -16,8 +16,10 @@ void GameObject::setSprite(const int name,
                            const sf::Vector2f &scale) {
     m_sprite.setTexture(Resources::instance().getTexture(name));
     m_sprite.setPosition(position);
+//    if(scale.x == 20)
+//        m_sprite.setRotation(-20);
     m_sprite.setOrigin(m_sprite.getGlobalBounds().width / 2, m_sprite.getGlobalBounds().height / 2);
-    m_sprite.setScale(scale);
+//    m_sprite.setScale(scale);
 }
 
 //________________________________________________________________________
@@ -26,6 +28,7 @@ void GameObject::setB2d(std::unique_ptr<b2World> &world, b2BodyType bodyType) {
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
     bodyDef.position.Set(getPosition().x, getPosition().y);
+    bodyDef.angle = m_sprite.getRotation();
     // set Body to world
     m_body = world->CreateBody(&bodyDef);
 
@@ -40,6 +43,7 @@ void GameObject::setB2d(std::unique_ptr<b2World> &world, b2BodyType bodyType) {
     fixtureDef.friction = 1.0f;
 
     m_body->CreateFixture(&fixtureDef);
+    m_body->SetUserData(this);
 }
 
 //_____________________________________________
@@ -51,10 +55,4 @@ void GameObject::draw(sf::RenderWindow &window) {
     m_sprite.setRotation(angle);
 
     window.draw(m_sprite);
-}
-
-//______________________________________
-void GameObject::setMove(const b2Vec2 &dir) {
-    float impulse = m_body->GetMass() * 20;
-    m_body->ApplyLinearImpulse(b2Vec2(impulse*dir.x, dir.y), m_body->GetWorldCenter(), true);
 }

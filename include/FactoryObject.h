@@ -1,8 +1,6 @@
 #pragma once
 
 #include "macros.h"
-#include <map>
-#include <memory>
 #include "IncObjects/MovingObject.h"
 #include "IncObjects/StaticObject.h"
 
