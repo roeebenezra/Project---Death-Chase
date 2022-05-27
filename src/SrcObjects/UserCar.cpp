@@ -27,5 +27,7 @@ bool UserCar::m_registerIt = FactoryObject<MovingObject>::registerIt("userCar",
 
 //__________________________________________
 void UserCar::move(const sf::Event &event) {
-    setMove(keyToDirection(event.key.code));
+    b2Vec2 dir = keyToDirection(event.key.code);
+    float impulse = m_body->GetMass() * 50;
+    m_body->ApplyLinearImpulse(b2Vec2(impulse*dir.x, impulse*dir.y), m_body->GetWorldCenter(), true);
 }

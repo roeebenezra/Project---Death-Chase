@@ -2,7 +2,6 @@
 
 #include "macros.h"
 
-
 class GameObject {
 public:
     GameObject(int,
@@ -15,17 +14,17 @@ public:
 
     sf::Vector2f getPosition() const { return m_sprite.getPosition(); }
 
+protected:
+    b2Body *m_body = nullptr;
+
+private:
     float getWidth() const { return m_sprite.getLocalBounds().width; }
 
     float getHeight() const { return m_sprite.getLocalBounds().height; }
 
-    void setMove(const b2Vec2 &);
-
-protected:
-    b2Body *m_body = nullptr;
-private:
     void setSprite(int, const sf::Vector2f &, const sf::Vector2f &);
+
     void setB2d(std::unique_ptr<b2World> &, b2BodyType);
-    std::string m_name;
+
     sf::Sprite m_sprite;
 };

@@ -10,4 +10,6 @@ target_sources (${CMAKE_PROJECT_NAME} PRIVATE "main.cpp"
                                                 "SrcObjects/Barrel.cpp"
                                                 "FactoryObject.cpp"
                                                 "Map.cpp"
+                                                "MyContactListener.cpp"
+                                                "HandleCollision.cpp"
                                                 "Data.cpp")

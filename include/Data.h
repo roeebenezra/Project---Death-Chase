@@ -8,8 +8,6 @@
 #include "FactoryObject.h"
 #include "Map.h"
 #include "macros.h"
-#include "box2d/box2d.h"
-#include <memory>
 
 class Data {
 public:

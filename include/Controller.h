@@ -2,6 +2,7 @@
 
 #include "macros.h"
 #include "Data.h"
+#include "MyContactListener.h"
 #include <memory>
 
 class Controller {
@@ -12,6 +13,8 @@ public:
     void run();
 
 private:
+    void setView();
+
     void handleEvents();
 
     void mouseEventPressed(const Event &);
@@ -28,6 +31,5 @@ private:
     sf::Sprite m_gameImage;
     std::vector<sf::View> m_views;
     Data m_data;
-    std::unique_ptr<b2World> m_world;
     bool m_userMoved;
 };
