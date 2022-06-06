@@ -1,6 +1,6 @@
 #include "IncObjects/ComputerCar.h"
 
-ComputerCar::ComputerCar(int name,
+ComputerCar::ComputerCar(unsigned name,
                          std::unique_ptr<b2World> &world,
                          const sf::Vector2f &position,
                          const sf::Vector2f &scale,

@@ -3,35 +3,31 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include<stdio.h>
 #include <fstream>
 #include <map>
 #include <typeinfo>
 #include <typeindex>
+#include <memory>
+
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "Resources.h"
 #include "box2d/box2d.h"
-#include <memory>
+
 
 using namespace sf;
 using namespace std;
 
-static const float VIEW_HEIGHT = 900.0f;
-static const float VIEW_WIDTH = 1200.0f;
+const string FileName = "map.txt";
 
-const std::string fileName = "map.txt";
+const string FontFile = "FontFile.ttf";
 
-const std::string FontName = "FontFile.ttf";
+const vector Textures = {"background.png", "truck.png", "redCar.png", "greenCar.png",
+                         "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
+                         "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png",
+                         "openMenu.png", "musicIcons.png"};
 
-const std::vector NAMES = {"background.png", "truck.png", "redCar.png", "greenCar.png",
-                           "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
-                           "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png"};
-
-const int User = 0;
-
-const float Scale = 30.f;
-
-enum rcsNames {
+enum TextureRcs {
     Background,
     userCar,
     redCar,
@@ -44,4 +40,25 @@ enum rcsNames {
     ground_8,
     ground_9,
     barrel,
+    OpenMenuBackground,
+    musicIcons,
+    TexturesCount
+};
+
+const vector Sounds = {"GameMenuSound.wav"};
+
+const int User = 0;
+
+enum SoundRcs {
+    OpenSound,
+    SoundsCount
+};
+
+enum Menus {
+    OpenGameMenu,
+    HowToPlayMenu,
+    ChooseCarMenu,
+    Play,
+    InGameMenu,
+    MenusCount
 };

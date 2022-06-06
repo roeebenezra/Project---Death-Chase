@@ -11,10 +11,11 @@ target_sources (${CMAKE_PROJECT_NAME} PRIVATE  "Controller.h"
 												"IncObjects/Cone.h"
 												"IncObjects/Barrel.h"
 
-												"IncWindows/GameWindow.h"
-												"IncWindows/ChooseVehicleWindow.h"
-												"IncWindows/MenuWindow.h"
-												"IncWindows/GameWindow.h"
+												"IncMenus/ChooseVehicleMenu.h"
+												"IncMenus/OpenMenu.h"
+												"IncMenus/GameMenu.h"
+												"IncMenus/Button.h"
+												"IncMenus/MusicButton.h"
 
 												"Resources.h"
 												"macros.h" )

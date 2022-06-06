@@ -6,7 +6,7 @@
 class ComputerCar : public MovingObject {
 
 public:
-    ComputerCar(int,
+    ComputerCar(unsigned,
                 std::unique_ptr<b2World> &,
                 const sf::Vector2f &,
                 const sf::Vector2f &,

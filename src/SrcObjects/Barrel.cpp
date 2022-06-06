@@ -1,6 +1,6 @@
 #include "IncObjects/Barrel.h"
 
-Barrel::Barrel(int name,
+Barrel::Barrel(unsigned name,
                std::unique_ptr<b2World> &world,
                const sf::Vector2f &position,
                const sf::Vector2f &scale,

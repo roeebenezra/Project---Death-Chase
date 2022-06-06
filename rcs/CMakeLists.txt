@@ -1,5 +1,4 @@
 configure_file ("FontFile.ttf" ${CMAKE_BINARY_DIR} COPYONLY)
-configure_file ("footbridge.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("background.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("map.txt" ${CMAKE_BINARY_DIR} COPYONLY)
 
@@ -26,3 +25,8 @@ configure_file ("rcsStone/stone_1.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsStone/stone_2.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsStone/stone_3.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsStone/stone_4.png" ${CMAKE_BINARY_DIR} COPYONLY)
+
+configure_file ("rcsMenu/openMenu.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsMenu/musicIcons.png" ${CMAKE_BINARY_DIR} COPYONLY)
+
+configure_file ("rcsSound/GameMenuSound.wav" ${CMAKE_BINARY_DIR} COPYONLY)

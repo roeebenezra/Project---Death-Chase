@@ -11,7 +11,7 @@ HandleCollision &HandleCollision::instance() {
 
 void HandleCollision::gameObjectGameObject(GameObject *ground,
                                            GameObject *userCar) {
-    std::cout << "gameObject with GameObject!\n";
+//    std::cout << "gameObject with GameObject!\n";
 }
 
 void HandleCollision::userCarGround(GameObject *userCar,
@@ -19,7 +19,7 @@ void HandleCollision::userCarGround(GameObject *userCar,
     // To get the actual types and use them:
     // UserCar& user = dynamic_cast<UserCar&>(userCar);
     // Ground&  ground1  = dynamic_cast<Ground&>(ground);
-    std::cout << "userCar on Ground!\n";
+//    std::cout << "userCar on Ground!\n";
 }
 
 void HandleCollision::groundUserCar(GameObject *ground,
@@ -29,7 +29,7 @@ void HandleCollision::groundUserCar(GameObject *ground,
 
 void HandleCollision::computerCarGround(GameObject *computerCar,
                                         GameObject *ground) {
-    std::cout << "computerCar on Ground!\n";
+//    std::cout << "computerCar on Ground!\n";
 }
 
 void HandleCollision::groundComputerCar(GameObject *ground,
@@ -39,7 +39,7 @@ void HandleCollision::groundComputerCar(GameObject *ground,
 
 void HandleCollision::barrelGround(GameObject *computerCar,
                                    GameObject *ground) {
-    std::cout << "computerCar on Ground!\n";
+//    std::cout << "computerCar on Ground!\n";
 }
 
 void HandleCollision::groundBarrel(GameObject *ground,
@@ -49,7 +49,7 @@ void HandleCollision::groundBarrel(GameObject *ground,
 
 void HandleCollision::userCarComputerCar(GameObject *userCar,
                                          GameObject *computerCar) {
-    std::cout << "userCar with computerCar!\n";
+//    std::cout << "userCar with computerCar!\n";
 }
 
 void HandleCollision::computerCarUserCar(GameObject *computerCar,
@@ -77,28 +77,18 @@ HandleCollision::HitMap HandleCollision::initializeCollisionMap() {
     return phm;
 }
 
-void HandleCollision::processCollision(GameObject *object1, GameObject *object2) {
-//    auto a = static_cast<UserCar*> (object1);
-//    auto b = static_cast<Ground*> (object2);
-//    std::cout << typeid(*object1).name() << " 1\n";
-//    std::cout << typeid(*object2).name() << " 2\n";
+void HandleCollision::processCollision(GameObject *object1, GameObject *object2)
+{
+    dynamic_cast<GameObject*> (object1);
+    dynamic_cast<GameObject*> (object2);
     static HitMap collisionMap = initializeCollisionMap();
     auto mapEntry = collisionMap.find(Key(typeid(*object1), typeid(*object2)));
     if (mapEntry != collisionMap.end()) {
         auto func = mapEntry->second;
         (this->*(func))(object1, object2);
-    } else {
-        std::cout << "couldn't find function \n";
-        throw CollisionException("Unknown collision of ", object1, object2);
     }
+//    else {
+//        std::cout << "couldn't find function \n";
+//        //throw CollisionException("Unknown collision of ", object1, object2);
+//    }
 }
-
-//userCar 2000 500 1 1
-//redCar 1000 500 1 1
-//greenCar 1500 500 1 1
-//barrel 2500 1700 1 1
-//barrel 3000 1700 1 1
-//ground_1 1000 1700 20 1
-//ground_1 4000 1700 2 1
-//ground_1 7000 1700 2 1
-//ground_1 10000 1700 2 1

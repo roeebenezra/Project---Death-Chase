@@ -1,7 +1,7 @@
 #include "IncObjects/GameObject.h"
 
-//______________________________
-GameObject::GameObject(int name,
+//_____________________________
+GameObject::GameObject(unsigned  name,
                        std::unique_ptr<b2World> &world,
                        const sf::Vector2f &position,
                        const sf::Vector2f &scale,
@@ -11,14 +11,15 @@ GameObject::GameObject(int name,
 }
 
 //_______________________________________
-void GameObject::setSprite(const int name,
+void GameObject::setSprite(const unsigned name,
                            const sf::Vector2f &position,
                            const sf::Vector2f &scale) {
     m_sprite.setTexture(Resources::instance().getTexture(name));
     m_sprite.setPosition(position);
-//    if(scale.x == 20)
-//        m_sprite.setRotation(-20);
     m_sprite.setOrigin(m_sprite.getGlobalBounds().width / 2, m_sprite.getGlobalBounds().height / 2);
+
+    //    if(scale.x == 20)
+//        m_sprite.setRotation(-20);
 //    m_sprite.setScale(scale);
 }
 
@@ -51,7 +52,8 @@ void GameObject::draw(sf::RenderWindow &window) {
     b2Vec2 position = m_body->GetPosition();
     m_sprite.setPosition(position.x, position.y);
 
-    float angle = m_body->GetAngle();
+    float angle = 180/b2_pi * m_body->GetAngle(); //body angle multiply by 180/pie
+
     m_sprite.setRotation(angle);
 
     window.draw(m_sprite);

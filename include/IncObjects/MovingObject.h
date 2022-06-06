@@ -5,15 +5,13 @@
 class MovingObject : public GameObject {
 
 public:
-    MovingObject(int,
+    MovingObject(unsigned,
                  std::unique_ptr<b2World> &,
                  const sf::Vector2f &,
                  const sf::Vector2f &,
                  b2BodyType);
 
-    virtual ~MovingObject() = default;
-
-    virtual void move(const sf::Event &) {}
+    void move(const sf::Event &) override{}
 };
 
 //________

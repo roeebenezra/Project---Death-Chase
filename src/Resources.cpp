@@ -1,6 +1,5 @@
 #include "Resources.h"
 
-
 //____________________
 Resources::Resources() {
     loadResources();
@@ -14,33 +13,54 @@ Resources &Resources::instance() {
 
 //_____________________________
 void Resources::loadResources() {
-    if (!m_font.loadFromFile(FontName))
+    if (!m_font.loadFromFile(FontFile))
         std::cout << "fail to load font";
 
-//    for (int i = 0; i < SOUNDS_NAMES.size(); i++)
-//    {
-//        sf::SoundBuffer soundBuffer;
-//        if (!soundBuffer.loadFromFile(SOUNDS_NAMES[i]))
-//            std::cout << "fail to load " << i << " sound";
-//        m_soundsBuffer.push_back(soundBuffer);
-//    }
+    sf::SoundBuffer soundBuffer;
+    sf::Sound sound;
 
-//    for (int i = 0; i < m_soundsBuffer.size(); i++)
-//    {
-//        sf::Sound sound;
-//        sound.setBuffer(m_soundsBuffer[i]);
-//        m_sounds.push_back(sound);
-//    }
-
-    for (int i = 0; i < NAMES.size(); i++) {
-        sf::Texture texture;
-        if (!texture.loadFromFile(NAMES[i]))
-            std::cout << "fail to load " << i << " texture";
-        m_texture.push_back(texture);
+    for (unsigned i = 0; i < SoundsCount; i++) {
+        if (!soundBuffer.loadFromFile(Sounds[i]))
+            cout << "fail to load " << i << " sound";
+        m_soundsBuffer.push_back(soundBuffer);
+        sound.setBuffer(m_soundsBuffer[i]);
+        m_sounds.push_back(sound);
     }
-    for (int i = 0; i < m_texture.size(); i++) {
-        sf::Sprite sprite;
+
+    sf::Texture texture;
+    sf::Sprite sprite;
+
+    for (unsigned i = 0; i < TexturesCount ; i++) {
+        if (!texture.loadFromFile(Textures[i])) {
+            std::cout << "fail to load " << i << " texture";
+        }
+        texture.setSmooth(true);
+        m_texture.push_back(texture);
         sprite.setTexture(m_texture[i]);
         m_sprites.push_back(sprite);
     }
+}
+
+//___________________________________________
+void Resources::playSound(const unsigned sound)
+{
+    m_sounds[sound].play();
+}
+
+//___________________________________________
+void Resources::stopSound(const unsigned sound)
+{
+    m_sounds[sound].stop();
+}
+
+//__________________________________________________
+void Resources::playInLoopSound(const unsigned sound)
+{
+    m_sounds[sound].setLoop(true);
+}
+
+//____________________________________________________________
+void Resources::setSoundVol(const unsigned sound, float volume)
+{
+    m_sounds[sound].setVolume(volume);
 }

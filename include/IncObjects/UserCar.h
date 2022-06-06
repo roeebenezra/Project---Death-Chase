@@ -8,7 +8,7 @@
 class UserCar : public MovingObject {
 
 public:
-    UserCar(int,
+    UserCar(unsigned,
             std::unique_ptr<b2World> &,
             const sf::Vector2f &,
             const sf::Vector2f &,

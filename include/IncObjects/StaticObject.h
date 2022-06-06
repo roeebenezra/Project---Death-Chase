@@ -4,7 +4,7 @@
 
 class StaticObject : public GameObject {
 public:
-    StaticObject(int,
+    StaticObject(unsigned,
                  std::unique_ptr<b2World> &,
                  const sf::Vector2f &,
                  const sf::Vector2f &,

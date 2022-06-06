@@ -12,7 +12,7 @@ void Map::readMapFile(Data &data) {
 //___________________________
 Map::OpenFile Map::openFile() {
     std::ifstream file;
-    file.open(fileName);
+    file.open(FileName);
     return file;
 }
 

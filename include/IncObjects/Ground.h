@@ -5,7 +5,7 @@
 
 class Ground : public StaticObject {
 public:
-    Ground(int,
+    Ground(unsigned,
            std::unique_ptr<b2World> &,
            const sf::Vector2f &,
            const sf::Vector2f &,

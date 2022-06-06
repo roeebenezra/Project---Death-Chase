@@ -1,6 +1,6 @@
 #include "IncObjects/Ground.h"
 
-Ground::Ground(int name,
+Ground::Ground(unsigned name,
                std::unique_ptr<b2World> &world,
                const sf::Vector2f &position,
                const sf::Vector2f &scale,
