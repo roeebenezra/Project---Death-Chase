@@ -28,13 +28,13 @@ bool Map::checkIfFileOpened(std::ifstream &file) {
 //____________________________________________________________
 void Map::sendObjectsFromMap(Data &data, std::ifstream & file) {
 
-    std::string typeOfObject;
+    std::string typeOfObject = "1";
     sf::Vector2f position;
-    sf::Vector2f scale;
+    float rotation;
     while (!file.eof()) {
         file >> typeOfObject;
         file >> position.x >> position.y;
-        file >> scale.x >> scale.y;
-        data.setObject(typeOfObject, position, scale);
+        file >> rotation;
+        data.setObject(typeOfObject, position, rotation);
     }
 }

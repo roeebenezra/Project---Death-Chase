@@ -1,7 +1,6 @@
 #pragma once
 
 #include "macros.h"
-#include "FactoryObject.h"
 
 class Data;
 

@@ -26,6 +26,8 @@ private:
 
     long CurrMenu();
 
+    void setIcon();
+
     void handleEvents();
 
     void mouseEventPressed(const Event &);
@@ -48,5 +50,5 @@ private:
 
     vector<unique_ptr<GameMenu>> m_menus;
 
-    bool m_userMoved;
+    bool m_userMoved = false;
 };

@@ -18,7 +18,7 @@ public:
 
     void setObject(std::string &,
                    const sf::Vector2f &,
-                   const sf::Vector2f &);
+                   const float);
 
     void moveUserCar(const sf::Event &);
 
@@ -29,6 +29,10 @@ public:
     void setWorldStep();
 
     std::unique_ptr<b2World> &getWorld() { return m_world; }
+
+    void removeObjects();
+
+    void setCarsPlace();
 
 private:
     void setWorld();
