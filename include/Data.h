@@ -5,6 +5,7 @@
 #include "IncObjects/UserCar.h"
 #include "IncObjects/ComputerCar.h"
 #include "IncObjects/Barrel.h"
+#include "IncMenus/GameMenu.h"
 #include "FactoryObject.h"
 #include "Map.h"
 #include "macros.h"
@@ -13,7 +14,7 @@ class Data {
 public:
     Data();
 
-    sf::Vector2f getUserPosition() const { return m_moving[User]->getPosition(); }
+    const sf::Vector2f getUserPosition() const { return m_moving[User]->getPosition(); }
 
     void setObject(std::string &,
                    const sf::Vector2f &,
@@ -23,7 +24,7 @@ public:
 
     void moveComputerCars(const sf::Event &);
 
-    void drawData(sf::RenderWindow &);
+    void drawData(sf::RenderWindow &, const unique_ptr<GameMenu> &);
 
     void setWorldStep();
 
@@ -31,6 +32,8 @@ public:
 
 private:
     void setWorld();
+
+    void setView(sf::RenderWindow &window);
 
     std::unique_ptr<b2World> m_world;
 

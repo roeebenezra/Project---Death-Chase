@@ -2,29 +2,13 @@
 #include "DebugDraw.h"
 
 //____________________
-Controller::Controller() : m_userMoved(false) {
+Controller::Controller()
+        : m_userMoved(false) {
+    Resources::instance().playInLoopSound(OpenSound);
     setMenus();
-    setView();
-
-//    const auto viewSize = sf::Vector2f(m_gameWindow.getSize().x, m_gameWindow.getSize().y);
-//    m_views.emplace_back(sf::Vector2f{0, 0}, viewSize);
-//    m_views.back().setViewport({0.f, 0.f, 1.f, 1.f});
-//    m_views.back().setCenter(m_data.getUserPosition().x + 500, 1000);
-//
-//    m_views.emplace_back(sf::Vector2f{0, 0}, sf::Vector2f(100, 100));
-//    m_views.back().setCenter(m_data.getUserPosition().x + 500, 1000);
-//    m_views.back().setViewport({0.f, 0.8f, 0.2f, 0.2f});
-
-//    const auto viewSize = sf::Vector2f(m_gameWindow.getSize().x / 2.f, m_gameWindow.getSize().y * 1.f);
-//    m_views.emplace_back(sf::Vector2f{ 0,0 }, viewSize);
-//    m_views.back().setViewport({ 0.f, 0.f, 0.5f, 1.f });
-//    auto viewCenter = m_views.back().getCenter();
-//    viewCenter.x += viewSize.x;
-//    m_views.emplace_back(viewCenter, viewSize);
-//    m_views.back().setViewport({ 0.5f, 0.f, 0.5f, 1.f });
 }
 
-//__________________
+//____________________
 void Controller::run() {
     //DebugDraw
 //    DebugDraw d(m_gameWindow);
@@ -39,9 +23,10 @@ void Controller::run() {
         DataSetup(&myContactListenerInstance);
         handleEvents();
         m_gameWindow.clear();
-        if (m_windows[Play])
-            setView();
         draw();
+        if (m_windows[Play])
+            m_data.drawData(m_gameWindow, m_menus[size_t(CurrMenu())]);
+
         m_gameWindow.display();
     }
 }
@@ -52,24 +37,36 @@ void Controller::DataSetup(MyContactListener *ContactListener) {
     m_data.getWorld()->SetContactListener(ContactListener);
 }
 
-//_______________________
-void Controller::setView() {
-    auto view = m_gameWindow.getView();
-    view.setCenter(m_data.getUserPosition().x + 500, 1000);
-    view.setSize(3300.0f, 2000.0f);
-    if (m_windows[Play])
-        m_gameWindow.setView(view);
+//________________________
+void Controller::setMenus() {
+    //Open Menu setup
+    IntRect OpenMenuRect(0, 0, MenuButtonWidth, MenuButtonHeight);
+    IntRect SoundButtonRect(0, 0, clicksButtonWidth, SoundButtonHeight);
+    IntRect SoundButtonRect2(320, 0, MusicButtonWidth, SoundButtonHeight);
+    IntRect PauseButtonRect(0, 0, 122, 122);
+
+    Vector2f OpenMenuButtonPos = {1100, 300};
+
+    m_menus.emplace_back(make_unique<OpenMenu>(OpenMenuBackground, Vector2f(0, 0)));
+    m_menus[OpenGameMenu]->add(make_unique<MusicButton>(musicIcons, Vector2f(1350, 0), SoundButtonRect));
+    m_menus[OpenGameMenu]->add(make_unique<MusicButton>(musicIcons, Vector2f(1480, 0), SoundButtonRect2));
+
+    for (int i = 0; i < 3; ++i) {
+        m_menus[OpenGameMenu]->add(make_unique<OpenMenuButton>(OpenMenuButtons, OpenMenuButtonPos, OpenMenuRect));
+        OpenMenuButtonPos.y += 150;
+        OpenMenuRect.top += MenuButtonHeight * 2;
+    }
+//    m_menus[OpenGameMenu]->add(make_unique<OpenMenuButton>(pos, Rect));
+//    m_menus[OpenGameMenu]->add(make_unique<OpenMenuButton>(pos, Rect));
+
+    //In Game Menu setup
+    m_menus.emplace_back(make_unique<PlayMenu>(PlayBackground, Vector2f(0, 0)));
+    m_menus[Play]->add(make_unique<PauseButton>(Buttons, Vector2f{0, 0}, PauseButtonRect));
 }
 
 //________________________
-void Controller::setMenus() {
-    m_image.setTexture(Resources::instance().getTexture(Background));
-    Resources::instance().playSound(OpenSound);
-
-    //open menu setup
-    m_menus.emplace_back(make_unique<OpenMenu>(Resources::instance().getSprite(OpenMenuBackground), Vector2f(0, 0)));
-    m_menus[OpenGameMenu]->add(make_unique<MusicButton>(Resources::instance().getSprite(musicIcons), Vector2f (900, 0)));
-
+long Controller::CurrMenu() {
+    return find(m_windows.begin(), m_windows.end(), true) - m_windows.begin();
 }
 
 //____________________________
@@ -98,11 +95,16 @@ void Controller::handleEvents() {
 //_________________________________________________
 void Controller::mouseEventMoved(const Event &event) {
     auto location = Vector2f(float(event.mouseMove.x), float(event.mouseMove.y));
+    m_menus.at(size_t(CurrMenu()))->isMouseOnButton(location);
 }
 
 //___________________________________________________
 void Controller::mouseEventPressed(const Event &event) {
     auto location = m_gameWindow.mapPixelToCoords({event.mouseButton.x, event.mouseButton.y});
+    if (m_menus.at(size_t(CurrMenu()))->isMousePressOnButton(location)) {
+        m_windows[size_t(CurrMenu())] = false;
+        m_windows[Play] = true;
+    }
 }
 
 //____________________________________________________
@@ -112,35 +114,14 @@ void Controller::keyboardPressed(const sf::Event &event) {
         m_data.moveUserCar(event);
 }
 
-//_________________________________________
+//__________________________________________
 void Controller::exitGame(const Event &event) {
     if (event.key.code == sf::Keyboard::Escape ||
         event.type == sf::Event::Closed)
         m_gameWindow.close();
 }
 
-//___________________
+//____________________
 void Controller::draw() {
-    if (m_windows[Play]) {
-        m_gameWindow.draw(m_image);
-        m_data.drawData(m_gameWindow);
-    } else
-        drawMenu();
-
-    //    m_data.getWorld()->DebugDraw();
-}
-
-//__________________________
-void Controller::drawMenu() {
-    if (m_windows[OpenGameMenu])
-        m_menus[OpenGameMenu]->draw(m_gameWindow);
-
-    if (m_windows[HowToPlayMenu])
-        m_menus[HowToPlayMenu]->draw(m_gameWindow);
-
-    if (m_windows[ChooseCarMenu])
-        m_menus[ChooseCarMenu]->draw(m_gameWindow);
-
-    if (m_windows[InGameMenu])
-        m_menus[InGameMenu]->draw(m_gameWindow);
+    m_menus.at(size_t(CurrMenu()))->draw(m_gameWindow);
 }

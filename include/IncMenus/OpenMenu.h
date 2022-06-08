@@ -4,7 +4,7 @@
 
 class OpenMenu : public GameMenu {
 public:
-    explicit OpenMenu(Sprite background, Vector2f pos) : GameMenu(background, pos) {}
+    OpenMenu(unsigned TextureName, Vector2f pos) : GameMenu(TextureName, pos) {}
 
 private:
 

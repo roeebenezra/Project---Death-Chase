@@ -22,13 +22,13 @@ const string FileName = "map.txt";
 
 const string FontFile = "FontFile.ttf";
 
-const vector Textures = {"background.png", "truck.png", "redCar.png", "greenCar.png",
+const vector Textures = {"PlayBackground.png", "truck.png", "redCar.png", "greenCar.png",
                          "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
                          "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png",
-                         "openMenu.png", "musicIcons.png"};
+                         "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png"};
 
 enum TextureRcs {
-    Background,
+    PlayBackground,
     userCar,
     redCar,
     greenCar,
@@ -42,6 +42,8 @@ enum TextureRcs {
     barrel,
     OpenMenuBackground,
     musicIcons,
+    Buttons,
+    OpenMenuButtons,
     TexturesCount
 };
 
@@ -56,9 +58,16 @@ enum SoundRcs {
 
 enum Menus {
     OpenGameMenu,
+    Play,
     HowToPlayMenu,
     ChooseCarMenu,
-    Play,
     InGameMenu,
     MenusCount
 };
+
+const int MenuButtonHeight = 102;
+const int MenuButtonWidth = 285;
+
+const int SoundButtonHeight = 125;
+const int MusicButtonWidth = 100;
+const int clicksButtonWidth = 150;

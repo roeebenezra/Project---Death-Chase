@@ -4,7 +4,7 @@
 
 class MusicButton : public Button {
 public:
-    MusicButton(Sprite &sprite, Vector2f pos);
+    MusicButton(unsigned TextureName, const Vector2f &, const IntRect &);
 
     void setRects();
 
@@ -15,9 +15,6 @@ public:
     void setSpriteclicks();
 
 private:
-    RectangleShape m_music;
-    RectangleShape m_clicks;
-
     bool m_musicOn = true;
     bool m_clicksOn = true;
 };

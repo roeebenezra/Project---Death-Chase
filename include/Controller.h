@@ -3,13 +3,14 @@
 #include "macros.h"
 #include "Data.h"
 #include "IncMenus/GameMenu.h"
-
 #include "IncMenus/MusicButton.h"
+#include "IncMenus/PauseButton.h"
+#include "IncMenus/OpenMenuButton.h"
+
 #include "IncMenus/OpenMenu.h"
 #include "IncMenus/ChooseVehicleMenu.h"
-
+#include "IncMenus/PlayMenu.h"
 #include "MyContactListener.h"
-#include <memory>
 
 class Controller {
 
@@ -19,13 +20,11 @@ public:
     void run();
 
 private:
-    void setView();
-
-    void DataSetup(MyContactListener*);
+    void DataSetup(MyContactListener *);
 
     void setMenus();
 
-    void drawMenu();
+    long CurrMenu();
 
     void handleEvents();
 
@@ -40,11 +39,14 @@ private:
     void exitGame(const Event &);
 
     RenderWindow m_gameWindow = {VideoMode(1600, 900), "Death Chase"};
+
     std::vector<sf::View> m_views;
+
     Data m_data;
 
-    Sprite m_image;
-    bool m_windows[MenusCount] = {true, false,  false, false, false};
+    vector<bool> m_windows = {true, false, false, false, false};
+
     vector<unique_ptr<GameMenu>> m_menus;
+
     bool m_userMoved;
 };

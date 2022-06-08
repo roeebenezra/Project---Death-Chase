@@ -30,10 +30,9 @@ void Resources::loadResources() {
     sf::Texture texture;
     sf::Sprite sprite;
 
-    for (unsigned i = 0; i < TexturesCount ; i++) {
-        if (!texture.loadFromFile(Textures[i])) {
+    for (unsigned i = 0; i < TexturesCount; i++) {
+        if (!texture.loadFromFile(Textures[i]))
             std::cout << "fail to load " << i << " texture";
-        }
         texture.setSmooth(true);
         m_texture.push_back(texture);
         sprite.setTexture(m_texture[i]);
@@ -42,25 +41,24 @@ void Resources::loadResources() {
 }
 
 //___________________________________________
-void Resources::playSound(const unsigned sound)
-{
+void Resources::playSound(const unsigned sound) {
     m_sounds[sound].play();
+    setSoundVol(sound, 50.0f);
 }
 
 //___________________________________________
-void Resources::stopSound(const unsigned sound)
-{
+void Resources::stopSound(const unsigned sound) {
     m_sounds[sound].stop();
 }
 
 //__________________________________________________
-void Resources::playInLoopSound(const unsigned sound)
-{
+void Resources::playInLoopSound(const unsigned sound) {
+    m_sounds[sound].play();
     m_sounds[sound].setLoop(true);
+    setSoundVol(sound, 50.0f);
 }
 
 //____________________________________________________________
-void Resources::setSoundVol(const unsigned sound, float volume)
-{
+void Resources::setSoundVol(const unsigned sound, float volume) {
     m_sounds[sound].setVolume(volume);
 }

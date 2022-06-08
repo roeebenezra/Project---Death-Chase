@@ -11,9 +11,9 @@ public:
 
     void operator=(const Resources &) = delete;
 
-    sf::Sprite &getSprite(const unsigned name){ return m_sprites[name]; }
+    sf::Sprite &getSprite(const unsigned name) { return m_sprites[name]; }
 
-    const sf::Texture &getTexture(const unsigned name) const { return m_texture[name]; }
+    sf::Texture &getTexture(const unsigned name) { return m_texture[name]; }
 
     void playSound(unsigned);
 
@@ -28,10 +28,10 @@ private:
 
     void loadResources();
 
+    sf::Font m_font;
     std::vector<sf::Sprite> m_sprites;
     std::vector<sf::Texture> m_texture;
 
     std::vector<sf::SoundBuffer> m_soundsBuffer;
     std::vector<sf::Sound> m_sounds;
-    sf::Font m_font;
 };
