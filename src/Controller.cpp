@@ -6,6 +6,14 @@ Controller::Controller()
         : m_userMoved(false) {
     Resources::instance().playInLoopSound(OpenSound);
     setMenus();
+    setIcon();
+}
+
+//_________________________
+void Controller::setIcon() {
+    sf::Image iconTexture;
+    iconTexture.loadFromFile(Textures[icon]);
+    m_gameWindow.setIcon(iconTexture.getSize().x, iconTexture.getSize().y, iconTexture.getPixelsPtr());
 }
 
 //____________________
@@ -22,6 +30,8 @@ void Controller::run() {
     while (m_gameWindow.isOpen()) {
         DataSetup(&myContactListenerInstance);
         handleEvents();
+        m_data.removeObjects();
+        m_data.setCarsPlace();
         m_gameWindow.clear();
         draw();
         if (m_windows[Play])
@@ -109,12 +119,13 @@ void Controller::mouseEventPressed(const Event &event) {
 
 //____________________________________________________
 void Controller::keyboardPressed(const sf::Event &event) {
-    m_userMoved = true;
-    if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0)
+    if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0) {
         m_data.moveUserCar(event);
+        m_userMoved = true;
+    }
 }
 
-//__________________________________________
+//___________________________________________
 void Controller::exitGame(const Event &event) {
     if (event.key.code == sf::Keyboard::Escape ||
         event.type == sf::Event::Closed)
@@ -124,4 +135,7 @@ void Controller::exitGame(const Event &event) {
 //____________________
 void Controller::draw() {
     m_menus.at(size_t(CurrMenu()))->draw(m_gameWindow);
+//    m_data.getWorld()->DebugDraw();
 }
+
+

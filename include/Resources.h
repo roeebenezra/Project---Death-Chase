@@ -1,10 +1,21 @@
 #pragma once
 
+#include "IncAnimation/AnimationData.h"
 #include "macros.h"
 
 class Resources {
 
 public:
+    enum Objects
+    {
+        UserCar,
+        ComputerCar,
+        Dust,
+        Coin,
+        HealthBar,
+        Explosion,
+        Max,
+    };
     static Resources &instance();
 
     Resources(const Resources &) = delete;
@@ -15,6 +26,8 @@ public:
 
     sf::Texture &getTexture(const unsigned name) { return m_texture[name]; }
 
+    const AnimationData& animationData(Objects object) { return m_data[object]; }
+
     void playSound(unsigned);
 
     void stopSound(unsigned);
@@ -22,7 +35,6 @@ public:
     void playInLoopSound(unsigned);
 
     void setSoundVol(unsigned, float);
-
 private:
     Resources();
 
@@ -34,4 +46,6 @@ private:
 
     std::vector<sf::SoundBuffer> m_soundsBuffer;
     std::vector<sf::Sound> m_sounds;
+    std::vector<AnimationData> m_data;
+
 };

@@ -9,11 +9,15 @@ public:
     ComputerCar(unsigned,
                 std::unique_ptr<b2World> &,
                 const sf::Vector2f &,
-                const sf::Vector2f &,
-                b2BodyType);
+                const float,
+                b2BodyType,
+                int16);
 
     void move(const sf::Event &) override;
 
+    void draw(sf::RenderWindow &) override;
+
+private:
     static bool m_registerRedCar;
     static bool m_registerGreenCar;
 };

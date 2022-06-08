@@ -8,7 +8,7 @@ target_sources (${CMAKE_PROJECT_NAME} PRIVATE  "Controller.h"
 												"IncObjects/ComputerCar.h"
 
 												"IncObjects/StaticObject.h"
-												"IncObjects/Cone.h"
+												"IncObjects/Box.h"
 												"IncObjects/Barrel.h"
 
 												"IncMenus/ChooseVehicleMenu.h"
