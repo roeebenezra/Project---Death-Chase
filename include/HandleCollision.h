@@ -1,12 +1,12 @@
 #pragma once
 
 #include "macros.h"
-#include "HashHandler.h"
 #include "IncObjects/GameObject.h"
 #include "IncObjects/UserCar.h"
 #include "IncObjects/ComputerCar.h"
 #include "IncObjects/Ground.h"
-#include "IncObjects/Barrel.h"
+#include "IncObjects/Water.h"
+#include "IncAnimation/Coin.h"
 
 class GameObject;
 
@@ -18,11 +18,9 @@ public:
     void processCollision(GameObject *, GameObject *);
 
 private:
-    HandleCollision();
+    HandleCollision(){}
 
     void operator=(const HandleCollision &) {}
-
-    void gameObjectGameObject(GameObject *, GameObject *);
 
     void userCarGround(GameObject *, GameObject *);
 
@@ -36,21 +34,23 @@ private:
 
     void computerCarUserCar(GameObject *, GameObject *);
 
-    void barrelGround(GameObject *, GameObject *);
+    void computerCarComputerCar(GameObject *, GameObject *);
 
-    void groundBarrel(GameObject *, GameObject *);
+    void userCarCoin(GameObject *, GameObject *);
 
-    using HitFunctionPtr = void (HandleCollision::*)(GameObject *, GameObject *);
+    void coinUserCar(GameObject *, GameObject *);
+
+    void userCarWater(GameObject *, GameObject *);
+
+    void waterUserCar(GameObject *, GameObject *);
+
+    void computerCarWater(GameObject *, GameObject *);
+
+    void waterComputerCar(GameObject *, GameObject *);
+
+    using HitFunctionPtr = void (HandleCollision::*)(GameObject*, GameObject*);
     using Key = std::pair<std::type_index, std::type_index>;
-    using HitMap = std::unordered_map<Key, HitFunctionPtr, PairKeysHash, KeyEqual>;
+    using HitMap = std::map<Key, HitFunctionPtr>;
 
     HitMap initializeCollisionMap();
-
-};
-
-class CollisionException : public std::runtime_error {
-public:
-    CollisionException(const std::string &s, GameObject *a, GameObject *b)
-            : std::runtime_error(
-            std::string(s) + typeid(a).name() + " and " + typeid(b).name()) {}
 };

@@ -8,9 +8,11 @@ public:
     Ground(int,
            std::unique_ptr<b2World> &,
            const sf::Vector2f &,
-           const sf::Vector2f &,
-           b2BodyType);
+           const float,
+           b2BodyType,
+           int16);
 
+private:
     static bool m_registerGround_1;
     static bool m_registerGround_2;
     static bool m_registerGround_3;

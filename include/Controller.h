@@ -13,6 +13,8 @@ public:
     void run();
 
 private:
+    void setIcon();
+
     void setView();
 
     void handleEvents();
@@ -31,5 +33,5 @@ private:
     sf::Sprite m_gameImage;
     std::vector<sf::View> m_views;
     Data m_data;
-    bool m_userMoved;
+    bool m_userMoved = false;
 };
