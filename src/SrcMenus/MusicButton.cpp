@@ -1,33 +1,34 @@
 #include "IncMenus/MusicButton.h"
 
-//___________________________________________________
+//____________________________________________________________________________________
 MusicButton::MusicButton(unsigned TextureName, const Vector2f &pos, const IntRect &rect)
-        : Button(TextureName, pos, rect) {
-    setRects();
-}
-
-//_________________________
-void MusicButton::setRects() {
-
-}
+        : Button(TextureName, pos, rect) {}
 
 //_________________________________________
 void MusicButton::draw(RenderTarget &window) {
-    window.draw(getSpriteButton());
+    if (isClickOnButton()) {
+        getSpriteButton().setTextureRect(
+                IntRect(getTextureRect().left + getTextureRect().width, 0, getTextureRect().width,
+                        getTextureRect().height));
+        window.draw(getSpriteButton());
+    } else {
+        getSpriteButton().setTextureRect(getTextureRect());
+        window.draw(getSpriteButton());
+    }
 }
 
-//_______________________________
-void MusicButton::setSpriteMusic() {
-//    if (m_musicOn)
-//        m_music.setTextureRect(IntRect(414, 0, 207, 207));
-//    else
-//        m_music.setTextureRect(IntRect(621, 0, 207, 207));
-}
-
-//_________________________________
-void MusicButton::setSpriteclicks() {
-//    if (m_clicksOn)
-//        m_clicks.setTextureRect(IntRect(0, 0, 207, 207));
-//    else
-//        m_clicks.setTextureRect(IntRect(207, 0, 207, 207));
+//________________________________________________________
+bool MusicButton::isMousePressOnButton(const Vector2f &pos) {
+    if (getSpriteButton().getGlobalBounds().contains(pos)) {
+        if (isClickOnButton()) {
+            setClickOnButton(false);
+            Resources::instance().setLoopSound(OpenSound, true);
+        }
+        else {
+            setClickOnButton(true);
+            Resources::instance().setLoopSound(OpenSound, false);
+        }
+        return true;
+    }
+    return false;
 }

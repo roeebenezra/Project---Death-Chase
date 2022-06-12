@@ -13,28 +13,35 @@ public:
 
     virtual void draw(RenderTarget &window) = 0;
 
-    bool isMousePressOnButton(const Vector2f &pos) {
-        if (m_button.getGlobalBounds().contains(pos))
+    virtual bool isMousePressOnButton(const Vector2f &pos) {
+        if (m_button.getGlobalBounds().contains(pos)) {
+            setClickOnButton(true);
             return true;
-        return false;
+        }
+        else {
+            setClickOnButton(false);
+            return false;
+        }
     }
 
     void isMouseOnButton(const Vector2f &pos) {
         if (m_button.getGlobalBounds().contains(pos))
-            setOnButton();
+            setOnButton(true);
         else
-            setOffButton();
+            setOnButton(false);
     }
 
     void updatePos(const Vector2f &pos) {
         getSpriteButton().setPosition(pos);
     }
 
-    void setOnButton() { m_isOnButton = true; }
-
-    void setOffButton() { m_isOnButton = false; }
+    void setOnButton(bool mode) { m_isOnButton = mode; }
 
     bool isOnButton() const { return m_isOnButton; }
+
+    bool isClickOnButton() const { return m_isClickOnButton; }
+
+    void setClickOnButton(bool mode) { m_isClickOnButton = mode; }
 
 protected:
     Sprite &getSpriteButton() { return m_button; }
@@ -44,6 +51,7 @@ protected:
 private:
     Sprite m_button;
     IntRect m_TextureRect;
-    bool m_isOnButton = false;
-};
 
+    bool m_isOnButton = false;
+    bool m_isClickOnButton = false;
+};

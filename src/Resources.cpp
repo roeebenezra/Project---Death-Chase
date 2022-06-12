@@ -1,6 +1,6 @@
 #include "Resources.h"
 
-//____________________
+//_________
 namespace {
     AnimationData CoinObject(const sf::Vector2i size1, const sf::Vector2i init, const sf::Vector2i mid) {
         const auto size = size1;
@@ -102,7 +102,6 @@ namespace {
     }
 }
 
-
 //_________________________________
 Resources::Resources() : m_data(Max) {
     loadResources();
@@ -140,7 +139,7 @@ void Resources::loadResources() {
     for (unsigned i = 0; i < TexturesCount; i++) {
         if (!texture.loadFromFile(Textures[i]))
             std::cout << "fail to load " << i << " texture";
-        texture.setSmooth(true);
+//        texture.setSmooth(true);
         m_texture.push_back(texture);
         sprite.setTexture(m_texture[i]);
         m_sprites.push_back(sprite);
@@ -150,7 +149,6 @@ void Resources::loadResources() {
 //___________________________________________
 void Resources::playSound(const unsigned sound) {
     m_sounds[sound].play();
-    setSoundVol(sound, 50.0f);
 }
 
 //___________________________________________
@@ -158,14 +156,13 @@ void Resources::stopSound(const unsigned sound) {
     m_sounds[sound].stop();
 }
 
-//__________________________________________________
-void Resources::playInLoopSound(const unsigned sound) {
-    m_sounds[sound].play();
-    m_sounds[sound].setLoop(true);
-    setSoundVol(sound, 50.0f);
-}
-
-//____________________________________________________________
-void Resources::setSoundVol(const unsigned sound, float volume) {
-    m_sounds[sound].setVolume(volume);
+//_________________________________________________________
+void Resources::setLoopSound(const unsigned sound, bool mode) {
+    if (mode) {
+        m_sounds[sound].play();
+        m_sounds[sound].setLoop(mode);
+        m_sounds[sound].setVolume(50.0f);
+    }
+    else
+        m_sounds[sound].stop();
 }

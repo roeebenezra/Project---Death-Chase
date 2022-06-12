@@ -8,6 +8,7 @@ public:
     PlayMenu(unsigned TextureName, const Vector2f &pos)
             : GameMenu(TextureName, pos) {}
 
-//    void setButtons();
-//    void pauseGame();
+    void pauseGame() {
+
+    }
 };

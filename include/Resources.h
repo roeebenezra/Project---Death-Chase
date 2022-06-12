@@ -2,10 +2,11 @@
 
 #include "IncAnimation/AnimationData.h"
 #include "macros.h"
+#include <SFML/Audio.hpp>
 
 class Resources {
-
 public:
+
     enum Objects
     {
         UserCar,
@@ -16,6 +17,7 @@ public:
         Explosion,
         Max,
     };
+
     static Resources &instance();
 
     Resources(const Resources &) = delete;
@@ -32,9 +34,8 @@ public:
 
     void stopSound(unsigned);
 
-    void playInLoopSound(unsigned);
+    void setLoopSound(unsigned, bool);
 
-    void setSoundVol(unsigned, float);
 private:
     Resources();
 
@@ -46,6 +47,6 @@ private:
 
     std::vector<sf::SoundBuffer> m_soundsBuffer;
     std::vector<sf::Sound> m_sounds;
-    std::vector<AnimationData> m_data;
 
+    std::vector<AnimationData> m_data;
 };

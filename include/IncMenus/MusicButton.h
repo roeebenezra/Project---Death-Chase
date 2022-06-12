@@ -6,16 +6,8 @@ class MusicButton : public Button {
 public:
     MusicButton(unsigned TextureName, const Vector2f &, const IntRect &);
 
-    void setRects();
-
     void draw(RenderTarget &window) override;
 
-    void setSpriteMusic();
-
-    void setSpriteclicks();
-
-private:
-    bool m_musicOn = true;
-    bool m_clicksOn = true;
+    bool isMousePressOnButton(const Vector2f& pos) override;
 };
 

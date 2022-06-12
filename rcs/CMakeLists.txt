@@ -30,14 +30,15 @@ configure_file ("rcsStone/stone_2.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsStone/stone_3.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsStone/stone_4.png" ${CMAKE_BINARY_DIR} COPYONLY)
 
-
 configure_file ("rcsMenu/openMenu.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/PlayBackground.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/musicIcons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/Buttons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/OpenMenuButtons.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsMenu/HowToPlay.png" ${CMAKE_BINARY_DIR} COPYONLY)
 
 configure_file ("rcsSound/GameMenuSound.wav" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsSound/Click.wav" ${CMAKE_BINARY_DIR} COPYONLY)
 
 configure_file ("numbers/one.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("numbers/two.png" ${CMAKE_BINARY_DIR} COPYONLY)

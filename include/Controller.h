@@ -1,16 +1,17 @@
 #pragma once
-
 #include "macros.h"
 #include "Data.h"
+
 #include "IncMenus/GameMenu.h"
 #include "IncMenus/MusicButton.h"
 #include "IncMenus/PauseButton.h"
 #include "IncMenus/OpenMenuButton.h"
-
 #include "IncMenus/OpenMenu.h"
 #include "IncMenus/ChooseVehicleMenu.h"
 #include "IncMenus/PlayMenu.h"
+
 #include "MyContactListener.h"
+
 
 class Controller {
 
@@ -46,9 +47,13 @@ private:
 
     Data m_data;
 
-    vector<bool> m_windows = {true, false, false, false, false};
+    vector<bool> m_windows = {true, false, false, false};
 
     vector<unique_ptr<GameMenu>> m_menus;
 
+    Clock m_clock;
+
     bool m_userMoved = false;
+
+    bool m_running = true;
 };

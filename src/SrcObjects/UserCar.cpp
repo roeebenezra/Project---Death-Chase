@@ -57,6 +57,7 @@ void UserCar::setCarAngle(const sf::Keyboard::Key &key) {
     }
 }
 
+//______________________________________
 void UserCar::moveCar(const b2Vec2 &dir) {
     float impulse = m_body->GetMass() * carVelocity;
     m_body->ApplyLinearImpulse(b2Vec2(impulse * dir.x, impulse * dir.y), m_body->GetWorldCenter(), true);

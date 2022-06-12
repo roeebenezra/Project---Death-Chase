@@ -46,7 +46,34 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     )
 endif ()
 
-add_executable(${CMAKE_PROJECT_NAME} src/Controller.cpp "include/macros.h" "include/IncObjects/GameObject.h" "include/IncObjects/MovingObject.h" "include/IncObjects/StaticObject.h" "include/IncObjects/UserCar.h" "include/IncMenus/ChooseVehicleMenu.h" "include/IncMenus/GameMenu.h" "include/IncMenus/OpenMenu.h" "include/Data.h" "include/IncObjects/Box.h" "include/IncObjects/Barrel.h" "include/Resources.h" "include/IncObjects/ComputerCar.h" include/IncMenus/Button.h include/IncMenus/MusicButton.h src/SrcMenus/MusicButton.cpp include/IncMenus/PlayMenu.h include/IncMenus/PauseButton.h include/IncMenus/OpenMenuButton.h src/SrcMenus/OpenMenuButton.cpp)
+add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
+                                        include/macros.h
+                                        include/Data.h
+                                        include/Resources.h
+                                        include/Map.h
+                                        include/HandleCollision.h
+                                        include/FactoryObject.h
+                                        include/MyContactListener.h
+
+                                        include/IncObjects/GameObject.h
+                                        include/IncObjects/MovingObject.h
+                                        include/IncObjects/StaticObject.h
+                                        include/IncObjects/UserCar.h
+                                        include/IncObjects/ComputerCar.h
+                                        include/IncObjects/Box.h
+                                        include/IncObjects/Barrel.h
+                                        include/IncObjects/FinishLine.h
+                                        include/IncObjects/Ground.h
+                                        include/IncObjects/Water.h
+
+                                        include/IncMenus/GameMenu.h
+                                        include/IncMenus/OpenMenu.h
+                                        include/IncMenus/ChooseVehicleMenu.h
+                                        include/IncMenus/PlayMenu.h
+                                        include/IncMenus/Button.h
+                                        include/IncMenus/MusicButton.h
+                                        include/IncMenus/PauseButton.h
+                                        include/IncMenus/OpenMenuButton.h)
 
 
 #target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
@@ -70,3 +97,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} sfml-system sfml-window sfml-graphic
 target_link_libraries(${CMAKE_PROJECT_NAME} box2d)
 
 include_directories(${SFML_INCLUDE_DIRS})
+
+#configure_file (C:/SFML/SFML-2.5.1/bin/openal32.dll ${CMAKE_BINARY_DIR} COPYONLY)

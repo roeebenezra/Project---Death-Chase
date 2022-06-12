@@ -7,7 +7,7 @@ OpenMenuButton::OpenMenuButton(unsigned TextureName, const Vector2f& pos, const 
 //_____________________________________________
 void OpenMenuButton::draw(RenderTarget &window) {
     if (isOnButton()) {
-        getSpriteButton().setTextureRect(IntRect(0, getTextureRect().top + MenuButtonHeight, MenuButtonWidth, MenuButtonHeight));
+        getSpriteButton().setTextureRect(IntRect(getTextureRect().left, getTextureRect().top + MenuButtonHeight, MenuButtonWidth, MenuButtonHeight));
         window.draw(getSpriteButton());
     }
     else {

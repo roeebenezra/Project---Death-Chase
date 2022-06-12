@@ -34,12 +34,16 @@ void Data::setObject(std::string &name,
     }
 }
 
+//______________________
 void Data::setCarsPlace() {
     int carPlace = carPLaceStart;
     std::vector<float> places;
+
     for (auto &moving: m_moving)
         places.push_back(moving->getPosition().x);
+
     std::sort(places.begin(), places.end());
+
     for (auto &place: places) {
         for (auto &moving: m_moving)
             if (moving->getPosition().x == place) {
@@ -80,6 +84,8 @@ void Data::removeObjects() {
 //____________________________________________________________________________
 void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) {
 
+    setView(window);
+
     for (auto &moving: m_moving) {
         moving->updateObjects();
         moving->draw(window);
@@ -90,8 +96,6 @@ void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) 
         statics->draw(window);
     }
     menu->getButton(0)->updatePos(Vector2f(getUserPosition().x + 2000, 50));
-
-    setView(window);
 }
 
 //__________________________________________
