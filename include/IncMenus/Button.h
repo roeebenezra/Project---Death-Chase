@@ -26,9 +26,7 @@ public:
             setOffButton();
     }
 
-    void updatePos(const Vector2f &pos) {
-        getSpriteButton().setPosition(pos);
-    }
+    void updatePos(const Vector2f &pos) { getSpriteButton().setPosition(pos); }
 
     void setOnButton() { m_isOnButton = true; }
 

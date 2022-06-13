@@ -4,7 +4,7 @@
 //____________________
 Controller::Controller()
         : m_userMoved(false) {
-    Resources::instance().playInLoopSound(OpenSound);
+//    Resources::instance().playInLoopSound(OpenSound);
     setMenus();
     setIcon();
 }
@@ -18,31 +18,24 @@ void Controller::setIcon() {
 
 //____________________
 void Controller::run() {
-    //DebugDraw
-//    DebugDraw d(m_gameWindow);
-//    uint32 flags = b2Draw::e_shapeBit;
-//    d.SetFlags(flags);
-//    m_data.getWorld()->SetDebugDraw(&d);
 
-    // Contact Listener
-    MyContactListener myContactListenerInstance;
+    DebugDraw d(m_gameWindow); //DebugDraw
+    uint32 flags = b2Draw::e_shapeBit;
+    d.SetFlags(flags);
+    m_data.getWorld()->SetDebugDraw(&d);
+
+    MyContactListener myContactListenerInstance; // Contact Listener
 
     while (m_gameWindow.isOpen()) {
-        DataSetup(&myContactListenerInstance);
+        box2dStep(&myContactListenerInstance);
         handleEvents();
-        m_data.removeObjects();
-        m_data.setCarsPlace();
-        m_gameWindow.clear();
+        handleData();
         draw();
-        if (m_windows[Play])
-            m_data.drawData(m_gameWindow, m_menus[size_t(CurrMenu())]);
-
-        m_gameWindow.display();
     }
 }
 
 //__________________________________________________________
-void Controller::DataSetup(MyContactListener *ContactListener) {
+void Controller::box2dStep(MyContactListener *ContactListener) {
     m_data.setWorldStep();
     m_data.getWorld()->SetContactListener(ContactListener);
 }
@@ -119,7 +112,7 @@ void Controller::mouseEventPressed(const Event &event) {
 
 //____________________________________________________
 void Controller::keyboardPressed(const sf::Event &event) {
-    if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0) {
+    if (!m_startMessageDraw.getDrawMessage()) {
         m_data.moveUserCar(event);
         m_userMoved = true;
     }
@@ -132,10 +125,30 @@ void Controller::exitGame(const Event &event) {
         m_gameWindow.close();
 }
 
-//____________________
-void Controller::draw() {
-    m_menus.at(size_t(CurrMenu()))->draw(m_gameWindow);
-//    m_data.getWorld()->DebugDraw();
+//___________________________
+void Controller::handleData() {
+    m_data.removeObjects();
+    m_data.setCarsPlace();
 }
 
+//____________________
+void Controller::draw() {
+    m_gameWindow.clear();
+    m_menus.at(size_t(CurrMenu()))->draw(m_gameWindow); // draw background
+    drawPlay();
+//    m_data.getWorld()->DebugDraw();
+    m_gameWindow.display();
+}
 
+void Controller::drawPlay() {
+    if (m_windows[Play]) {
+        m_data.drawData(m_gameWindow, m_menus[size_t(CurrMenu())]); // draw game objects
+
+        if (m_startMessageDraw.getDrawMessage())
+            drawStartMessage();
+    }
+}
+
+void Controller::drawStartMessage() {
+    m_startMessageDraw.drawMessage(m_gameWindow);
+}

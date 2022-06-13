@@ -4,14 +4,15 @@
 //__________
 Data::Data() {
     setWorld();
-    m_map.readMapFile(*this);
+    m_map.getObjectsFromFile(*this, 2);
+    m_floor.setFloor(m_world);
+    m_boundaries.setBoundaries(m_world, {1200, 500});
     setCarsPlace();
 }
 
 //__________________
 void Data::setWorld() {
-    //set gravity
-    b2Vec2 gravity(0.0f, 10.f);
+    b2Vec2 gravity(0.0f, 10.f); //set gravity
     m_world = std::make_unique<b2World>(gravity);
 }
 
@@ -39,14 +40,16 @@ void Data::setCarsPlace() {
     std::vector<float> places;
     for (auto &moving: m_moving)
         places.push_back(moving->getPosition().x);
+
     std::sort(places.begin(), places.end());
+
     for (auto &place: places) {
         for (auto &moving: m_moving)
             if (moving->getPosition().x == place) {
                 moving->setCarPlace(carPlace);
+                carPlace--;
                 break;
             }
-        carPlace--;
     }
 }
 
@@ -99,5 +102,10 @@ void Data::setView(sf::RenderWindow &window) {
     auto view = window.getView();
     view.setCenter(getUserPosition().x + 500, 1000);
     view.setSize(3500.0f, 2000.0f);
+//    if(dynamic_cast<UserCar *>(m_moving[User].get())->isCarMoving())
+//    {
+//        view.setCenter(getUserPosition().x, getUserPosition().y-200);
+//        view.zoom(dynamic_cast<UserCar *>(m_moving[User].get())->getCarZoomView());
+//    }
     window.setView(view);
 }

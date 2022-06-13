@@ -1,14 +1,14 @@
 #include "IncObjects/Box.h"
 
-Box::Box(int name,
+Box::Box(const unsigned& name,
          std::unique_ptr<b2World> &world,
          const sf::Vector2f &position,
-         const float rotation,
-         b2BodyType bodyType,
-         int16 group)
+         const float& rotation,
+         const b2BodyType& bodyType,
+         const int16& group)
         : StaticObject(name, world, position, rotation, bodyType, group) {}
 
-//_________________________________________________________________
+//______________________
 bool Box::m_registerIt =
         FactoryObject<StaticObject>::registerIt("box", [](std::unique_ptr<b2World> &world,
                                                           const sf::Vector2f &position,

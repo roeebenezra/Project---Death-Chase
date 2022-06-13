@@ -1,5 +1,5 @@
 #include "IncAnimation/Animation.h"
-#include "Resources.h"
+#include "IncBuildGame/Resources.h"
 
 Animation::Animation(const AnimationData &data, Direction dir, sf::Sprite &sprite, const int name)
         : m_data(data), m_dir(dir), m_sprite(sprite) {

@@ -1,17 +1,17 @@
 #pragma once
 
 #include "MovingObject.h"
-#include "FactoryObject.h"
+#include "IncBuildGame/FactoryObject.h"
 
 class ComputerCar : public MovingObject {
 
 public:
-    ComputerCar(unsigned,
+    ComputerCar(const unsigned&,
                 std::unique_ptr<b2World> &,
                 const sf::Vector2f &,
-                const float,
-                b2BodyType,
-                int16);
+                const float&,
+                const b2BodyType&,
+                const int16&);
 
     void move(const sf::Event &) override;
 
@@ -19,5 +19,7 @@ public:
 
 private:
     static bool m_registerRedCar;
-    static bool m_registerGreenCar;
+    static bool m_registerYellowCar;
+    static bool m_registerTruck;
+    static bool m_registerHummer;
 };

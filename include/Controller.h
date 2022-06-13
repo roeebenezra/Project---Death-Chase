@@ -2,6 +2,7 @@
 
 #include "macros.h"
 #include "Data.h"
+#include "StartMessage.h"
 #include "IncMenus/GameMenu.h"
 #include "IncMenus/MusicButton.h"
 #include "IncMenus/PauseButton.h"
@@ -20,7 +21,7 @@ public:
     void run();
 
 private:
-    void DataSetup(MyContactListener *);
+    void box2dStep(MyContactListener *);
 
     void setMenus();
 
@@ -30,6 +31,8 @@ private:
 
     void handleEvents();
 
+    void handleData();
+
     void mouseEventPressed(const Event &);
 
     void mouseEventMoved(const Event &);
@@ -38,17 +41,18 @@ private:
 
     void draw();
 
+    void drawPlay();
+
+    void drawStartMessage();
+
     void exitGame(const Event &);
 
-    RenderWindow m_gameWindow = {VideoMode(1600, 900), "Death Chase"};
-
+//    RenderWindow m_gameWindow = {VideoMode(1600, 900), "Death Chase"};
+    RenderWindow m_gameWindow = {VideoMode(1600, 900), "Death Chase", Style::Close | Style::Resize | Style::Fullscreen};
     std::vector<sf::View> m_views;
-
     Data m_data;
-
-    vector<bool> m_windows = {true, false, false, false, false};
-
+    vector<bool> m_windows = {false, true, false, false, false};
     vector<unique_ptr<GameMenu>> m_menus;
-
     bool m_userMoved = false;
+    StartMessage m_startMessageDraw;
 };

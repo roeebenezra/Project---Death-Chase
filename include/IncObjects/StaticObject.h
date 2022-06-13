@@ -4,11 +4,11 @@
 
 class StaticObject : public GameObject {
 public:
-    StaticObject(unsigned,
+    StaticObject(const unsigned&,
                  std::unique_ptr<b2World> &,
                  const sf::Vector2f &,
-                 const float,
-                 b2BodyType,
-                 int16);
+                 const float&,
+                 const b2BodyType&,
+                 const int16&);
 
 };

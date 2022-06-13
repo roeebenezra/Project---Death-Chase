@@ -1,27 +1,41 @@
 #include "IncObjects/ComputerCar.h"
 
-ComputerCar::ComputerCar(unsigned name,
+ComputerCar::ComputerCar(const unsigned& name,
                          std::unique_ptr<b2World> &world,
                          const sf::Vector2f &position,
-                         const float rotation,
-                         b2BodyType bodyType,
-                         int16 group) :
+                         const float& rotation,
+                         const b2BodyType& bodyType,
+                         const int16& group) :
         MovingObject(name, world, position, rotation, bodyType, group) {
 
 }
-
-bool ComputerCar::m_registerGreenCar =
-        FactoryObject<MovingObject>::registerIt("greenCar", [](std::unique_ptr<b2World> &world,
-                                                               const sf::Vector2f &position,
-                                                               const float rotation) -> std::unique_ptr<MovingObject> {
-            return std::make_unique<ComputerCar>(greenCar, world, position, rotation, b2_dynamicBody, Collide);
-        });
 
 bool ComputerCar::m_registerRedCar =
         FactoryObject<MovingObject>::registerIt("redCar", [](std::unique_ptr<b2World> &world,
                                                                const sf::Vector2f &position,
                                                                const float rotation) -> std::unique_ptr<MovingObject> {
             return std::make_unique<ComputerCar>(redCar, world, position, rotation, b2_dynamicBody, Collide);
+        });
+
+bool ComputerCar::m_registerYellowCar =
+        FactoryObject<MovingObject>::registerIt("yellowCar", [](std::unique_ptr<b2World> &world,
+                                                               const sf::Vector2f &position,
+                                                               const float rotation) -> std::unique_ptr<MovingObject> {
+            return std::make_unique<ComputerCar>(yellowCar, world, position, rotation, b2_dynamicBody, Collide);
+        });
+
+bool ComputerCar::m_registerHummer =
+        FactoryObject<MovingObject>::registerIt("hummer", [](std::unique_ptr<b2World> &world,
+                                                               const sf::Vector2f &position,
+                                                               const float rotation) -> std::unique_ptr<MovingObject> {
+            return std::make_unique<ComputerCar>(hummer, world, position, rotation, b2_dynamicBody, Collide);
+        });
+
+bool ComputerCar::m_registerTruck =
+        FactoryObject<MovingObject>::registerIt("truck", [](std::unique_ptr<b2World> &world,
+                                                               const sf::Vector2f &position,
+                                                               const float rotation) -> std::unique_ptr<MovingObject> {
+            return std::make_unique<ComputerCar>(truck, world, position, rotation, b2_dynamicBody, Collide);
         });
 
 //_______________________________________

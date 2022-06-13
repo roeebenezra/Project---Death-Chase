@@ -1,7 +1,7 @@
 #pragma once
 
 #include "IncObjects/StaticObject.h"
-#include "FactoryObject.h"
+#include "IncBuildGame/FactoryObject.h"
 
 class Coin : public StaticObject {
 

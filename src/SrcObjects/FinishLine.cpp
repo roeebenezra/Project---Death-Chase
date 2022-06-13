@@ -1,11 +1,11 @@
 #include "IncObjects/FinishLine.h"
 
-FinishLine::FinishLine(int name,
-             std::unique_ptr<b2World> &world,
-             const sf::Vector2f &position,
-             const float rotation,
-             b2BodyType bodyType,
-             int16 group)
+FinishLine::FinishLine(const unsigned& name,
+                       std::unique_ptr<b2World> &world,
+                       const sf::Vector2f &position,
+                       const float& rotation,
+                       const b2BodyType& bodyType,
+                       const int16& group)
         : StaticObject(name, world, position, rotation, bodyType, group) {
     m_sprite.setScale(1, 2);
 }

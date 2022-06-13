@@ -1,6 +1,6 @@
-#include "Resources.h"
+#include "IncBuildGame/Resources.h"
 
-//____________________
+//________
 namespace {
     AnimationData CoinObject(const sf::Vector2i size1, const sf::Vector2i init, const sf::Vector2i mid) {
         const auto size = size1;
@@ -78,7 +78,7 @@ namespace {
         const auto initSpace = init;
         const auto middleSpace = mid;
 
-        auto carHealth = AnimationData{};
+        auto explosion = AnimationData{};
         auto currentStart = initSpace;
 
         auto nextStart = [&]() {
@@ -87,18 +87,18 @@ namespace {
             return currentStart;
         };
 
-        carHealth.m_data[Direction::Right].emplace_back(currentStart, size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
-        carHealth.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(currentStart, size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
+        explosion.m_data[Direction::Right].emplace_back(nextStart(), size);
 
-        return carHealth;
+        return explosion;
     }
 }
 

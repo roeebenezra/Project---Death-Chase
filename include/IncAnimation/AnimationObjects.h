@@ -1,7 +1,7 @@
 #pragma once
 
 #include "IncAnimation/Animation.h"
-#include "Resources.h"
+#include "IncBuildGame/Resources.h"
 
 class AnimationObjects {
 
