@@ -36,9 +36,11 @@ configure_file ("rcsMenu/musicIcons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/Buttons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/OpenMenuButtons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/HowToPlay.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsMenu/PauseMenu.png" ${CMAKE_BINARY_DIR} COPYONLY)
 
-configure_file ("rcsSound/GameMenuSound.wav" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsSound/Click.wav" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsSound/MenuSound.wav" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsSound/PlaySound.wav" ${CMAKE_BINARY_DIR} COPYONLY)
 
 configure_file ("numbers/one.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("numbers/two.png" ${CMAKE_BINARY_DIR} COPYONLY)

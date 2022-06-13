@@ -32,15 +32,15 @@ void GameObject::setB2d(std::unique_ptr<b2World> &world,
     bodyDef.position.Set(getPosition().x, getPosition().y);
     // set Body to world
     m_body = world->CreateBody(&bodyDef);
-
     // set BoxShape
     b2PolygonShape BoxShape;
     BoxShape.SetAsBox(getWidth() / 2, getHeight() / 2);
 
-//     FixtureDef
+    //FixtureDef
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &BoxShape;
     fixtureDef.density = 1.0f;
+    m_body->ResetMassData();
     fixtureDef.friction = 1.0f;
     fixtureDef.filter.groupIndex = group;
     if (bodyType == b2_kinematicBody)

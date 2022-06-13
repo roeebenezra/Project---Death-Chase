@@ -22,11 +22,11 @@ bool MusicButton::isMousePressOnButton(const Vector2f &pos) {
     if (getSpriteButton().getGlobalBounds().contains(pos)) {
         if (isClickOnButton()) {
             setClickOnButton(false);
-            Resources::instance().setLoopSound(OpenSound, true);
+            Resources::instance().setLoopSound(MenuSound, true);
         }
         else {
             setClickOnButton(true);
-            Resources::instance().setLoopSound(OpenSound, false);
+            Resources::instance().setLoopSound(MenuSound, false);
         }
         return true;
     }

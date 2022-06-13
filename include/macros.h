@@ -28,11 +28,16 @@ const std::vector Textures = {"PlayBackground.png", "truck.png", "redCar.png", "
                               "one.png", "two.png", "three.png", "four.png", "five.png", "six.png",
                               "seven.png", "explosion.png", "water.png", "finishLine.png",
                               "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png",
-                              "HowToPlay.png"};
+                              "HowToPlay.png", "PauseMenu.png"};
 
-const vector Sounds = {"GameMenuSound.wav", "Click.wav"};
+const vector Sounds{"MenuSound.wav", "PlaySound.wav", "Click.wav"};
 
-const int carPLaceStart = 3; // by the amount of cars in the game
+enum SoundRcs {
+    MenuSound,
+    GameSound,
+    Click,
+    SoundsCount
+};
 
 const int carVelocity = 180;
 
@@ -57,12 +62,53 @@ const sf::Vector2f oppositeScale = {-1, -1};
 
 const int User = 0;
 
-const int MenuButtonHeight = 102;
-const int MenuButtonWidth = 285;
+
+const int MenuButtonHeight = 100;
+const int MenuButtonWidth = 283;
 
 const int SoundButtonHeight = 125;
 const int MusicButtonWidth = 105;
 const int clicksButtonWidth = 155;
+
+const vector<Vector2f> OpenMenuMenuButtonPos{Vector2f{1100, 300},
+                                             Vector2f{1100, 450},
+                                             Vector2f{1100, 600}};
+
+const vector<IntRect> OpenMenuButtonsIntRect{IntRect(0, 0, MenuButtonWidth, MenuButtonHeight),
+                                             IntRect(0, MenuButtonHeight * 2, MenuButtonWidth, MenuButtonHeight),
+                                             IntRect(0, MenuButtonHeight * 4, MenuButtonWidth, MenuButtonHeight),};
+
+enum OpenMenuButtuns {
+    OpenMenuPlay,
+    OpenMenuOptions,
+    OpenMenuExit,
+    OpenMenuButtonsCount
+};
+
+const IntRect SoundButtonRect(0, 0, clicksButtonWidth, SoundButtonHeight);
+const IntRect SoundButtonRect2(320, 0, MusicButtonWidth, SoundButtonHeight);
+
+const int InGameMenuButtonHeight = 130;
+const int InGameMenuButtonWidth = 140;
+
+const vector<Vector2f> InGameMenuButtonPos{Vector2f{600, 450},
+                                           Vector2f{750, 450},
+                                           Vector2f{900, 450},
+                                           Vector2f{1050, 450}};
+
+const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1135, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1010, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1280, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1410, InGameMenuButtonWidth, InGameMenuButtonHeight)};
+
+
+enum InGameButtuns {
+    InGamePause,
+    InGameMusic,
+    InGameHome,
+    InGamePlay,
+    InGameButtonsCount
+};
 
 enum TextureRcs {
     PlayBackground,
@@ -97,20 +143,16 @@ enum TextureRcs {
     Buttons,
     OpenMenuButtons,
     HowToPlay,
+    InGameMenuBackground,
     TexturesCount
 };
 
-enum SoundRcs {
-    OpenSound,
-    Click,
-    SoundsCount
-};
+const int carPLaceStart = three; // by the amount of cars in the game
 
 enum Menus {
     OpenGameMenu,
     Play,
     ChooseCarMenu,
-    InGameMenu,
     MenusCount
 };
 
@@ -118,7 +160,6 @@ enum OpenMenuButtons {
     PlayButton = 1,
     OptionsButton,
     ExitButton,
-    OpenMenuButtonsCount
 };
 
 enum groupIndex {

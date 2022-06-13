@@ -4,7 +4,7 @@
 
 class OpenMenuButton : public Button {
 public:
-    OpenMenuButton(unsigned TextureName, const Vector2f &, const IntRect &);
+    OpenMenuButton(unsigned TextureName, unsigned Name);
 
     void draw(RenderTarget&) override;
 

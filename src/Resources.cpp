@@ -159,9 +159,9 @@ void Resources::stopSound(const unsigned sound) {
 //_________________________________________________________
 void Resources::setLoopSound(const unsigned sound, bool mode) {
     if (mode) {
-        m_sounds[sound].play();
         m_sounds[sound].setLoop(mode);
         m_sounds[sound].setVolume(50.0f);
+        m_sounds[sound].play();
     }
     else
         m_sounds[sound].stop();

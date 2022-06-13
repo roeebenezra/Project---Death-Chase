@@ -14,7 +14,7 @@ public:
 
     void add(unique_ptr<Button> button) { m_buttons.emplace_back(move(button)); }
 
-    virtual void draw(RenderTarget &);
+    virtual void draw(RenderTarget &, const Vector2f&);
 
     void isMouseOnButton(const Vector2f &pos);
 
@@ -45,7 +45,8 @@ protected:
 
     size_t getNumOfButtons() { return m_buttons.size(); }
 
-private:
     vector<unique_ptr<Button>> m_buttons;
+private:
+
     Sprite m_background;
 };

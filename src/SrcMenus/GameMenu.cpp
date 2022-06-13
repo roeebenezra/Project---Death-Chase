@@ -7,7 +7,7 @@ GameMenu::GameMenu(unsigned TextureName, const Vector2f& pos)
 }
 
 //_____________________________________
-void GameMenu::draw(RenderTarget &window)
+void GameMenu::draw(RenderTarget &window, const Vector2f& userCarPos)
 {
     window.draw(m_background);
     for (auto &button: m_buttons)

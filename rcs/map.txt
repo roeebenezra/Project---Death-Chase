@@ -8,8 +8,8 @@ finishLine 4800 1500 0
 ground_1 1000 2000 0
 ground_1 2900 2000 0
 ground_1 4800 2000 0
-ground_4 5920 1800 6
-ground_4 6275 1750 0
+ground_4 5920 1900 6
+ground_4 6275 1850 0
 ground_4 6670 1700 6
 ground_4 7035 1650 0
 ground_4 7430 1600 6

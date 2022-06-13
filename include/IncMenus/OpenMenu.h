@@ -13,10 +13,10 @@ public:
         m_howToPlay.setPosition(float(getSprite().getTexture()->getSize().x) / 2,
                                 float(getSprite().getTexture()->getSize().y) / 2);
 
-        Resources::instance().setLoopSound(OpenSound, true);
+        Resources::instance().setLoopSound(MenuSound, true);
     }
 
-    void draw(RenderTarget &window) override {
+    void draw(RenderTarget &window, const Vector2f& userCarPos) override {
         window.draw(getSprite());
         for (size_t i = 0; i < getNumOfButtons(); ++i) {
             const auto &button = getButton(i);
@@ -33,6 +33,8 @@ public:
     void handleClick(const Vector2f &pos, vector<bool> &windows, size_t currWindow, bool *running) override {
         int press = int(mousePressButton(pos));
         if (press == PlayButton) {
+            Resources::instance().stopSound(MenuSound);
+            Resources::instance().setLoopSound(GameSound, true);
             windows[currWindow] = false;
             windows[Play] = true;
         }

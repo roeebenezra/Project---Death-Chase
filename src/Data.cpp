@@ -84,7 +84,7 @@ void Data::removeObjects() {
 //____________________________________________________________________________
 void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) {
 
-    setView(window);
+    setView(window, 3500.0f, 2000.0f);
 
     for (auto &moving: m_moving) {
         moving->updateObjects();
@@ -95,13 +95,18 @@ void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) 
         statics->updateObjects();
         statics->draw(window);
     }
-    menu->getButton(0)->updatePos(Vector2f(getUserPosition().x + 2000, 50));
+
+    menu->getButton(InGamePause)->updatePos(Vector2f(getUserPosition().x + 2000, 50));
+    menu->getButton(InGameMusic)->updatePos(Vector2f(getUserPosition().x + 100, 800));
+    menu->getButton(InGameHome)->updatePos(Vector2f(getUserPosition().x + 250, 800));
+    menu->getButton(InGamePlay)->updatePos(Vector2f(getUserPosition().x + 400, 800));
+
 }
 
 //__________________________________________
-void Data::setView(sf::RenderWindow &window) {
+void Data::setView(sf::RenderWindow &window, float width, float height) const {
     auto view = window.getView();
     view.setCenter(getUserPosition().x + 500, 1000);
-    view.setSize(3500.0f, 2000.0f);
+    view.setSize(width, height);
     window.setView(view);
 }

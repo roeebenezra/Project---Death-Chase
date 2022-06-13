@@ -37,7 +37,7 @@ public:
 private:
     void setWorld();
 
-    void setView(sf::RenderWindow &window);
+    void setView(sf::RenderWindow &window, float width, float height) const;
 
     std::unique_ptr<b2World> m_world;
 

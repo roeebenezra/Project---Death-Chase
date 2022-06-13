@@ -51,217 +51,217 @@ build cmake_object_order_depends_target_Project: phony || cmake_object_order_dep
 
 build CMakeFiles/Project.dir/src/Controller.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Controller.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Controller.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/main.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/main.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/main.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/Data.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Data.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Data.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/Map.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Map.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Map.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/FactoryObject.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/FactoryObject.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/FactoryObject.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/Resources.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Resources.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Resources.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/MyContactListener.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/MyContactListener.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/MyContactListener.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/HandleCollision.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/HandleCollision.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/HandleCollision.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
 build CMakeFiles/Project.dir/src/SrcObjects/GameObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/GameObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/GameObjects.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/MovingObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/MovingObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/MovingObjects.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/StaticObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/StaticObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/StaticObjects.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/UserCar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/UserCar.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/UserCar.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/ComputerCar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/ComputerCar.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/ComputerCar.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/Ground.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Ground.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Ground.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/Barrel.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Barrel.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Barrel.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/Water.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Water.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Water.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/FinishLine.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/FinishLine.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/FinishLine.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcObjects/Box.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Box.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Box.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
 build CMakeFiles/Project.dir/src/SrcAnimation/Direction.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Direction.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Direction.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/AnimationData.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/AnimationData.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/AnimationData.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/Animation.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Animation.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Animation.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/AnimationObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/AnimationObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/AnimationObjects.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/Coin.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Coin.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Coin.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/HealthBar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/HealthBar.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/HealthBar.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/Explosion.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Explosion.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Explosion.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcAnimation/Dust.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Dust.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Dust.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
 build CMakeFiles/Project.dir/src/SrcMenus/GameMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/GameMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/GameMenu.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
 build CMakeFiles/Project.dir/src/SrcMenus/OpenMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/OpenMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/OpenMenu.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
 build CMakeFiles/Project.dir/src/SrcMenus/OpenMenuButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/OpenMenuButton.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/OpenMenuButton.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
 build CMakeFiles/Project.dir/src/SrcMenus/ChooseVehicleMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/ChooseVehicleMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/ChooseVehicleMenu.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
 build CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/MusicButton.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -fsanitize=address -std=c++2a
   INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
@@ -276,6 +276,7 @@ build CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o: CXX_COMPILER__Proje
 
 build Project: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/src/Controller.cpp.o CMakeFiles/Project.dir/src/main.cpp.o CMakeFiles/Project.dir/src/Data.cpp.o CMakeFiles/Project.dir/src/Map.cpp.o CMakeFiles/Project.dir/src/FactoryObject.cpp.o CMakeFiles/Project.dir/src/Resources.cpp.o CMakeFiles/Project.dir/src/MyContactListener.cpp.o CMakeFiles/Project.dir/src/HandleCollision.cpp.o CMakeFiles/Project.dir/src/SrcObjects/GameObjects.cpp.o CMakeFiles/Project.dir/src/SrcObjects/MovingObjects.cpp.o CMakeFiles/Project.dir/src/SrcObjects/StaticObjects.cpp.o CMakeFiles/Project.dir/src/SrcObjects/UserCar.cpp.o CMakeFiles/Project.dir/src/SrcObjects/ComputerCar.cpp.o CMakeFiles/Project.dir/src/SrcObjects/Ground.cpp.o CMakeFiles/Project.dir/src/SrcObjects/Barrel.cpp.o CMakeFiles/Project.dir/src/SrcObjects/Water.cpp.o CMakeFiles/Project.dir/src/SrcObjects/FinishLine.cpp.o CMakeFiles/Project.dir/src/SrcObjects/Box.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/Direction.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/AnimationData.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/Animation.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/AnimationObjects.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/Coin.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/HealthBar.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/Explosion.cpp.o CMakeFiles/Project.dir/src/SrcAnimation/Dust.cpp.o CMakeFiles/Project.dir/src/SrcMenus/GameMenu.cpp.o CMakeFiles/Project.dir/src/SrcMenus/OpenMenu.cpp.o CMakeFiles/Project.dir/src/SrcMenus/OpenMenuButton.cpp.o CMakeFiles/Project.dir/src/SrcMenus/ChooseVehicleMenu.cpp.o CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o | /usr/local/lib/libsfml-graphics.2.5.1.dylib /usr/local/lib/libsfml-audio.2.5.1.dylib /usr/local/lib/libsfml-network.2.5.1.dylib external/box2d/src/libbox2d.a /usr/local/lib/libsfml-window.2.5.1.dylib /usr/local/lib/libsfml-system.2.5.1.dylib || external/box2d/src/libbox2d.a
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk
+  LINK_FLAGS = -fsanitize=address
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libsfml-graphics.2.5.1.dylib  /usr/local/lib/libsfml-audio.2.5.1.dylib  /usr/local/lib/libsfml-network.2.5.1.dylib  external/box2d/src/libbox2d.a  /usr/local/lib/libsfml-window.2.5.1.dylib  /usr/local/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/Project.dir
   POST_BUILD = :
@@ -818,14 +819,14 @@ build src/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../external/box2d/src/CMakeLists.txt ../include/CMakeLists.txt ../rcs/CMakeLists.txt ../rcs/FontFile.ttf ../rcs/map.txt ../rcs/numbers/five.png ../rcs/numbers/four.png ../rcs/numbers/one.png ../rcs/numbers/seven.png ../rcs/numbers/six.png ../rcs/numbers/three.png ../rcs/numbers/two.png ../rcs/rcsCars/greenCar.png ../rcs/rcsCars/redCar.png ../rcs/rcsCars/truck.png ../rcs/rcsGameObjects/barrel.png ../rcs/rcsGameObjects/box.png ../rcs/rcsGameObjects/coin.png ../rcs/rcsGameObjects/dust.png ../rcs/rcsGameObjects/explosion.png ../rcs/rcsGameObjects/finishLine.png ../rcs/rcsGameObjects/healthObjectBar.png ../rcs/rcsGameObjects/icon.png ../rcs/rcsGameObjects/part_bridge.png ../rcs/rcsGameObjects/sign.png ../rcs/rcsGameObjects/water.png ../rcs/rcsGround/ground_1.png ../rcs/rcsGround/ground_2.png ../rcs/rcsGround/ground_3.png ../rcs/rcsGround/ground_4.png ../rcs/rcsGround/ground_5.png ../rcs/rcsGround/ground_8.png ../rcs/rcsGround/ground_9.png ../rcs/rcsMenu/Buttons.png ../rcs/rcsMenu/HowToPlay.png ../rcs/rcsMenu/OpenMenuButtons.png ../rcs/rcsMenu/PlayBackground.png ../rcs/rcsMenu/musicIcons.png ../rcs/rcsMenu/openMenu.png ../rcs/rcsSound/Click.wav ../rcs/rcsSound/GameMenuSound.wav ../rcs/rcsStone/stone_1.png ../rcs/rcsStone/stone_2.png ../rcs/rcsStone/stone_3.png ../rcs/rcsStone/stone_4.png ../src/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/SFML/SFMLConfig.cmake /usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake /usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../external/box2d/src/CMakeLists.txt ../include/CMakeLists.txt ../rcs/CMakeLists.txt ../rcs/FontFile.ttf ../rcs/map.txt ../rcs/numbers/five.png ../rcs/numbers/four.png ../rcs/numbers/one.png ../rcs/numbers/seven.png ../rcs/numbers/six.png ../rcs/numbers/three.png ../rcs/numbers/two.png ../rcs/rcsCars/greenCar.png ../rcs/rcsCars/redCar.png ../rcs/rcsCars/truck.png ../rcs/rcsGameObjects/barrel.png ../rcs/rcsGameObjects/box.png ../rcs/rcsGameObjects/coin.png ../rcs/rcsGameObjects/dust.png ../rcs/rcsGameObjects/explosion.png ../rcs/rcsGameObjects/finishLine.png ../rcs/rcsGameObjects/healthObjectBar.png ../rcs/rcsGameObjects/icon.png ../rcs/rcsGameObjects/part_bridge.png ../rcs/rcsGameObjects/sign.png ../rcs/rcsGameObjects/water.png ../rcs/rcsGround/ground_1.png ../rcs/rcsGround/ground_2.png ../rcs/rcsGround/ground_3.png ../rcs/rcsGround/ground_4.png ../rcs/rcsGround/ground_5.png ../rcs/rcsGround/ground_8.png ../rcs/rcsGround/ground_9.png ../rcs/rcsMenu/Buttons.png ../rcs/rcsMenu/HowToPlay.png ../rcs/rcsMenu/OpenMenuButtons.png ../rcs/rcsMenu/PauseMenu.png ../rcs/rcsMenu/PlayBackground.png ../rcs/rcsMenu/musicIcons.png ../rcs/rcsMenu/openMenu.png ../rcs/rcsSound/Click.wav ../rcs/rcsSound/MenuSound.wav ../rcs/rcsSound/PlaySound.wav ../rcs/rcsStone/stone_1.png ../rcs/rcsStone/stone_2.png ../rcs/rcsStone/stone_3.png ../rcs/rcsStone/stone_4.png ../src/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/SFML/SFMLConfig.cmake /usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake /usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../external/box2d/src/CMakeLists.txt ../include/CMakeLists.txt ../rcs/CMakeLists.txt ../rcs/FontFile.ttf ../rcs/map.txt ../rcs/numbers/five.png ../rcs/numbers/four.png ../rcs/numbers/one.png ../rcs/numbers/seven.png ../rcs/numbers/six.png ../rcs/numbers/three.png ../rcs/numbers/two.png ../rcs/rcsCars/greenCar.png ../rcs/rcsCars/redCar.png ../rcs/rcsCars/truck.png ../rcs/rcsGameObjects/barrel.png ../rcs/rcsGameObjects/box.png ../rcs/rcsGameObjects/coin.png ../rcs/rcsGameObjects/dust.png ../rcs/rcsGameObjects/explosion.png ../rcs/rcsGameObjects/finishLine.png ../rcs/rcsGameObjects/healthObjectBar.png ../rcs/rcsGameObjects/icon.png ../rcs/rcsGameObjects/part_bridge.png ../rcs/rcsGameObjects/sign.png ../rcs/rcsGameObjects/water.png ../rcs/rcsGround/ground_1.png ../rcs/rcsGround/ground_2.png ../rcs/rcsGround/ground_3.png ../rcs/rcsGround/ground_4.png ../rcs/rcsGround/ground_5.png ../rcs/rcsGround/ground_8.png ../rcs/rcsGround/ground_9.png ../rcs/rcsMenu/Buttons.png ../rcs/rcsMenu/HowToPlay.png ../rcs/rcsMenu/OpenMenuButtons.png ../rcs/rcsMenu/PlayBackground.png ../rcs/rcsMenu/musicIcons.png ../rcs/rcsMenu/openMenu.png ../rcs/rcsSound/Click.wav ../rcs/rcsSound/GameMenuSound.wav ../rcs/rcsStone/stone_1.png ../rcs/rcsStone/stone_2.png ../rcs/rcsStone/stone_3.png ../rcs/rcsStone/stone_4.png ../src/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/SFML/SFMLConfig.cmake /usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake /usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../external/box2d/src/CMakeLists.txt ../include/CMakeLists.txt ../rcs/CMakeLists.txt ../rcs/FontFile.ttf ../rcs/map.txt ../rcs/numbers/five.png ../rcs/numbers/four.png ../rcs/numbers/one.png ../rcs/numbers/seven.png ../rcs/numbers/six.png ../rcs/numbers/three.png ../rcs/numbers/two.png ../rcs/rcsCars/greenCar.png ../rcs/rcsCars/redCar.png ../rcs/rcsCars/truck.png ../rcs/rcsGameObjects/barrel.png ../rcs/rcsGameObjects/box.png ../rcs/rcsGameObjects/coin.png ../rcs/rcsGameObjects/dust.png ../rcs/rcsGameObjects/explosion.png ../rcs/rcsGameObjects/finishLine.png ../rcs/rcsGameObjects/healthObjectBar.png ../rcs/rcsGameObjects/icon.png ../rcs/rcsGameObjects/part_bridge.png ../rcs/rcsGameObjects/sign.png ../rcs/rcsGameObjects/water.png ../rcs/rcsGround/ground_1.png ../rcs/rcsGround/ground_2.png ../rcs/rcsGround/ground_3.png ../rcs/rcsGround/ground_4.png ../rcs/rcsGround/ground_5.png ../rcs/rcsGround/ground_8.png ../rcs/rcsGround/ground_9.png ../rcs/rcsMenu/Buttons.png ../rcs/rcsMenu/HowToPlay.png ../rcs/rcsMenu/OpenMenuButtons.png ../rcs/rcsMenu/PauseMenu.png ../rcs/rcsMenu/PlayBackground.png ../rcs/rcsMenu/musicIcons.png ../rcs/rcsMenu/openMenu.png ../rcs/rcsSound/Click.wav ../rcs/rcsSound/MenuSound.wav ../rcs/rcsSound/PlaySound.wav ../rcs/rcsStone/stone_1.png ../rcs/rcsStone/stone_2.png ../rcs/rcsStone/stone_3.png ../rcs/rcsStone/stone_4.png ../src/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/SFML/SFMLConfig.cmake /usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake /usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake: phony
 
 
 #############################################

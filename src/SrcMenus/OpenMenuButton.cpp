@@ -1,8 +1,8 @@
 #include "IncMenus/OpenMenuButton.h"
 
 //____________________________________________________________________
-OpenMenuButton::OpenMenuButton(unsigned TextureName, const Vector2f& pos, const IntRect& rect)
-        : Button(TextureName, pos, rect){}
+OpenMenuButton::OpenMenuButton(unsigned TextureName, unsigned Name)
+        : Button(TextureName, OpenMenuMenuButtonPos[Name], OpenMenuButtonsIntRect[Name]){}
 
 //_____________________________________________
 void OpenMenuButton::draw(RenderTarget &window) {

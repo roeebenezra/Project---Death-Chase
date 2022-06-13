@@ -4,13 +4,22 @@
 
 class PauseButton : public Button {
 public:
-    PauseButton(unsigned TextureName, const Vector2f &pos, const IntRect &rect)
-            : Button(TextureName, pos, rect) {}
+    PauseButton(unsigned TextureName, unsigned name)
+            : Button(TextureName, InGameMenuButtonPos[name], InGameButtonsIntRect[name]) {
+    }
 
     void draw(RenderTarget &window) override {
-        window.draw(getSpriteButton());
+        if (isOnButton()) {
+            getSpriteButton().setTextureRect(IntRect(getTextureRect().left + InGameMenuButtonWidth, getTextureRect().top, InGameMenuButtonWidth, InGameMenuButtonHeight));
+            window.draw(getSpriteButton());
+        }
+        else {
+            getSpriteButton().setTextureRect(getTextureRect());
+            window.draw(getSpriteButton());
+        }
     }
 
 private:
+    Vector2f pos;
     bool m_pauseGame = false;
 };

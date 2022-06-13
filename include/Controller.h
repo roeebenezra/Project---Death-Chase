@@ -6,6 +6,7 @@
 #include "IncMenus/MusicButton.h"
 #include "IncMenus/PauseButton.h"
 #include "IncMenus/OpenMenuButton.h"
+#include "IncMenus/InGameMenuButton.h"
 #include "IncMenus/OpenMenu.h"
 #include "IncMenus/ChooseVehicleMenu.h"
 #include "IncMenus/PlayMenu.h"
@@ -22,6 +23,8 @@ public:
 
 private:
     void DataSetup(MyContactListener *);
+
+    void setView(float width, float height);
 
     void setMenus();
 
