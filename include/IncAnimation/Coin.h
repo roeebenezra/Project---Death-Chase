@@ -1,17 +1,16 @@
 #pragma once
 
 #include "IncObjects/StaticObject.h"
-#include "FactoryObject.h"
+#include "IncBuildGame/FactoryObject.h"
 
 class Coin : public StaticObject {
-
 public:
-    Coin(int,
+    Coin(const unsigned&,
          std::unique_ptr<b2World> &,
          const sf::Vector2f &,
-         const float,
-         b2BodyType,
-         int16);
+         const float&,
+         const b2BodyType&,
+         const int16&);
 
     void draw(sf::RenderWindow &) override;
 

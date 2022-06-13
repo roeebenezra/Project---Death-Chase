@@ -1,14 +1,23 @@
 #include "IncObjects/MovingObject.h"
 
 //________________________________
-MovingObject::MovingObject(unsigned name,
+MovingObject::MovingObject(const unsigned& name,
                            std::unique_ptr<b2World> &world,
                            const sf::Vector2f &position,
-                           const float rotation,
-                           b2BodyType bodyType,
-                           int16 group)
+                           const float& rotation,
+                           const b2BodyType& bodyType,
+                           const int16& group)
         : GameObject(name, world, position, rotation, bodyType, group),
-          m_carHealth(getPosition(), oppositeScale), m_carExplosion(getPosition(), regularScale) {}
+          m_carHealth(getPosition(), oppositeScale), m_carExplosion(getPosition(), regularScale) {
+//    cout << "old car mass is " << m_body->GetMass() << "\n";
+//    b2MassData* data;
+//    m_body->GetMassData(data);
+//
+//    data->mass = 20000;
+////    data->center.Set(0, -m_sprite.getLocalBounds().height/2);
+//    m_body->SetMassData(data);
+//    cout << "new car mass is " << m_body->GetMass() << "\n";
+}
 
 bool MovingObject::showHealthBar() {
     return (getCarOnGround() && getRotation() < 182 && getRotation() > 178 && m_carHealth.getAnimationIndex()) ||

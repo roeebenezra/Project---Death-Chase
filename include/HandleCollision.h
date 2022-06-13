@@ -6,7 +6,9 @@
 #include "IncObjects/ComputerCar.h"
 #include "IncObjects/Ground.h"
 #include "IncObjects/Water.h"
+#include "IncObjects/Rock.h"
 #include "IncAnimation/Coin.h"
+#include "IncObjects/Floor.h"
 
 class GameObject;
 
@@ -18,9 +20,21 @@ public:
     void processCollision(GameObject *, GameObject *);
 
 private:
-    HandleCollision(){}
+    HandleCollision() {}
 
     void operator=(const HandleCollision &) {}
+
+    void userCarRock(GameObject *, GameObject *);
+
+    void rockUserCar(GameObject *, GameObject *);
+
+//    void userCarFloor(GameObject *, GameObject *);
+//
+//    void floorUserCar(GameObject *, GameObject *);
+//
+//    void computerCarFloor(GameObject *, GameObject *);
+//
+//    void floorComputerCar(GameObject *, GameObject *);
 
     void userCarGround(GameObject *, GameObject *);
 
@@ -48,7 +62,7 @@ private:
 
     void waterComputerCar(GameObject *, GameObject *);
 
-    using HitFunctionPtr = void (HandleCollision::*)(GameObject*, GameObject*);
+    using HitFunctionPtr = void (HandleCollision::*)(GameObject *, GameObject *);
     using Key = std::pair<std::type_index, std::type_index>;
     using HitMap = std::map<Key, HitFunctionPtr>;
 

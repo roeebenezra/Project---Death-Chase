@@ -50,10 +50,10 @@ add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
                                         include/macros.h
                                         include/Data.h
                                         include/Controller.h
-                                        include/Resources.h
-                                        include/Map.h
+                                        include/IncBuildGame/Resources.h
+                                        include/IncBuildGame/Map.h
                                         include/HandleCollision.h
-                                        include/FactoryObject.h
+                                        include/IncBuildGame/FactoryObject.h
                                         include/MyContactListener.h
                                         
                                         include/IncAnimation/Animation.h

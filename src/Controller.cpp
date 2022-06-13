@@ -3,7 +3,6 @@
 
 //____________________
 Controller::Controller() : m_userMoved(false) {
-    m_clock.restart();
     setMenus();
     setIcon();  //set window icon
 }
@@ -23,31 +22,32 @@ void Controller::run() {
     //d.SetFlags(flags);
     //m_data.getWorld()->SetDebugDraw(&d);
 
-    // Contact Listener
-    MyContactListener myContactListenerInstance;
+    MyContactListener myContactListenerInstance; // Contact Listener
 
     while (m_gameWindow.isOpen() && m_running) {
-        DataSetup(&myContactListenerInstance);
+        box2dStep(&myContactListenerInstance);
         handleEvents();
-        m_data.removeObjects();
-        m_data.setCarsPlace();
-        m_gameWindow.clear();
+        handleData();
         draw();
-        m_gameWindow.display();
     }
 }
 
+//__________________________
+void Controller::handleData() {
+    m_data.removeObjects();
+    m_data.setCarsPlace();
+}
+
 //__________________________________________________________
-void Controller::DataSetup(MyContactListener *ContactListener) {
+void Controller::box2dStep(MyContactListener *ContactListener) {
     m_data.setWorldStep();
     m_data.getWorld()->SetContactListener(ContactListener);
 }
 
 //________________________
 void Controller::setMenus() {
-    //Open Menu setup
 
-    m_menus.emplace_back(make_unique<OpenMenu>(OpenMenuBackground, HowToPlay, Vector2f(0, 0)));
+    m_menus.emplace_back(make_unique<OpenMenu>(OpenMenuBackground, HowToPlay, Vector2f(0, 0))); //Open Menu setup
 
     m_menus[OpenGameMenu]->add(make_unique<OpenMenuButton>(Buttons, OpenMenuPlay));
     m_menus[OpenGameMenu]->add(make_unique<OpenMenuButton>(Buttons, OpenMenuOptions));
@@ -95,14 +95,13 @@ void Controller::handleEvents() {
                 break;
         }
     }
-//    if (m_userMoved)
-//        m_data.moveComputerCars(event);
+    if (m_userMoved && !m_menus.at(size_t(CurrMenu()))->isPause())
+        m_data.moveComputerCars(event);
 }
 
 //_________________________________________________
 void Controller::mouseEventMoved(const Event &event) {
     auto location = Vector2f(float(event.mouseMove.x), float(event.mouseMove.y));
-    //auto location = m_gameWindow.mapPixelToCoords({ event.mouseButton.x, event.mouseButton.y });
     m_menus.at(size_t(CurrMenu()))->isMouseOnButton(location);
 }
 
@@ -115,7 +114,7 @@ void Controller::mouseEventPressed(const Event &event) {
 
 //_____________________________________________________
 void Controller::keyboardPressed(const sf::Event &event) {
-    if (m_data.getUserPosition().x < 40000 && m_data.getUserPosition().y - 200 > 0) {
+    if (!m_startMessageDraw.getDrawMessage() && !m_menus.at(size_t(CurrMenu()))->isPause()) {
         m_data.moveUserCar(event);
         m_userMoved = true;
     }
@@ -123,21 +122,29 @@ void Controller::keyboardPressed(const sf::Event &event) {
 
 //__________________________________________
 void Controller::exitGame(const Event &event) {
-    if (event.key.code == sf::Keyboard::Escape ||
-        event.type == sf::Event::Closed)
+    if (event.key.code == sf::Keyboard::Escape || event.type == sf::Event::Closed)
         m_gameWindow.close();
 }
 
 //____________________
 void Controller::draw() {
+    m_gameWindow.clear();
+    drawPlay();
     m_menus.at(size_t(CurrMenu()))->draw(m_gameWindow, m_data.getUserPosition());
-    if (m_windows[Play]) {
-        m_data.drawData(m_gameWindow, m_menus[size_t(CurrMenu())]);
-    }
-    else
-        setView(1600.0f,900.0f);
-
     //m_data.getWorld()->DebugDraw();
+
+    m_gameWindow.display();
+}
+
+//________________________
+void Controller::drawPlay() {
+    if (m_windows[Play]) {
+        m_data.drawData(m_gameWindow);
+
+        if (m_startMessageDraw.getDrawMessage())
+            drawStartMessage();
+    } else
+        setView(1600.0f, 900.0f);
 }
 
 //__________________________________________
@@ -146,4 +153,9 @@ void Controller::setView(float width, float height) {
     view.setCenter(width / 2, height / 2);
     view.setSize(width, height);
     m_gameWindow.setView(view);
+}
+
+//________________________________
+void Controller::drawStartMessage() {
+    m_startMessageDraw.drawMessage(m_gameWindow);
 }

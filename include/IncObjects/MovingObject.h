@@ -7,18 +7,20 @@
 class MovingObject : public GameObject {
 
 public:
-    MovingObject(unsigned,
+    MovingObject(const unsigned&,
                  std::unique_ptr<b2World> &,
                  const sf::Vector2f &,
-                 const float,
-                 b2BodyType,
-                 int16);
+                 const float&,
+                 const b2BodyType&,
+                 const int16&);
 
     float getRotation() const { return m_sprite.getRotation(); }
 
     virtual ~MovingObject() = default;
 
     virtual void move(const sf::Event &) {}
+
+//    void updateObjects() override;
 
     void setCarOnGround(const bool ground) { m_carOnGround = ground; }
 
@@ -40,9 +42,14 @@ public:
 
     bool getCarInWater() const { return m_carInWater; }
 
+    void setCarOnGroundAngle(float carOnGround) { m_carOnGroundAngle = carOnGround; }
+
+    float getCarOnGroundAngle() { return m_carOnGroundAngle; }
+
 private:
+    float m_carOnGroundAngle = 0;
     bool m_carInWater = false;
-    int m_carPLace = 17;
+    int m_carPLace;
     bool m_carOnGround = true;
     HealthBar m_carHealth;
     Explosion m_carExplosion;

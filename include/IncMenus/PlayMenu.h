@@ -25,6 +25,5 @@ public:
 
 private:
     Sprite m_menuBackground;
-    bool m_pressPause = false;
     bool m_music = true;
 };

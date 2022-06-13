@@ -5,9 +5,11 @@
 #include "IncObjects/UserCar.h"
 #include "IncObjects/ComputerCar.h"
 #include "IncObjects/Barrel.h"
+#include "IncObjects//Floor.h"
 #include "IncMenus/GameMenu.h"
-#include "FactoryObject.h"
-#include "Map.h"
+#include "IncBuildGame/FactoryObject.h"
+#include "IncBuildGame/Map.h"
+#include "Boundaries.h"
 #include "macros.h"
 
 class Data {
@@ -24,7 +26,7 @@ public:
 
     void moveComputerCars(const sf::Event &);
 
-    void drawData(sf::RenderWindow &, const unique_ptr<GameMenu> &);
+    void drawData(sf::RenderWindow &);
 
     void setWorldStep();
 
@@ -40,6 +42,8 @@ private:
     void setView(sf::RenderWindow &window, float width, float height) const;
 
     std::unique_ptr<b2World> m_world;
+    Floor m_floor;
+    Boundaries m_boundaries;
 
     float m_timeStep = 1.0f / 60.0f;
     int32 m_velocityIterations = 8;
@@ -49,4 +53,3 @@ private:
     std::vector<std::unique_ptr<MovingObject>> m_moving;
     std::vector<std::unique_ptr<StaticObject>> m_static;
 };
-

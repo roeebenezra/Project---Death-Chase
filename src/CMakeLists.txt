@@ -1,11 +1,14 @@
-target_sources(${CMAKE_PROJECT_NAME} PRIVATE "main.cpp"
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE
+        "main.cpp"
         "Controller.cpp"
         "Data.cpp"
-        "Map.cpp"
-        "FactoryObject.cpp"
-        "Resources.cpp"
         "MyContactListener.cpp"
         "HandleCollision.cpp"
+        "StartMessage.cpp"
+
+        "SrcBuildGame/Map.cpp"
+        "SrcBuildGame/FactoryObject.cpp"
+        "SrcBuildGame/Resources.cpp"
 
         "SrcObjects/GameObjects.cpp"
         "SrcObjects/MovingObjects.cpp"
@@ -15,6 +18,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE "main.cpp"
         "SrcObjects/Ground.cpp"
         "SrcObjects/Barrel.cpp"
         "SrcObjects/Water.cpp"
+        "SrcObjects/Rock.cpp"
+        "SrcObjects/Fence.cpp"
         "SrcObjects/FinishLine.cpp"
         "SrcObjects/Box.cpp"
 

@@ -4,14 +4,15 @@
 //__________
 Data::Data() {
     setWorld();
-    m_map.readMapFile(*this);
+    m_map.getObjectsFromFile(*this, 2);
+    m_floor.setFloor(m_world);
+    m_boundaries.setBoundaries(m_world, {1200, 500});
     setCarsPlace();
 }
 
 //__________________
 void Data::setWorld() {
-    //set gravity
-    b2Vec2 gravity(0.0f, 10.f);
+    b2Vec2 gravity(0.0f, 10.f); //set gravity
     m_world = std::make_unique<b2World>(gravity);
 }
 
@@ -34,11 +35,9 @@ void Data::setObject(std::string &name,
     }
 }
 
-//______________________
 void Data::setCarsPlace() {
     int carPlace = carPLaceStart;
     std::vector<float> places;
-
     for (auto &moving: m_moving)
         places.push_back(moving->getPosition().x);
 
@@ -48,9 +47,9 @@ void Data::setCarsPlace() {
         for (auto &moving: m_moving)
             if (moving->getPosition().x == place) {
                 moving->setCarPlace(carPlace);
+                carPlace--;
                 break;
             }
-        carPlace--;
     }
 }
 
@@ -82,7 +81,7 @@ void Data::removeObjects() {
 }
 
 //____________________________________________________________________________
-void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) {
+void Data::drawData(sf::RenderWindow &window) {
 
     setView(window, 3500.0f, 2000.0f);
 
@@ -95,11 +94,6 @@ void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) 
         statics->updateObjects();
         statics->draw(window);
     }
-
-    menu->getButton(InGamePause)->updatePos(Vector2f(getUserPosition().x + 2000, 50));
-    menu->getButton(InGameMusic)->updatePos(Vector2f(getUserPosition().x + 100, 800));
-    menu->getButton(InGameHome)->updatePos(Vector2f(getUserPosition().x + 250, 800));
-    menu->getButton(InGamePlay)->updatePos(Vector2f(getUserPosition().x + 400, 800));
 }
 
 //__________________________________________

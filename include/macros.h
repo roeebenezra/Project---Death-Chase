@@ -11,7 +11,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include "Resources.h"
+#include "IncBuildGame/Resources.h"
+#include "Utillities.h"
 #include "box2d/box2d.h"
 
 using namespace sf;
@@ -21,23 +22,18 @@ const string FileName = "map.txt";
 
 const string FontFile = "FontFile.ttf";
 
-const std::vector Textures =  {"PlayBackground.png", "truck.png", "redCar.png", "greenCar.png",
+const std::vector Textures = {"PlayBackground.png", "truck.png", "redCar.png", "yellowCar.png",
+                              "hummer.png", "mustang.png",
                               "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
                               "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png",
                               "coin.png", "icon.png", "dust.png", "box.png", "healthObjectBar.png",
                               "one.png", "two.png", "three.png", "four.png", "five.png", "six.png",
-                              "seven.png", "explosion.png", "water.png", "finishLine.png",
+                              "seven.png", "explosion.png", "water.png", "finishLine.png", "rock.png",
+                              "rollerCoaster.png", "fence.png", "letsGo.png", "1.png", "2.png", "3.png",
                               "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png",
                               "HowToPlay.png", "PauseMenu.png"};
 
 const std::string Sounds[] = {"MenuSound.wav", "PlaySound.wav", "Click.wav"};
-
-enum SoundRcs {
-    MenuSound,
-    GameSound,
-    Click,
-    SoundsCount
-};
 
 const int carVelocity = 180;
 
@@ -62,7 +58,6 @@ const sf::Vector2f oppositeScale = {-1, -1};
 
 const int User = 0;
 
-
 const int MenuButtonHeight = 100;
 const int MenuButtonWidth = 283;
 
@@ -78,12 +73,6 @@ const vector<IntRect> OpenMenuButtonsIntRect{IntRect(0, 0, MenuButtonWidth, Menu
                                              IntRect(0, MenuButtonHeight * 2, MenuButtonWidth, MenuButtonHeight),
                                              IntRect(0, MenuButtonHeight * 4, MenuButtonWidth, MenuButtonHeight),};
 
-enum OpenMenuButtuns {
-    OpenMenuPlay,
-    OpenMenuOptions,
-    OpenMenuExit,
-    OpenMenuButtonsCount
-};
 
 const IntRect SoundButtonRect(0, 0, clicksButtonWidth, SoundButtonHeight);
 const IntRect SoundButtonRect2(320, 0, MusicButtonWidth, SoundButtonHeight);
@@ -102,72 +91,17 @@ const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1135, InGameMenuButtonWidt
                                            IntRect(0, 1410, InGameMenuButtonWidth, InGameMenuButtonHeight)};
 
 
-enum InGameButtuns {
-    InGamePause,
-    InGameMusic,
-    InGameHome,
-    InGamePlay,
-    InGameButtonsCount
-};
+const int AmountOfLevels = 3;
 
-enum TextureRcs {
-    PlayBackground,
-    userCar,
-    redCar,
-    greenCar,
-    ground_1,
-    ground_2,
-    ground_3,
-    ground_4,
-    ground_5,
-    ground_8,
-    ground_9,
-    barrel,
-    coin,
-    icon,
-    dust,
-    box,
-    healthBar,
-    one,
-    two,
-    three,
-    four,
-    five,
-    six,
-    seven,
-    explosion,
-    water,
-    finishLine,
-    OpenMenuBackground,
-    musicIcons,
-    Buttons,
-    OpenMenuButtons,
-    HowToPlay,
-    InGameMenuBackground,
-    TexturesCount
-};
+const std::string EndLevelMark = "EndLevel";
 
-const int carPLaceStart = three; // by the amount of cars in the game
+const int carPLaceStart = five; // by the amount of cars in the game
 
-enum Menus {
-    OpenGameMenu,
-    Play,
-    ChooseCarMenu,
-    MenusCount
-};
+const float moveSpeed = 300.f;
+const b2Vec2 RIGHT = {1, 0};
+const b2Vec2 LEFT = {-1, 0};
 
-enum OpenMenuButtons {
-    PlayButton = 1,
-    OptionsButton,
-    ExitButton,
-};
-
-enum groupIndex {
-    Collide = 3,
-    DontCollide = -3,
-    GroundCollide = 1,
-    SensorCollide = -9,
-};
-
-
-
+const int amountOfMessages = 4;
+const int startMessage = messageThree;
+const float messageTime = 0.5f;
+const sf::Vector2f messagePosition = {4000, 600};

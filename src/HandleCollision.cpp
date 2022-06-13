@@ -5,9 +5,34 @@ HandleCollision &HandleCollision::instance() {
     return collision;
 }
 
+void HandleCollision::userCarRock(GameObject *, GameObject *) {
+    cout << "user car rock\n";
+}
+
+void HandleCollision::rockUserCar(GameObject *rock, GameObject *userCar) {
+    userCarRock(userCar, rock);
+}
+
+//void HandleCollision::userCarFloor(GameObject *userCar, GameObject *floor) {
+//    cout << "userCar on floor\n";
+//}
+//
+//void HandleCollision::floorUserCar(GameObject *floor, GameObject *userCar) {
+//    userCarFloor(userCar, floor);
+//}
+//
+//void HandleCollision::computerCarFloor(GameObject *computerCar, GameObject *floor) {
+//    cout << "computerCar on floor\n";
+//}
+//
+//void HandleCollision::floorComputerCar(GameObject *floor, GameObject *computerCar) {
+//    computerCarFloor(floor, computerCar);
+//}
+
 void HandleCollision::userCarGround(GameObject *userCar, GameObject *ground) {
     UserCar *user = dynamic_cast<UserCar *>(userCar);
     user->setCarOnGround(true);
+    user->setCarOnGroundAngle(ground->getAngle());
 }
 
 void HandleCollision::groundUserCar(GameObject *ground, GameObject *userCar) {
@@ -81,6 +106,15 @@ HandleCollision::HitMap HandleCollision::initializeCollisionMap() {
     phm[Key(typeid(UserCar), typeid(ComputerCar))] = &HandleCollision::userCarComputerCar;
     phm[Key(typeid(ComputerCar), typeid(UserCar))] = &HandleCollision::computerCarUserCar;
     phm[Key(typeid(ComputerCar), typeid(ComputerCar))] = &HandleCollision::computerCarComputerCar;
+
+    phm[Key(typeid(UserCar), typeid(Rock))] = &HandleCollision::userCarRock;
+    phm[Key(typeid(Rock), typeid(UserCar))] = &HandleCollision::rockUserCar;
+
+//    phm[Key(typeid(UserCar), typeid(Floor))] = &HandleCollision::userCarFloor;
+//    phm[Key(typeid(Floor), typeid(UserCar))] = &HandleCollision::floorUserCar;
+//
+//    phm[Key(typeid(ComputerCar), typeid(Floor))] = &HandleCollision::computerCarFloor;
+//    phm[Key(typeid(Floor), typeid(ComputerCar))] = &HandleCollision::floorComputerCar;
 
     phm[Key(typeid(UserCar), typeid(Ground))] = &HandleCollision::userCarGround;
     phm[Key(typeid(Ground), typeid(UserCar))] = &HandleCollision::groundUserCar;

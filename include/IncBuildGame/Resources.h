@@ -2,7 +2,6 @@
 
 #include "IncAnimation/AnimationData.h"
 #include "macros.h"
-#include <SFML/Audio.hpp>
 
 class Resources {
 public:
