@@ -2,10 +2,7 @@
 
 class Button {
 public:
-    Button(unsigned TextureName, const Vector2f &pos, const IntRect &rect)
-            : m_button(Resources::instance().getTexture(TextureName), rect), m_TextureRect(rect) {
-        m_button.setPosition(pos);
-    }
+    Button(unsigned TextureName, const Vector2f& pos, const IntRect& rect);
 
     Button() = default;
 
@@ -13,27 +10,11 @@ public:
 
     virtual void draw(RenderTarget &window) = 0;
 
-    virtual bool isMousePressOnButton(const Vector2f &pos) {
-        if (m_button.getGlobalBounds().contains(pos)) {
-            setClickOnButton(true);
-            return true;
-        }
-        else {
-            setClickOnButton(false);
-            return false;
-        }
-    }
+    virtual bool isMousePressOnButton(const Vector2f& pos);
 
-    virtual void isMouseOnButton(const Vector2f &pos) {
-        if (m_button.getGlobalBounds().contains(pos))
-            setOnButton(true);
-        else
-            setOnButton(false);
-    }
+    virtual void isMouseOnButton(const Vector2f& pos);
 
-    void updatePos(const Vector2f &pos) {
-        m_button.setPosition(pos);
-    }
+    void updatePos(const Vector2f &pos) { m_button.setPosition(pos); }
 
     void setOnButton(bool mode) { m_isOnButton = mode; }
 
@@ -44,8 +25,8 @@ public:
     void setClickOnButton(bool mode) { m_isClickOnButton = mode; }
 
     Sprite &getSpriteButton() { return m_button; }
-protected:
 
+protected:
     IntRect &getTextureRect() { return m_TextureRect; }
 
 private:

@@ -6,9 +6,7 @@
 
 class Resources {
 public:
-
-    enum Objects
-    {
+    enum Objects{
         UserCar,
         ComputerCar,
         Dust,
@@ -30,11 +28,13 @@ public:
 
     const AnimationData& animationData(Objects object) { return m_data[object]; }
 
-    void playSound(unsigned);
+    void playSoundBuffer(int);
 
-    void stopSound(unsigned);
+    void playSoundMusic(int);
 
-    void setLoopSound(unsigned, bool);
+    void stopSound();
+
+    void setLoopSound(int, bool);
 
 private:
     Resources();
@@ -46,7 +46,8 @@ private:
     std::vector<sf::Texture> m_texture;
 
     std::vector<sf::SoundBuffer> m_soundsBuffer;
-    std::vector<sf::Sound> m_sounds;
+    sf::Sound m_soundBuffer;
+    sf::Sound m_soundMusic;
 
     std::vector<AnimationData> m_data;
 };

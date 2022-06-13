@@ -21,7 +21,7 @@ const string FileName = "map.txt";
 
 const string FontFile = "FontFile.ttf";
 
-const std::vector Textures = {"PlayBackground.png", "truck.png", "redCar.png", "greenCar.png",
+const std::vector Textures =  {"PlayBackground.png", "truck.png", "redCar.png", "greenCar.png",
                               "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
                               "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png",
                               "coin.png", "icon.png", "dust.png", "box.png", "healthObjectBar.png",
@@ -30,7 +30,7 @@ const std::vector Textures = {"PlayBackground.png", "truck.png", "redCar.png", "
                               "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png",
                               "HowToPlay.png", "PauseMenu.png"};
 
-const vector Sounds{"MenuSound.wav", "PlaySound.wav", "Click.wav"};
+const std::string Sounds[] = {"MenuSound.wav", "PlaySound.wav", "Click.wav"};
 
 enum SoundRcs {
     MenuSound,
@@ -168,4 +168,6 @@ enum groupIndex {
     GroundCollide = 1,
     SensorCollide = -9,
 };
+
+
 

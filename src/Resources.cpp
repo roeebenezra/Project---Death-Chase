@@ -122,47 +122,54 @@ void Resources::loadResources() {
     if (!m_font.loadFromFile(FontFile))
         std::cout << "fail to load font";
 
-    sf::SoundBuffer soundBuffer;
-    sf::Sound sound;
 
-    for (unsigned i = 0; i < SoundsCount; i++) {
-        if (!soundBuffer.loadFromFile(Sounds[i]))
-            cout << "fail to load " << i << " sound";
+    auto soundBuffer = sf::SoundBuffer();
+    for (auto& sound : Sounds) 
+    {
+        soundBuffer.loadFromFile(sound);
         m_soundsBuffer.push_back(soundBuffer);
-        sound.setBuffer(m_soundsBuffer[i]);
-        m_sounds.push_back(sound);
     }
-
+  
     sf::Texture texture;
     sf::Sprite sprite;
 
     for (unsigned i = 0; i < TexturesCount; i++) {
         if (!texture.loadFromFile(Textures[i]))
             std::cout << "fail to load " << i << " texture";
-//        texture.setSmooth(true);
+        texture.setSmooth(true);
         m_texture.push_back(texture);
         sprite.setTexture(m_texture[i]);
         m_sprites.push_back(sprite);
     }
 }
 
-//___________________________________________
-void Resources::playSound(const unsigned sound) {
-    m_sounds[sound].play();
+//_____________________________________________
+void Resources::playSoundBuffer(const int index) {
+    
+    m_soundBuffer.setBuffer(m_soundsBuffer[index]);
+    m_soundBuffer.play();
+}
+//____________________________________________
+void Resources::playSoundMusic(const int index) {
+
+    m_soundMusic.setBuffer(m_soundsBuffer[index]);
+    m_soundMusic.setLoop(true);
+    m_soundMusic.play();
 }
 
-//___________________________________________
-void Resources::stopSound(const unsigned sound) {
-    m_sounds[sound].stop();
+//________________________
+void Resources::stopSound() {
+    m_soundMusic.stop();
 }
 
-//_________________________________________________________
-void Resources::setLoopSound(const unsigned sound, bool mode) {
+//____________________________________________________
+void Resources::setLoopSound(const int index, bool mode) {
     if (mode) {
-        m_sounds[sound].setLoop(mode);
-        m_sounds[sound].setVolume(50.0f);
-        m_sounds[sound].play();
+        m_soundMusic.setBuffer(m_soundsBuffer[index]);
+        m_soundMusic.setLoop(mode);
+        m_soundMusic.setVolume(50.0f);
+        m_soundMusic.play();
     }
     else
-        m_sounds[sound].stop();
+        stopSound();
 }

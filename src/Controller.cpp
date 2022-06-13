@@ -54,7 +54,7 @@ void Controller::setMenus() {
     m_menus[OpenGameMenu]->add(make_unique<OpenMenuButton>(Buttons, OpenMenuExit));
 
     m_menus[OpenGameMenu]->add(make_unique<MusicButton>(musicIcons, Vector2f(1350, 0), SoundButtonRect));
-    //m_menus[OpenGameMenu]->add(make_unique<MusicButton>(musicIcons, Vector2f(1480, 0), SoundButtonRect2));
+    m_menus[OpenGameMenu]->add(make_unique<MusicButton>(musicIcons, Vector2f(1480, 0), SoundButtonRect2));
 
     //In Game Menu setup
     m_menus.emplace_back(make_unique<PlayMenu>(PlayBackground, InGameMenuBackground, Vector2f(0, 0)));

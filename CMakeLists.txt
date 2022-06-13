@@ -49,11 +49,21 @@ endif ()
 add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
                                         include/macros.h
                                         include/Data.h
+                                        include/Controller.h
                                         include/Resources.h
                                         include/Map.h
                                         include/HandleCollision.h
                                         include/FactoryObject.h
                                         include/MyContactListener.h
+                                        
+                                        include/IncAnimation/Animation.h
+                                        include/IncAnimation/AnimationData.h
+                                        include/IncAnimation/AnimationObjects.h
+                                        include/IncAnimation/Coin.h
+                                        include/IncAnimation/Dust.h
+                                        include/IncAnimation/Direction.h
+                                        include/IncAnimation/Explosion.h
+                                        include/IncAnimation/HealthBar.h
 
                                         include/IncObjects/GameObject.h
                                         include/IncObjects/MovingObject.h
@@ -73,11 +83,12 @@ add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
                                         include/IncMenus/Button.h
                                         include/IncMenus/MusicButton.h
                                         include/IncMenus/PauseButton.h
-                                        include/IncMenus/OpenMenuButton.h)
+                                        include/IncMenus/InGameMenuButton.h
+                                        include/IncMenus/OpenMenuButton.h "src/SrcMenus/PlayMenu.cpp" "src/SrcMenus/PauseButton.cpp" "src/SrcMenus/Button.cpp")
 
 
-target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
-target_link_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
+#target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
+#target_link_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)
 
 add_subdirectory(include)
 add_subdirectory(src)
@@ -89,9 +100,9 @@ if (MSVC)
     set(SFML_DIR "C:/SFML/SFML-2.5.1/lib/cmake/SFML")
 endif ()
 
-find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
+find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
-set_target_properties(sfml-system sfml-window sfml-graphics sfml-audio sfml-network PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
+set_target_properties(sfml-system sfml-window sfml-graphics sfml-audio PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
 target_link_libraries(${CMAKE_PROJECT_NAME} box2d)

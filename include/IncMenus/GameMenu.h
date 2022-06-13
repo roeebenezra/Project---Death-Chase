@@ -18,23 +18,9 @@ public:
 
     void isMouseOnButton(const Vector2f &pos);
 
-    virtual bool isMousePressOnButton(const Vector2f &pos) {
-        for (auto &button: m_buttons) {
-            if (button->isMousePressOnButton(pos))
-                return true;
-        }
-        return false;
-    }
+    virtual bool isMousePressOnButton(const Vector2f& pos);
 
-    long mousePressButton(const Vector2f &pos) {
-        for (auto &button: m_buttons) {
-            if (button->isMousePressOnButton(pos)) {
-                Resources::instance().playSound(Click);
-                return find(m_buttons.begin(), m_buttons.end(), button) - m_buttons.begin() + 1;
-            }
-        }
-        return 0;
-    }
+    long mousePressButton(const Vector2f& pos);
 
     virtual void handleClick(const Vector2f &pos, vector<bool> &windows, size_t currWindow, bool *running) {}
 
@@ -47,6 +33,5 @@ protected:
 
     vector<unique_ptr<Button>> m_buttons;
 private:
-
     Sprite m_background;
 };

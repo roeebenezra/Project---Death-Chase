@@ -4,47 +4,13 @@
 
 class OpenMenu : public GameMenu {
 public:
-    OpenMenu(unsigned Background, unsigned HowToPlay, Vector2f pos) : GameMenu(Background, pos),
-            m_howToPlay(Resources::instance().getTexture(HowToPlay))
-    {
-        m_howToPlay.setOrigin(m_howToPlay.getGlobalBounds().width / 2,
-                              m_howToPlay.getGlobalBounds().height / 2);
+    OpenMenu(unsigned Background, unsigned HowToPlay, Vector2f pos);
 
-        m_howToPlay.setPosition(float(getSprite().getTexture()->getSize().x) / 2,
-                                float(getSprite().getTexture()->getSize().y) / 2);
+    void draw(RenderTarget& window, const Vector2f& userCarPos) override;
 
-        Resources::instance().setLoopSound(MenuSound, true);
-    }
+    void drawHowToPlay(RenderTarget& window);
 
-    void draw(RenderTarget &window, const Vector2f& userCarPos) override {
-        window.draw(getSprite());
-        for (size_t i = 0; i < getNumOfButtons(); ++i) {
-            const auto &button = getButton(i);
-            button->draw(window);
-        }
-        drawHowToPlay(window);
-    }
-
-    void drawHowToPlay(RenderTarget &window) {
-        if (m_pressHowToPlay)
-            window.draw(m_howToPlay);
-    }
-
-    void handleClick(const Vector2f &pos, vector<bool> &windows, size_t currWindow, bool *running) override {
-        int press = int(mousePressButton(pos));
-        if (press == PlayButton) {
-            Resources::instance().stopSound(MenuSound);
-            Resources::instance().setLoopSound(GameSound, true);
-            windows[currWindow] = false;
-            windows[Play] = true;
-        }
-        if (press == OptionsButton)
-            setHowToPlay(true);
-        else
-            setHowToPlay(false);
-        if (press == ExitButton)
-            *(running) = false;
-    }
+    void handleClick(const Vector2f& pos, vector<bool>& windows, size_t currWindow, bool* running) override;
 
     void setHowToPlay(bool mode) { m_pressHowToPlay = mode; }
 

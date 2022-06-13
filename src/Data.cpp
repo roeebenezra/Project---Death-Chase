@@ -100,7 +100,6 @@ void Data::drawData(sf::RenderWindow &window, const unique_ptr<GameMenu> &menu) 
     menu->getButton(InGameMusic)->updatePos(Vector2f(getUserPosition().x + 100, 800));
     menu->getButton(InGameHome)->updatePos(Vector2f(getUserPosition().x + 250, 800));
     menu->getButton(InGamePlay)->updatePos(Vector2f(getUserPosition().x + 400, 800));
-
 }
 
 //__________________________________________
