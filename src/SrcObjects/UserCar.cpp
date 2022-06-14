@@ -7,7 +7,7 @@ UserCar::UserCar(const unsigned &name,
                  const float &rotation,
                  const b2BodyType &bodyType,
                  const int16 &group) :
-        MovingObject(name, world, position, rotation, bodyType, group),
+        CarObjects(name, world, position, rotation, bodyType, group),
         m_dust(getPosition(), regularScale) {
     setB2d(world, bodyType, group);
 }
@@ -103,11 +103,26 @@ void UserCar::setB2d(std::unique_ptr<b2World> &world,
 
 //_________________________
 bool UserCar::m_registerIt =
-        FactoryObject<MovingObject>::registerIt("mustang", [](std::unique_ptr<b2World> &world,
-                                                              const sf::Vector2f &position,
-                                                              const float rotation) -> std::unique_ptr<MovingObject> {
+        FactoryObject<CarObjects>::registerIt("mustang", [](std::unique_ptr<b2World> &world,
+                                                            const sf::Vector2f &position,
+                                                            const float rotation) -> std::unique_ptr<CarObjects> {
             return std::make_unique<UserCar>(mustang, world, position, rotation, b2_dynamicBody, Collide);
         });
+
+//____________________________________________________
+b2Vec2 UserCar::keyToDirection(sf::Keyboard::Key key) {
+    switch (key) {
+        case sf::Keyboard::Up:
+            return RIGHT;
+        case sf::Keyboard::Down:
+            return LEFT;
+        case sf::Keyboard::Space:
+        case sf::Keyboard::Z:
+            return {0, -1};
+        default:
+            return {0, 0};
+    }
+}
 
 //_________________________________________
 void UserCar::move(const sf::Event &event) {
@@ -153,11 +168,11 @@ void UserCar::setCarAngle(const sf::Keyboard::Key &key) {
 //______________________________________
 void UserCar::moveCar(const b2Vec2 &dir) {
     auto vel = m_body->GetLinearVelocity();
-    auto desireVel = 300.0f;
+    auto desireVel = 250.0f;
     auto velChange = desireVel - vel.x;
     float impulse = m_body->GetMass() * velChange;
-    m_bodyCircle1->ApplyLinearImpulse(b2Vec2(impulse, 0), m_body->GetWorldCenter(), true);
-    m_bodyCircle2->ApplyLinearImpulse(b2Vec2(impulse, 0), m_bodyCircle2->GetWorldCenter(), true);
+    m_body->ApplyLinearImpulse(impulse/2 * dir, m_bodyCircle1->GetWorldCenter(), true);
+    m_body->ApplyLinearImpulse(impulse * dir, m_bodyCircle2->GetWorldCenter(), true);
 
 //    m_bodyCircle1->ApplyForce(b2Vec2(300, 0), m_body->GetWorldCenter(), true);
 //    if (dir == RIGHT) {

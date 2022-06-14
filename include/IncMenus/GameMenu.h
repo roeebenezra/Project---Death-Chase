@@ -26,7 +26,17 @@ public:
 
     unique_ptr<Button> &getButton(size_t place) { return m_buttons[place]; }
 
-    bool isPause() { return m_pressPause; }
+    bool isPause() const { return m_pressPause; }
+
+    void setPause(const bool &pause) { m_pressPause = pause; }
+
+    virtual void nextLevel() {}
+
+    virtual void coinsCounter() {}
+
+    virtual void resetCoins() {}
+
+    virtual void updateTextString(const TEXTS &, const unsigned &, const unsigned &) {}
 
 protected:
     Sprite &getSprite() { return m_background; }

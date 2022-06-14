@@ -1,9 +1,9 @@
 #pragma once
 
-#include "MovingObject.h"
+#include "CarObjects.h"
 #include "IncBuildGame/FactoryObject.h"
 
-class ComputerCar : public MovingObject {
+class ComputerCar : public CarObjects {
 
 public:
     ComputerCar(const unsigned&,

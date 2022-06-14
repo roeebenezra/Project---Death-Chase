@@ -1,10 +1,10 @@
 #pragma once
 
-#include "MovingObject.h"
+#include "CarObjects.h"
 #include "IncBuildGame/FactoryObject.h"
 #include "IncAnimation/Dust.h"
 
-class UserCar : public MovingObject {
+class UserCar : public CarObjects {
 
 public:
     UserCar(const unsigned &,
@@ -39,6 +39,8 @@ private:
 
     void drawDust(sf::RenderWindow &);
 
+    b2Vec2 keyToDirection(sf::Keyboard::Key);
+
     static bool m_registerIt;
     b2Vec2 m_lastDir = {0, 0};
     sf::Clock m_carTimeDir;
@@ -47,8 +49,8 @@ private:
     Dust m_dust;
     bool m_showDust = false;
     sf::Vector2f m_dustOffset;
-    float m_carMass;
     float m_groundAngle;
+
     b2Vec2 m_Dir = {1, 0};
 
     b2Body *m_bodyCircle1;
@@ -60,31 +62,3 @@ private:
     b2RevoluteJoint* m_revoluteJoint2;
 };
 
-
-
-//________
-namespace {
-    b2Vec2 keyToDirection(sf::Keyboard::Key key) {
-        switch (key) {
-            case sf::Keyboard::Up:
-                return RIGHT;
-            case sf::Keyboard::Down:
-                return LEFT;
-            default:
-                return {0, 0};
-        }
-
-//        switch (key) {
-//            case sf::Keyboard::Left:
-//                return {-1, 0};
-//            case sf::Keyboard::Right:
-//                return {1, 0};
-//            case sf::Keyboard::Up:
-//                return {0, -1};
-//            case sf::Keyboard::Down:
-//                return {0, 1};
-//            default:
-//                return {0, 0};
-//        }
-    }
-}

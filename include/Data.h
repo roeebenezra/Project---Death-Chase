@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IncObjects/MovingObject.h"
+#include "IncObjects/CarObjects.h"
 #include "IncObjects/StaticObject.h"
 #include "IncObjects/UserCar.h"
 #include "IncObjects/ComputerCar.h"
@@ -26,9 +26,19 @@ public:
 
     void moveComputerCars(const sf::Event &);
 
+    void handlePlayerDead();
+
+    bool raceFinished() const;
+
     void drawData(sf::RenderWindow &);
 
     void setWorldStep();
+
+    void setIndexLevel(const unsigned& indexLevel) { m_indexLevel = indexLevel; }
+
+    unsigned getIndexLevel() const { return m_indexLevel; }
+
+    void setNextLevel(const unsigned&);
 
     std::unique_ptr<b2World> &getWorld() { return m_world; }
 
@@ -37,6 +47,8 @@ public:
     void setCarsPlace();
 
 private:
+    void setLevel();
+
     void setWorld();
 
     void setView(sf::RenderWindow &window, float width, float height) const;
@@ -50,6 +62,7 @@ private:
     int32 m_positionIterations = 3;
 
     Map m_map;
-    std::vector<std::unique_ptr<MovingObject>> m_moving;
+    std::vector<std::unique_ptr<CarObjects>> m_moving;
     std::vector<std::unique_ptr<StaticObject>> m_static;
+    unsigned m_indexLevel = 0;
 };

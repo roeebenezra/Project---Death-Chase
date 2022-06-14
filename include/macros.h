@@ -22,7 +22,13 @@ const string FileName = "map.txt";
 
 const string FontFile = "FontFile.ttf";
 
-const std::vector Textures = {"PlayBackground.png", "truck.png", "redCar.png", "yellowCar.png",
+const int FontSize = 150;
+const unsigned CoinsSetIndex = 2;
+const unsigned LevelsSetIndex = 6;
+
+const std::vector<sf::Vector2f> PlayMenuTextPositions = {{-1100, 50}, {1900, 200}};
+
+const std::vector Textures = {"PlayBackground.png", "PlayBackground2.png", "truck.png", "redCar.png", "yellowCar.png",
                               "hummer.png", "mustang.png",
                               "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
                               "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png",
@@ -96,6 +102,7 @@ const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1210, InGameMenuButtonWidt
 const int AmountOfLevels = 3;
 
 const std::string EndLevelMark = "EndLevel";
+const std::string CheckPointsMark  = "CheckPoint";
 
 const int carPLaceStart = five; // by the amount of cars in the game
 

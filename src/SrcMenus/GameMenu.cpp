@@ -6,7 +6,7 @@ GameMenu::GameMenu(unsigned TextureName, const Vector2f& pos)
     m_background.setPosition(pos);
 }
 
-//_____________________________________
+//_________________________________________________________________
 void GameMenu::draw(RenderTarget &window, const Vector2f& userCarPos)
 {
     window.draw(m_background);

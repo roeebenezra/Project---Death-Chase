@@ -18,6 +18,8 @@ public:
 
     bool getAnimationIndex() const { return m_animation.getIndex(); }
 
+    void setAnimationIndex(const int& index) { m_animation.setIndex(index); }
+
 private:
     sf::Sprite m_sprite;
     sf::Clock m_aiTime;

@@ -31,7 +31,7 @@ Coin::Coin(const unsigned& name,
 ////    m_body->CreateFixture(&fixtureDef);
 //
 //    m_body->CreateFixture(&fixtureDef); // create new fixture for the rock
-//    m_body->GetFixtureList()->SetSensor(true);
+    m_body->GetFixtureList()->SetSensor(true);
 }
 
 //______________________________________________________________________

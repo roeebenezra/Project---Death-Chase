@@ -15,6 +15,8 @@ public:
 
     bool getIndex() const { return m_index + 1 != m_data.m_data.find(m_dir)->second.size(); }
 
+    void setIndex(const int& index) { m_index = 0; }
+
 private:
     // Update the sprite to take the correct part of the texture,
     // based on current dir and index

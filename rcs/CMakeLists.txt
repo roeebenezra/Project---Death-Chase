@@ -37,6 +37,7 @@ configure_file ("rcsStone/stone_4.png" ${CMAKE_BINARY_DIR} COPYONLY)
 
 configure_file ("rcsMenu/openMenu.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/PlayBackground.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsMenu/PlayBackground2.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/musicIcons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/Buttons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/OpenMenuButtons.png" ${CMAKE_BINARY_DIR} COPYONLY)

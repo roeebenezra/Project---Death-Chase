@@ -12,7 +12,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         "IncBuildGame/Map.h"
 
         "IncObjects/GameObject.h"
-        "IncObjects/MovingObject.h"
+        "IncObjects/CarObjects.h"
         "IncObjects/UserCar.h"
         "IncObjects/ComputerCar.h"
         "IncObjects/StaticObject.h"

@@ -21,9 +21,11 @@ public:
 
     void operator=(const Resources &) = delete;
 
-    sf::Sprite &getSprite(const unsigned name) { return m_sprites[name]; }
+    sf::Sprite &getSprite(const unsigned& name) { return m_sprites[name]; }
 
-    sf::Texture &getTexture(const unsigned name) { return m_texture[name]; }
+    sf::Font &getFontForText() { return m_font; }
+
+    sf::Texture &getTexture(const unsigned& name) { return m_texture[name]; }
 
     const AnimationData& animationData(Objects object) { return m_data[object]; }
 
