@@ -13,8 +13,6 @@ public:
 
     void handleClick(const Vector2f& pos, vector<bool>& windows, size_t currWindow, bool* running) override;
 
-    void pauseGame() {}
-
     void setPause(bool mode) { m_pressPause = mode; }
 
     void handlePressPause();

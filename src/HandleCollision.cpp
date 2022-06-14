@@ -6,7 +6,7 @@ HandleCollision &HandleCollision::instance() {
 }
 
 void HandleCollision::userCarRock(GameObject *, GameObject *) {
-    cout << "user car rock\n";
+//    cout << "user car rock\n";
 }
 
 void HandleCollision::rockUserCar(GameObject *rock, GameObject *userCar) {

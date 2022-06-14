@@ -9,7 +9,7 @@ OpenMenu::OpenMenu(unsigned Background, unsigned HowToPlay, Vector2f pos) : Game
     m_howToPlay.setPosition(float(getSprite().getTexture()->getSize().x) / 2,
         float(getSprite().getTexture()->getSize().y) / 2);
 
-    Resources::instance().playSoundMusic(MenuSound);
+    Resources::instance().setLoopSound(MenuSound, true);
 }
 
 //________________________________________________________________

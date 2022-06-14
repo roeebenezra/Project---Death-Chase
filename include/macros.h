@@ -37,7 +37,7 @@ const std::string Sounds[] = {"MenuSound.wav", "PlaySound.wav", "Click.wav"};
 
 const int carVelocity = 180;
 
-const double carAngle = 0.05;
+const double carAngle = 0.01;
 
 //animations time
 const float dustTime = 0.06f;
@@ -58,8 +58,8 @@ const sf::Vector2f oppositeScale = {-1, -1};
 
 const int User = 0;
 
-const int MenuButtonHeight = 100;
-const int MenuButtonWidth = 283;
+const int MenuButtonHeight = 107;
+const int MenuButtonWidth = 312;
 
 const int SoundButtonHeight = 125;
 const int MusicButtonWidth = 105;
@@ -70,25 +70,27 @@ const vector<Vector2f> OpenMenuMenuButtonPos{Vector2f{1100, 300},
                                              Vector2f{1100, 600}};
 
 const vector<IntRect> OpenMenuButtonsIntRect{IntRect(0, 0, MenuButtonWidth, MenuButtonHeight),
-                                             IntRect(0, MenuButtonHeight * 2, MenuButtonWidth, MenuButtonHeight),
-                                             IntRect(0, MenuButtonHeight * 4, MenuButtonWidth, MenuButtonHeight),};
+                                             IntRect(0, MenuButtonHeight*2, MenuButtonWidth, MenuButtonHeight),
+                                             IntRect(0, MenuButtonHeight*4, MenuButtonWidth, MenuButtonHeight),};
 
 
 const IntRect SoundButtonRect(0, 0, clicksButtonWidth, SoundButtonHeight);
 const IntRect SoundButtonRect2(320, 0, MusicButtonWidth, SoundButtonHeight);
 
-const int InGameMenuButtonHeight = 130;
-const int InGameMenuButtonWidth = 140;
+const int InGameMenuButtonHeight = 135;
+const int InGameMenuButtonWidth = 145;
 
 const vector<Vector2f> InGameMenuButtonPos{Vector2f{600, 450},
                                            Vector2f{750, 450},
                                            Vector2f{900, 450},
-                                           Vector2f{1050, 450}};
+                                           Vector2f{1050, 450},
+                                           Vector2f{750, 300}};
 
-const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1135, InGameMenuButtonWidth, InGameMenuButtonHeight),
-                                           IntRect(0, 1010, InGameMenuButtonWidth, InGameMenuButtonHeight),
-                                           IntRect(0, 1280, InGameMenuButtonWidth, InGameMenuButtonHeight),
-                                           IntRect(0, 1410, InGameMenuButtonWidth, InGameMenuButtonHeight)};
+const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1210, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1075, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1360, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1500, InGameMenuButtonWidth, InGameMenuButtonHeight),
+                                           IntRect(0, 1650, InGameMenuButtonWidth, InGameMenuButtonHeight)};
 
 
 const int AmountOfLevels = 3;
@@ -97,7 +99,7 @@ const std::string EndLevelMark = "EndLevel";
 
 const int carPLaceStart = five; // by the amount of cars in the game
 
-const float moveSpeed = 300.f;
+const float moveSpeed = 100.f;
 const b2Vec2 RIGHT = {1, 0};
 const b2Vec2 LEFT = {-1, 0};
 

@@ -15,9 +15,10 @@ void PlayMenu::draw(RenderTarget &window, const Vector2f &userCarPos) {
     if (m_pressPause)
     {
         m_menuBackground.setPosition(userCarPos.x + 320, 800);      //update Menu Position
-        m_buttons.at(InGameMusic)->getSpriteButton().setPosition(userCarPos.x + 100, 800);
-        m_buttons.at(InGameHome)->getSpriteButton().setPosition(userCarPos.x + 250, 800);
-        m_buttons.at(InGamePlay)->getSpriteButton().setPosition(userCarPos.x + 400, 800);
+        m_buttons.at(InGameMusic)->getSpriteButton().setPosition(userCarPos.x + 100, 850);
+        m_buttons.at(InGameHome)->getSpriteButton().setPosition(userCarPos.x + 250, 700);
+        m_buttons.at(InGamePlay)->getSpriteButton().setPosition(userCarPos.x + 400, 850);
+        m_buttons.at(InGameRestart)->getSpriteButton().setPosition(userCarPos.x + 250, 850);
         window.draw(m_menuBackground);
         for (auto &button: m_buttons)
             button->draw(window);
@@ -39,6 +40,9 @@ void PlayMenu::handleClick(const Vector2f &pos, vector<bool> &windows, size_t cu
 
     if (press == InGameMusic)
         handlePressMusic();
+
+//    if (press == InGameRestart)
+//        handleRestart();
 }
 
 //______________________________

@@ -50,9 +50,9 @@ private:
 
     void exitGame(const Event &);
 
-    RenderWindow m_gameWindow = {VideoMode(1600, 900), "Death Chase"};
+    RenderWindow m_gameWindow = {VideoMode(1600, 900), "Death Chase" ,Style::Fullscreen};
     Data m_data;
-    vector<bool> m_windows = {true, false, false, false};
+    vector<bool> m_windows = {false, true, false, false};
     vector<unique_ptr<GameMenu>> m_menus;
     bool m_userMoved = false;
     bool m_running = true;

@@ -7,12 +7,16 @@
 class UserCar : public MovingObject {
 
 public:
-    UserCar(const unsigned&,
+    UserCar(const unsigned &,
             std::unique_ptr<b2World> &,
             const sf::Vector2f &,
-            const float&,
-            const b2BodyType&,
-            const int16&);
+            const float &,
+            const b2BodyType &,
+            const int16 &);
+
+    void setB2d(std::unique_ptr<b2World> &world,
+                b2BodyType bodyType,
+                int16 group )override;
 
     void move(const sf::Event &) override;
 
@@ -24,7 +28,7 @@ public:
         return m_body->GetMass() * moveSpeed * m_carTimeDir.getElapsedTime().asSeconds() > 1.99818e+07;
     }
 
-    void setCarOnGroundAngle(const float& angle) { m_groundAngle = angle; }
+    void setCarOnGroundAngle(const float &angle) { m_groundAngle = angle; }
 
 private:
     void updateDust(const b2Vec2 &);
@@ -45,7 +49,18 @@ private:
     sf::Vector2f m_dustOffset;
     float m_carMass;
     float m_groundAngle;
+    b2Vec2 m_Dir = {1, 0};
+
+    b2Body *m_bodyCircle1;
+    b2Body *m_bodyCircle2;
+
+    b2WheelJoint* m_joint;
+
+    b2RevoluteJoint* m_revoluteJoint1;
+    b2RevoluteJoint* m_revoluteJoint2;
 };
+
+
 
 //________
 namespace {

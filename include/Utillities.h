@@ -74,6 +74,7 @@ enum InGameButtuns {
     InGameMusic,
     InGameHome,
     InGamePlay,
+    InGameRestart,
     InGameButtonsCount
 };
 

@@ -39,14 +39,13 @@ protected:
     b2Body *m_body = nullptr;
     sf::Sprite m_sprite;
 
-private:
-    void setSprite(const unsigned&, const sf::Vector2f &, const float&);
-
-    void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
-
     float getWidth() const { return m_sprite.getLocalBounds().width; }
 
     float getHeight() const { return m_sprite.getLocalBounds().height; }
+private:
+    void setSprite(const unsigned&, const sf::Vector2f &, const float&);
+
+    virtual void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
 
     bool m_canCollide = true;
     bool m_dead = false;

@@ -17,10 +17,10 @@ void Controller::setIcon() {
 //___________________
 void Controller::run() {
     //DebugDraw
-    //DebugDraw d(m_gameWindow);
-    //uint32 flags = b2Draw::e_shapeBit;
-    //d.SetFlags(flags);
-    //m_data.getWorld()->SetDebugDraw(&d);
+    DebugDraw d(m_gameWindow);
+    uint32 flags = b2Draw::e_shapeBit;
+    d.SetFlags(flags);
+    m_data.getWorld()->SetDebugDraw(&d);
 
     MyContactListener myContactListenerInstance; // Contact Listener
 
@@ -64,6 +64,7 @@ void Controller::setMenus() {
     m_menus[Play]->add(make_unique<InGameMenuButton>(Buttons, InGameMusic));
     m_menus[Play]->add(make_unique<InGameMenuButton>(Buttons, InGameHome));
     m_menus[Play]->add(make_unique<InGameMenuButton>(Buttons, InGamePlay));
+    m_menus[Play]->add(make_unique<InGameMenuButton>(Buttons, InGameRestart));
 }
 
 //________________________
@@ -101,7 +102,7 @@ void Controller::handleEvents() {
 
 //_________________________________________________
 void Controller::mouseEventMoved(const Event &event) {
-    auto location = Vector2f(float(event.mouseMove.x), float(event.mouseMove.y));
+    auto location = m_gameWindow.mapPixelToCoords({event.mouseMove.x, event.mouseMove.y});
     m_menus.at(size_t(CurrMenu()))->isMouseOnButton(location);
 }
 
@@ -114,7 +115,7 @@ void Controller::mouseEventPressed(const Event &event) {
 
 //_____________________________________________________
 void Controller::keyboardPressed(const sf::Event &event) {
-    if (!m_startMessageDraw.getDrawMessage() && !m_menus.at(size_t(CurrMenu()))->isPause()) {
+    if (/*!m_startMessageDraw.getDrawMessage() &&*/ !m_menus.at(size_t(CurrMenu()))->isPause()) {
         m_data.moveUserCar(event);
         m_userMoved = true;
     }
@@ -129,9 +130,9 @@ void Controller::exitGame(const Event &event) {
 //____________________
 void Controller::draw() {
     m_gameWindow.clear();
-    drawPlay();
     m_menus.at(size_t(CurrMenu()))->draw(m_gameWindow, m_data.getUserPosition());
-    //m_data.getWorld()->DebugDraw();
+    drawPlay();
+    m_data.getWorld()->DebugDraw();
 
     m_gameWindow.display();
 }
@@ -147,7 +148,7 @@ void Controller::drawPlay() {
         setView(1600.0f, 900.0f);
 }
 
-//__________________________________________
+//________________________________________________
 void Controller::setView(float width, float height) {
     auto view = m_gameWindow.getView();
     view.setCenter(width / 2, height / 2);
@@ -157,5 +158,5 @@ void Controller::setView(float width, float height) {
 
 //________________________________
 void Controller::drawStartMessage() {
-    m_startMessageDraw.drawMessage(m_gameWindow);
+//    m_startMessageDraw.drawMessage(m_gameWindow);
 }

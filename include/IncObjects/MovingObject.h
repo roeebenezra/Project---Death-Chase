@@ -7,12 +7,12 @@
 class MovingObject : public GameObject {
 
 public:
-    MovingObject(const unsigned&,
+    MovingObject(const unsigned &,
                  std::unique_ptr<b2World> &,
                  const sf::Vector2f &,
-                 const float&,
-                 const b2BodyType&,
-                 const int16&);
+                 const float &,
+                 const b2BodyType &,
+                 const int16 &);
 
     float getRotation() const { return m_sprite.getRotation(); }
 
@@ -47,6 +47,8 @@ public:
     float getCarOnGroundAngle() { return m_carOnGroundAngle; }
 
 private:
+    virtual void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16) override;
+
     float m_carOnGroundAngle = 0;
     bool m_carInWater = false;
     int m_carPLace;

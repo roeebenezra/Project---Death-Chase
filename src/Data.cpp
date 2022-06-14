@@ -12,7 +12,7 @@ Data::Data() {
 
 //__________________
 void Data::setWorld() {
-    b2Vec2 gravity(0.0f, 10.f); //set gravity
+    b2Vec2 gravity(0.0f, 50.f); //set gravity
     m_world = std::make_unique<b2World>(gravity);
 }
 

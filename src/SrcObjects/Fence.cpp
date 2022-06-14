@@ -7,13 +7,13 @@ Fence::Fence(const unsigned& name,
              const b2BodyType& bodyType,
              const int16& group)
         : StaticObject(name, world, position, rotation, bodyType, group) {
-    cout << "old fence mass is " << m_body->GetMass() << "\n";
+//    cout << "old fence mass is " << m_body->GetMass() << "\n";
 //    b2MassData* data;
 //    m_body->GetMassData(data);
 //    data->mass = 50;
 //    data->center.Set(0, 0);
 //    m_body->SetMassData(data);
-    cout << "new fence mass is " << m_body->GetMass() << "\n";
+//    cout << "new fence mass is " << m_body->GetMass() << "\n";
 }
 
 bool Fence::m_registerIt =

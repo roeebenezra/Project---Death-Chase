@@ -63,10 +63,6 @@ fence 10250 1500 0
 fence 10200 1100 0
 EndLevel
 mustang 1500 1700 0
-redCar 1250 1700 0
-yellowCar 1800 1700 0
-truck 2000 1700 0
-hummer 2200 1700 0
 ground_5 1000 1900 0
 ground_5 2900 1900 0
 ground_5 4800 1900 0
@@ -112,4 +108,5 @@ rock 13200 1730 0
 rock 13500 1730 0
 rock 13800 1730 0
 rock 14100 1730 0
+ground_5 2500 1700 12
 EndLevel

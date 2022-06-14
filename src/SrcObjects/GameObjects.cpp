@@ -38,9 +38,9 @@ void GameObject::setB2d(std::unique_ptr<b2World> &world,
 
     b2FixtureDef fixtureDef; // FixtureDef
     fixtureDef.shape = &BoxShape;
-    fixtureDef.density = 1.0f;
-    m_body->ResetMassData();
-    fixtureDef.friction = 1.0f;
+    fixtureDef.density = 1;
+//    m_body->ResetMassData();
+    fixtureDef.friction = 1;
     fixtureDef.filter.groupIndex = group;
     m_body->CreateFixture(&fixtureDef);
     m_body->SetUserData(this);
