@@ -34,12 +34,13 @@ void UserCar::setB2d(std::unique_ptr<b2World> &world,
     fixtureDef.density = 1;
     fixtureDef.friction = 1;
     fixtureDef.filter.groupIndex = group;
+    fixtureDef.isSensor = true;
 
     m_body->CreateFixture(&fixtureDef);
     m_body->SetUserData(this);
 //    m_body->SetLinearVelocity(b2Vec2(m_body->GetMass()* moveSpeed, 0));
 
-    //circles
+    //circles Def
     b2BodyDef bodyDefCircle1; // BodyDef
     b2BodyDef bodyDefCircle2; // BodyDef
 
@@ -83,7 +84,7 @@ void UserCar::setB2d(std::unique_ptr<b2World> &world,
 
 //    b2DistanceJointDef jointDef;
 //    jointDef.Initialize(m_bodyCircle1, m_bodyCircle2, m_bodyCircle1->GetWorldCenter(), m_bodyCircle2->GetWorldCenter());
-//    jointDef.length = 300.0f;
+//    jointDef.length = 100.0f;
 //    jointDef.collideConnected = true;
 //    m_joint = dynamic_cast<b2WheelJoint *>(world->CreateJoint(&jointDef));
 //    m_joint->SetUserData(this);
@@ -129,12 +130,12 @@ void UserCar::move(const sf::Event &event) {
 
     b2Vec2 dir = keyToDirection(event.key.code);
 
-    if (dir == b2Vec2(0, 0)) {
-        setCarAngle(event.key.code); // set car angle
-    } else {
+//    if (dir == b2Vec2(0, 0)) {
+//        setCarAngle(event.key.code); // set car angle
+//    } else {
         moveCar(dir); // move car
         updateDust(dir); // car dust animation
-    }
+//    }
 }
 
 //__________________________________________
@@ -171,8 +172,16 @@ void UserCar::moveCar(const b2Vec2 &dir) {
     auto desireVel = 250.0f;
     auto velChange = desireVel - vel.x;
     float impulse = m_body->GetMass() * velChange;
-    m_body->ApplyLinearImpulse(impulse/2 * dir, m_bodyCircle1->GetWorldCenter(), true);
+
+    m_body->ApplyLinearImpulse(impulse / 3 * dir, m_bodyCircle1->GetWorldCenter(), true);
     m_body->ApplyLinearImpulse(impulse * dir, m_bodyCircle2->GetWorldCenter(), true);
+
+    m_body->ApplyAngularImpulse(0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity(), true);
+
+    b2Vec2 currentForwardNormal = m_body->GetLinearVelocity();
+    float currentForwardSpeed = currentForwardNormal.Normalize();
+    float dragForceMagnitude = -2 * currentForwardSpeed;
+    m_body->ApplyForce(dragForceMagnitude * currentForwardNormal, m_body->GetWorldCenter(), true);
 
 //    m_bodyCircle1->ApplyForce(b2Vec2(300, 0), m_body->GetWorldCenter(), true);
 //    if (dir == RIGHT) {

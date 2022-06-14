@@ -99,7 +99,7 @@ void Controller::draw() {
     m_gui.drawWindow(m_gameWindow, m_data.getUserPosition());
     drawPlay();
 
-    m_data.getWorld()->DebugDraw();
+//    m_data.getWorld()->DebugDraw();
     m_gameWindow.display();
 }
 
