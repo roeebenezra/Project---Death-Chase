@@ -1,7 +1,7 @@
 #pragma once
 
 #include "macros.h"
-#include "IncObjects/MovingObject.h"
+#include "IncObjects/CarObjects.h"
 #include "IncObjects/StaticObject.h"
 
 template<typename T>

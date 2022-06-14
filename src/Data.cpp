@@ -3,8 +3,13 @@
 
 //__________
 Data::Data() {
+    setLevel();
+}
+
+//___________________
+void Data::setLevel() {
     setWorld();
-    m_map.getObjectsFromFile(*this, 2);
+    m_map.getObjectsFromMapLevel(*this, m_indexLevel);
     m_floor.setFloor(m_world);
     m_boundaries.setBoundaries(m_world, {1200, 500});
     setCarsPlace();
@@ -25,8 +30,8 @@ void Data::setWorldStep() {
 void Data::setObject(std::string &name,
                      const sf::Vector2f &position,
                      const float rotation) {
-    if (FactoryObject<MovingObject>::checkIfNameInMap(name)) {
-        m_moving.push_back(FactoryObject<MovingObject>::create(m_world, name, position, rotation));
+    if (FactoryObject<CarObjects>::checkIfNameInMap(name)) {
+        m_moving.push_back(FactoryObject<CarObjects>::create(m_world, name, position, rotation));
         return;
     }
     if (FactoryObject<StaticObject>::checkIfNameInMap(name)) {
@@ -55,16 +60,47 @@ void Data::setCarsPlace() {
 
 //____________________________________________
 void Data::moveUserCar(const sf::Event &event) {
-    m_moving[User]->move(event);
+    if (!m_moving[User]->getCarAtFinishLine())
+        m_moving[User]->move(event);
 }
 
 //_________________________________________________
 void Data::moveComputerCars(const sf::Event &event) {
     for (auto &moving: m_moving)
-        if (moving != m_moving[User])
+        if (moving != m_moving[User] && !moving->getCarAtFinishLine())
             moving->move(event);
 }
 
+//____________________________
+void Data::handlePlayerDead() {
+    if (m_moving[User]->getObjectDead()) {
+//        set position
+        b2Vec2 checkPointPosition = m_map.getPlayerCheckPoint(m_indexLevel, m_moving[User]->getPosition().x);
+        m_moving[User]->setPosition(checkPointPosition);
+        m_moving[User]->setObjectDead(false);
+        m_moving[User]->restartCar();
+    }
+}
+
+//____________________________
+bool Data::raceFinished()const {
+    for (auto &moving: m_moving)
+        if (!moving->getCarAtFinishLine())
+            return false;
+    return true;
+}
+
+//_________________________________________________
+void Data::setNextLevel(const unsigned& levelIndex) {
+    for (auto &moving: m_moving)
+        moving->setObjectDead(true);
+    for (auto &statics: m_static)
+        statics->setObjectDead(true);
+    removeObjects();
+    m_indexLevel = levelIndex;
+    setLevel();
+
+}
 //______________________
 void Data::removeObjects() {
     for (auto &moving: m_moving)

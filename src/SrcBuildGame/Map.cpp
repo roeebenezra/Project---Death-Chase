@@ -1,14 +1,20 @@
 #include "IncBuildGame/Map.h"
 #include "Data.h"
 
-//_______________________________________
-void Map::getObjectsFromFile(Data &data,
-                             const unsigned& indexLevel) {
+//_________
+Map::Map() : m_levelNames(AmountOfLevels),
+             m_levelPositions(AmountOfLevels),
+             m_levelRotations(AmountOfLevels),
+             m_checkPoints(AmountOfLevels) {
+    readMapLevelsFromFile();
+}
+
+//____________________________
+void Map::readMapLevelsFromFile() {
     std::ifstream file = openFile();
     if (!checkIfFileOpened(file))
         return;
-    readMapFromFile(file);
-    sendObjectsFromMapLevel(data, indexLevel);
+    readFile(file);
 }
 
 //___________________________
@@ -27,8 +33,8 @@ bool Map::checkIfFileOpened(std::ifstream &file) {
     return true;
 }
 
-//____________________________________________
-void Map::readMapFromFile(std::ifstream &file) {
+//______________________________________
+void Map::readFile(std::ifstream &file) {
 
     unsigned index = 0;
     std::string typeOfObject;
@@ -37,7 +43,8 @@ void Map::readMapFromFile(std::ifstream &file) {
 
     while (!file.eof()) {
         file >> typeOfObject;
-        if (typeOfObject == EndLevelMark) {
+        if (typeOfObject == CheckPointsMark) {
+            setCheckPoints(file, index);
             index++;
             file >> typeOfObject;
         }
@@ -53,13 +60,42 @@ void Map::readMapFromFile(std::ifstream &file) {
     file.close();
 }
 
+//___________________________________________
+void Map::setCheckPoints(std::ifstream &file,
+                         const unsigned &index) {
+    b2Vec2 checkPointPosition;
+    std::string checkPoint;
+    file >> checkPoint;
+    while (checkPoint != EndLevelMark) {
+        file >> checkPointPosition.x >> checkPointPosition.y;
+        m_checkPoints[index].push_back(checkPointPosition);
+        file >> checkPoint;
+    }
+}
+
 //____________________________________________
-void Map::sendObjectsFromMapLevel(Data & data,
-                                  const unsigned& indexLevel) {
+void Map::getObjectsFromMapLevel(Data &data,
+                                  const unsigned &indexLevel) {
     for (unsigned i = 0; i < m_levelNames[indexLevel].size(); ++i)
         data.setObject(m_levelNames[indexLevel][i],
                        m_levelPositions[indexLevel][i],
                        m_levelRotations[indexLevel][i]);
+}
+
+//_______________________________________________________________
+b2Vec2 Map::getPlayerCheckPoint(const unsigned &levelIndex,
+                                      const float &playerPosition) const {
+    int minDistanceToCheckPoint = std::numeric_limits<int>::max(),
+    temp;
+    unsigned indexOfCheckPointToReturn;
+    for (unsigned i = 0; i <m_checkPoints[levelIndex].size(); ++i) {
+        temp = static_cast<int>(abs(m_checkPoints[levelIndex][i].x - playerPosition));
+        if ( temp < minDistanceToCheckPoint) {
+            minDistanceToCheckPoint = temp;
+            indexOfCheckPointToReturn = i;
+        }
+    }
+    return m_checkPoints[levelIndex][indexOfCheckPointToReturn];
 }
 
 //userCar 2500 1500 0

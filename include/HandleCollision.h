@@ -8,7 +8,7 @@
 #include "IncObjects/Water.h"
 #include "IncObjects/Rock.h"
 #include "IncAnimation/Coin.h"
-#include "IncObjects/Floor.h"
+#include "IncObjects/FinishLine.h"
 
 class GameObject;
 
@@ -24,17 +24,13 @@ private:
 
     void operator=(const HandleCollision &) {}
 
-    void userCarRock(GameObject *, GameObject *);
+    void userCarFinishLine(GameObject *, GameObject *);
 
-    void rockUserCar(GameObject *, GameObject *);
+    void finishLineUserCar(GameObject *, GameObject *);
 
-//    void userCarFloor(GameObject *, GameObject *);
-//
-//    void floorUserCar(GameObject *, GameObject *);
-//
-//    void computerCarFloor(GameObject *, GameObject *);
-//
-//    void floorComputerCar(GameObject *, GameObject *);
+    void computerCarFinishLine(GameObject *, GameObject *);
+
+    void finishLineComputerCar(GameObject *, GameObject *);
 
     void userCarGround(GameObject *, GameObject *);
 

@@ -7,16 +7,31 @@ UserCar::UserCar(const unsigned& name,
                  const float& rotation,
                  const b2BodyType& bodyType,
                  const int16& group) :
-        MovingObject(name, world, position, rotation, bodyType, group),
+        CarObjects(name, world, position, rotation, bodyType, group),
         m_dust(getPosition(), regularScale) {}
 
 //__________________________
 bool UserCar::m_registerIt =
-        FactoryObject<MovingObject>::registerIt("mustang", [](std::unique_ptr<b2World> &world,
-                                                              const sf::Vector2f &position,
-                                                              const float rotation) -> std::unique_ptr<MovingObject> {
+        FactoryObject<CarObjects>::registerIt("mustang", [](std::unique_ptr<b2World> &world,
+                                                            const sf::Vector2f &position,
+                                                            const float rotation) -> std::unique_ptr<CarObjects> {
             return std::make_unique<UserCar>(mustang, world, position, rotation, b2_dynamicBody, Collide);
         });
+
+//____________________________________________________
+b2Vec2 UserCar::keyToDirection(sf::Keyboard::Key key) {
+    switch (key) {
+        case sf::Keyboard::Up:
+            return RIGHT;
+        case sf::Keyboard::Down:
+            return LEFT;
+        case sf::Keyboard::Space:
+        case sf::Keyboard::Z:
+            return {0, -1};
+        default:
+            return {0, 0};
+    }
+}
 
 //_________________________________________
 void UserCar::move(const sf::Event &event) {
@@ -64,7 +79,7 @@ void UserCar::moveCar(const b2Vec2 &dir) {
 
 //    float impulse = m_body->GetMass() * moveSpeed * m_carTimeDir.getElapsedTime().asSeconds();
     float impulse = m_body->GetMass() * moveSpeed;
-    cout << getPosition().y << "\n";
+//    cout << getPosition().x << "\n";
     m_body->ApplyLinearImpulse(impulse * dir, m_body->GetWorldCenter(), true);
 }
 

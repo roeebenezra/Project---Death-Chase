@@ -1,6 +1,7 @@
 
 enum TextureRcs {
     PlayBackground,
+    PlayBackground2,
     truck,
     redCar,
     yellowCar,
@@ -88,4 +89,9 @@ enum OpenMenuButtons {
     OpenMenuOptions,
     OpenMenuExit,
     OpenMenuButtonsCount
+};
+
+enum TEXTS {
+    LEVEL,
+    COINS,
 };

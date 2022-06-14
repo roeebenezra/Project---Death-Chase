@@ -5,32 +5,26 @@ HandleCollision &HandleCollision::instance() {
     return collision;
 }
 
-void HandleCollision::userCarRock(GameObject *, GameObject *) {
-    cout << "user car rock\n";
+void HandleCollision::userCarFinishLine(GameObject *userCar, GameObject *finishLine) {
+    auto *user = dynamic_cast<UserCar *>(userCar);
+    user->setCarAtFinishLine(true);
 }
 
-void HandleCollision::rockUserCar(GameObject *rock, GameObject *userCar) {
-    userCarRock(userCar, rock);
+void HandleCollision::finishLineUserCar(GameObject *finishLine, GameObject *userCar) {
+    userCarFinishLine(userCar, finishLine);
 }
 
-//void HandleCollision::userCarFloor(GameObject *userCar, GameObject *floor) {
-//    cout << "userCar on floor\n";
-//}
-//
-//void HandleCollision::floorUserCar(GameObject *floor, GameObject *userCar) {
-//    userCarFloor(userCar, floor);
-//}
-//
-//void HandleCollision::computerCarFloor(GameObject *computerCar, GameObject *floor) {
-//    cout << "computerCar on floor\n";
-//}
-//
-//void HandleCollision::floorComputerCar(GameObject *floor, GameObject *computerCar) {
-//    computerCarFloor(floor, computerCar);
-//}
+void HandleCollision::computerCarFinishLine(GameObject *computerCar, GameObject *floor) {
+    auto *computer = dynamic_cast<ComputerCar *>(computerCar);
+    computer->setCarAtFinishLine(true);
+}
+
+void HandleCollision::finishLineComputerCar(GameObject *finishLine, GameObject *computerCar) {
+    computerCarFinishLine(computerCar, finishLine);
+}
 
 void HandleCollision::userCarGround(GameObject *userCar, GameObject *ground) {
-    UserCar *user = dynamic_cast<UserCar *>(userCar);
+    auto *user = dynamic_cast<UserCar *>(userCar);
     user->setCarOnGround(true);
     user->setCarOnGroundAngle(ground->getAngle());
 }
@@ -49,16 +43,6 @@ void HandleCollision::groundComputerCar(GameObject *ground, GameObject *computer
 
 void HandleCollision::userCarComputerCar(GameObject *userCar, GameObject *computerCar) {
 //    std::cout << "userCar with computerCar!\n";
-    auto *user = dynamic_cast<UserCar *>(userCar);
-    auto *computer = dynamic_cast<ComputerCar *>(computerCar);
-    user->setCarOnGround(true);
-//    int temp;
-//    if((user->getCarPlace() > computer->getCarPlace() && user->getPosition().x < computerCar->getPosition().x )||
-//            (user->getCarPlace() < computer->getCarPlace() && user->getPosition().x > computerCar->getPosition().x)) {
-//        temp = computer->getCarPlace();
-//        computer->setCarPlace(user->getCarPlace());
-//        user->setCarPlace(temp);
-//    }
 }
 
 void HandleCollision::computerCarUserCar(GameObject *computerCar, GameObject *userCar) {
@@ -84,6 +68,7 @@ void HandleCollision::coinUserCar(GameObject *coin, GameObject *userCar) {
 void HandleCollision::userCarWater(GameObject *userCar, GameObject *water) {
     auto *user = dynamic_cast<UserCar *>(userCar);
     user->setCarInWater(true);
+    cout << "userCar int water\n";
 }
 
 void HandleCollision::waterUserCar(GameObject *water, GameObject *userCar) {
@@ -107,14 +92,11 @@ HandleCollision::HitMap HandleCollision::initializeCollisionMap() {
     phm[Key(typeid(ComputerCar), typeid(UserCar))] = &HandleCollision::computerCarUserCar;
     phm[Key(typeid(ComputerCar), typeid(ComputerCar))] = &HandleCollision::computerCarComputerCar;
 
-    phm[Key(typeid(UserCar), typeid(Rock))] = &HandleCollision::userCarRock;
-    phm[Key(typeid(Rock), typeid(UserCar))] = &HandleCollision::rockUserCar;
+    phm[Key(typeid(UserCar), typeid(FinishLine))] = &HandleCollision::userCarFinishLine;
+    phm[Key(typeid(FinishLine), typeid(UserCar))] = &HandleCollision::finishLineUserCar;
 
-//    phm[Key(typeid(UserCar), typeid(Floor))] = &HandleCollision::userCarFloor;
-//    phm[Key(typeid(Floor), typeid(UserCar))] = &HandleCollision::floorUserCar;
-//
-//    phm[Key(typeid(ComputerCar), typeid(Floor))] = &HandleCollision::computerCarFloor;
-//    phm[Key(typeid(Floor), typeid(ComputerCar))] = &HandleCollision::floorComputerCar;
+    phm[Key(typeid(ComputerCar), typeid(FinishLine))] = &HandleCollision::computerCarFinishLine;
+    phm[Key(typeid(FinishLine), typeid(ComputerCar))] = &HandleCollision::finishLineComputerCar;
 
     phm[Key(typeid(UserCar), typeid(Ground))] = &HandleCollision::userCarGround;
     phm[Key(typeid(Ground), typeid(UserCar))] = &HandleCollision::groundUserCar;

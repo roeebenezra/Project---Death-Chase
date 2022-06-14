@@ -7,11 +7,12 @@ class Data;
 class Map {
 
 public:
-    Map() : m_levelNames(AmountOfLevels),
-            m_levelPositions(AmountOfLevels),
-            m_levelRotations(AmountOfLevels) {}
+    Map();
 
-    void getObjectsFromFile(Data &, const unsigned&);
+    void getObjectsFromMapLevel(Data &, const unsigned &);
+
+    b2Vec2 getPlayerCheckPoint(const unsigned &,
+                                     const float &) const;
 
 private:
     using OpenFile = std::ifstream;
@@ -20,11 +21,14 @@ private:
 
     bool checkIfFileOpened(std::ifstream &);
 
-    void readMapFromFile(std::ifstream &);
+    void readMapLevelsFromFile();
 
-    void sendObjectsFromMapLevel(Data &, const unsigned&);
+    void readFile(std::ifstream &);
+
+    void setCheckPoints(std::ifstream &file, const unsigned &);
 
     std::vector<std::vector<std::string>> m_levelNames;
     std::vector<std::vector<sf::Vector2f>> m_levelPositions;
     std::vector<std::vector<float>> m_levelRotations;
+    std::vector<std::vector<b2Vec2>> m_checkPoints;
 };

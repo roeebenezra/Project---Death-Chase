@@ -8,6 +8,7 @@ FinishLine::FinishLine(const unsigned& name,
                        const int16& group)
         : StaticObject(name, world, position, rotation, bodyType, group) {
     m_sprite.setScale(1, 2);
+    m_body->GetFixtureList()->SetSensor(true);
 }
 
 bool FinishLine::m_registerIt =

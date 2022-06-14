@@ -4,6 +4,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         "Data.cpp"
         "MyContactListener.cpp"
         "HandleCollision.cpp"
+        "Gui.cpp"
         "StartMessage.cpp"
 
         "SrcBuildGame/Map.cpp"
@@ -11,7 +12,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         "SrcBuildGame/Resources.cpp"
 
         "SrcObjects/GameObjects.cpp"
-        "SrcObjects/MovingObjects.cpp"
+        "SrcObjects/CarObjects.cpp"
         "SrcObjects/StaticObjects.cpp"
         "SrcObjects/UserCar.cpp"
         "SrcObjects/ComputerCar.cpp"

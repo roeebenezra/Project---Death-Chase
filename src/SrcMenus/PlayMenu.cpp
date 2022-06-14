@@ -2,18 +2,61 @@
 
 //___________________________________________________________________________________________
 PlayMenu::PlayMenu(unsigned playBackground, unsigned InGameMenuBackground, const Vector2f &pos)
-        : GameMenu(playBackground, pos), m_menuBackground(Resources::instance().getTexture(InGameMenuBackground)) {
+        : GameMenu(playBackground, pos), m_menuBackground(Resources::instance().getTexture(InGameMenuBackground)),
+          m_secondBackground(Resources::instance().getTexture(PlayBackground2)) {
     m_menuBackground.setOrigin(m_menuBackground.getLocalBounds().width / 2,
                                m_menuBackground.getLocalBounds().height / 2);
+    m_secondBackground.setPosition({16500, 300});
+    m_secondBackground.setOrigin(m_menuBackground.getLocalBounds().width / 2,
+                                 m_menuBackground.getLocalBounds().height / 2);
+    setPlayMenuTexts();
+}
+
+//________________________________
+void PlayMenu::setPlayMenuTexts() {
+    sf::Vector2f position;
+    for (auto & i : Texts) {
+        Text text = createText(position, FontSize, i, Color::Black);
+        m_playMenuTexts.push_back(text);
+    }
+    Texts[LEVEL] += std::to_string(m_level);
+    m_playMenuTexts[LEVEL].setString(Texts[LEVEL]);
+    Texts[COINS] += std::to_string(m_coins);
+    m_playMenuTexts[COINS].setString(Texts[COINS]);
+}
+
+//_____________________________________________________
+Text PlayMenu::createText(Vector2f pos, unsigned size,
+                          const string &name, Color color) const {
+    Text text(name, Resources::instance().getFontForText(), size);
+    text.setFillColor(color);
+    text.setPosition(pos);
+//    text.setOutlineThickness(2);
+
+    return text;
+}
+
+//______________________________________________
+void PlayMenu::updateTextString(const TEXTS &text,
+                                const unsigned &num,
+                                const unsigned &index) {
+    Texts[text].replace(index, std::to_string(num).size() + 1, std::to_string(num));
+    m_playMenuTexts[text].setString(Texts[text]);
+}
+
+//_________________________
+void PlayMenu::resetCoins() {
+    m_coins = 0;
+    updateTextString(COINS, m_coins, CoinsSetIndex);
 }
 
 //_________________________________________________________________
 void PlayMenu::draw(RenderTarget &window, const Vector2f &userCarPos) {
     window.draw(getSprite());
+    window.draw(m_secondBackground);
     window.draw(m_buttons.at(InGamePause)->getSpriteButton());
     m_buttons.at(InGamePause)->getSpriteButton().setPosition(userCarPos.x + 2000, 50);
-    if (m_pressPause)
-    {
+    if (m_pressPause) {
         m_menuBackground.setPosition(userCarPos.x + 320, 800);      //update Menu Position
         m_buttons.at(InGameMusic)->getSpriteButton().setPosition(userCarPos.x + 100, 800);
         m_buttons.at(InGameHome)->getSpriteButton().setPosition(userCarPos.x + 250, 800);
@@ -21,6 +64,11 @@ void PlayMenu::draw(RenderTarget &window, const Vector2f &userCarPos) {
         window.draw(m_menuBackground);
         for (auto &button: m_buttons)
             button->draw(window);
+    }
+
+    for (unsigned i = 0; i < m_playMenuTexts.size(); i++) {
+        m_playMenuTexts[i].setPosition({userCarPos.x + PlayMenuTextPositions[i].x, PlayMenuTextPositions[i].y});
+        window.draw(m_playMenuTexts[i]);
     }
 }
 
