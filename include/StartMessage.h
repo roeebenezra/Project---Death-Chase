@@ -10,9 +10,9 @@ public:
 
     void drawMessage(sf::RenderWindow &);
 
-    void setDrawMessage(const bool draw) { m_drawMessage = draw; }
-    [[nodiscard]]
     bool getDrawMessage() const { return m_drawMessage; }
+
+    void resetStartMessage();
 
 private:
     void setMessage();

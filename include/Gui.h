@@ -36,12 +36,26 @@ public:
 
     bool handlePauseButton(const sf::Keyboard::Key &);
 
-    [[nodiscard]]
     bool getStartDrawMessage() const { return m_startMessageDraw.getDrawMessage(); }
 
-    void setStartDrawMessage(const bool &draw) { m_startMessageDraw.setDrawMessage(draw); }
-
     bool isWindowInOpenGameMenu() { return CurrMenu() == OpenGameMenu; }
+
+    bool isRestart();
+
+    void setRestart(const bool &restart) { m_menus[CurrMenu()]->setRestart(restart); }
+
+    void updateText(const TEXTS &text,
+                    const unsigned &num,
+                    const unsigned &indexOffset) { m_menus[CurrMenu()]->updateTextString(text, num, indexOffset); }
+
+    void resetStartMessage() { m_startMessageDraw.resetStartMessage(); }
+
+    void setPause(const bool pause) { m_menus[CurrMenu()]->setPause(pause); }
+
+    void drawEnd(RenderWindow &window,
+                 const sf::Vector2f &pos,
+                 const std::string &text,
+                 const Color &color) { m_menus[CurrMenu()]->drawEnd(window, pos, text, color); }
 
 private:
     void setIcon(sf::RenderWindow &);
@@ -49,6 +63,6 @@ private:
     void setMenus();
 
     StartMessage m_startMessageDraw;
-    vector<bool> m_windows = {false, true};
+    vector<bool> m_windows = {true, false};
     vector<unique_ptr<GameMenu>> m_menus;
 };

@@ -38,11 +38,9 @@ const std::vector Textures = {"mustang.png", "redCar.png", "hummer.png", "yellow
                               "seven.png", "explosion.png", "water.png", "finishLine.png", "rock.png",
                               "rollerCoaster.png", "fence.png", "letsGo.png", "1.png", "2.png", "3.png",
                               "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png",
-                              "HowToPlay.png", "PauseMenu.png"};
+                              "HowToPlay.png", "PauseMenu.png", "stone_1.png", "stone_2.png", "stone_3.png", "stone_4.png"};
 
 const std::string Sounds[] = {"MenuSound.wav", "PlaySound.wav", "Click.wav"};
-
-const int carVelocity = 180;
 
 const double carAngle = 0.01;
 
@@ -111,12 +109,12 @@ const vector<std::pair<Vector2f ,Vector2f>> TireOffset {{{120,45},{130, 45}},{{1
 
 const int AmountOfLevels = 3;
 
+const std::string Objects = "Object";
+const std::string CheckPointsMark  = "CheckPoint";
 const std::string EndLevelMark = "EndLevel";
-const std::string CheckPointsMark = "CheckPoint";
 
-const int carPLaceStart = five; // by the amount of cars in the game
+const int carPLaceStart = three; // by the amount of cars in the game
 
-const float moveSpeed = 100.f;
 const b2Vec2 RIGHT = {1, 0};
 const b2Vec2 LEFT = {-1, 0};
 

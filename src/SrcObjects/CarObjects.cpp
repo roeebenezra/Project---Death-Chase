@@ -8,8 +8,8 @@ CarObjects::CarObjects(const unsigned &name,
                        const b2BodyType &bodyType,
                        const int16 &group)
         : GameObject(name, world, position, rotation, bodyType, group),
-          m_carHealth(getPosition(), oppositeScale), m_carExplosion(getPosition(), regularScale) {
-
+          m_carHealth(getPosition(), oppositeScale), m_carExplosion(getPosition(), regularScale)
+{
     m_tire1.setTexture(Resources::instance().getTexture(Tires));
     m_tire2.setTexture(Resources::instance().getTexture(Tires));
 
@@ -26,7 +26,6 @@ CarObjects::CarObjects(const unsigned &name,
         m_tire1.setScale(0.7f, 0.7f);
         m_tire2.setScale(0.7f, 0.7f);
     }
-
     setB2d(world, bodyType, group);
 }
 
@@ -45,17 +44,17 @@ void CarObjects::setB2d(std::unique_ptr<b2World> &world,
     m_body = world->CreateBody(&bodyDef); // set Body to world
 
     b2PolygonShape BoxShape; // set BoxShape
-    BoxShape.SetAsBox(float(getWidth()) / 2, float(getHeight()) / 6);
+    BoxShape.SetAsBox(getWidth() / 2, getHeight() / 6);
 
     b2FixtureDef fixtureDef; // FixtureDef
     fixtureDef.shape = &BoxShape;
     fixtureDef.density = 1;
     fixtureDef.friction = 1;
     fixtureDef.filter.groupIndex = group;
+    fixtureDef.isSensor= true;
 
     m_body->CreateFixture(&fixtureDef);
     m_body->SetUserData(this);
-//    m_body->SetLinearVelocity(b2Vec2(m_body->GetMass()* moveSpeed, 0));
 
     //circles Def
     b2BodyDef bodyDefCircle1; // BodyDef
@@ -71,10 +70,10 @@ void CarObjects::setB2d(std::unique_ptr<b2World> &world,
     b2CircleShape CircleShape2;
 
     CircleShape1.m_p.Set(m_tire1.getPosition().x, m_tire1.getPosition().y); //position, relative to body position
-    CircleShape1.m_radius = 35; //radius
+    CircleShape1.m_radius = 30; //radius
 
     CircleShape2.m_p.Set(m_tire2.getPosition().x, m_tire2.getPosition().y); //position, relative to body position
-    CircleShape2.m_radius = 35; //radius
+    CircleShape2.m_radius = 30; //radius
 
     b2FixtureDef CircleFixtureDef1; // FixtureDef
     b2FixtureDef CircleFixtureDef2; // FixtureDef
@@ -97,21 +96,14 @@ void CarObjects::setB2d(std::unique_ptr<b2World> &world,
     m_bodyCircle1->SetUserData(this);
     m_bodyCircle2->SetUserData(this);
 
-//    b2DistanceJointDef jointDef;
-//    jointDef.Initialize(m_bodyCircle1, m_bodyCircle2, m_bodyCircle1->GetWorldCenter(), m_bodyCircle2->GetWorldCenter());
-//    jointDef.length = 100.0f;
-//    jointDef.collideConnected = true;
-//    m_joint = dynamic_cast<b2WheelJoint *>(world->CreateJoint(&jointDef));
-//    m_joint->SetUserData(this);
+    b2RevoluteJointDef revoluteJointDef1;
+    b2RevoluteJointDef revoluteJointDef2;
 
-    b2RevoluteJointDef RevoluteJointDef1;
-    b2RevoluteJointDef RevoluteJointDef2;
+    revoluteJointDef1.Initialize(m_bodyCircle1, m_body, m_bodyCircle1->GetWorldCenter());
+    revoluteJointDef2.Initialize(m_bodyCircle2, m_body, m_bodyCircle2->GetWorldCenter());
 
-    RevoluteJointDef1.Initialize(m_body, m_bodyCircle1, m_bodyCircle1->GetWorldCenter());
-    RevoluteJointDef2.Initialize(m_body, m_bodyCircle2, m_bodyCircle2->GetWorldCenter());
-
-    m_revoluteJoint1 = dynamic_cast<b2RevoluteJoint *>(world->CreateJoint(&RevoluteJointDef1));
-    m_revoluteJoint2 = dynamic_cast<b2RevoluteJoint *>(world->CreateJoint(&RevoluteJointDef2));
+    m_revoluteJoint1 = dynamic_cast<b2RevoluteJoint *>(world->CreateJoint(&revoluteJointDef1));
+    m_revoluteJoint2 = dynamic_cast<b2RevoluteJoint *>(world->CreateJoint(&revoluteJointDef2));
 
     m_revoluteJoint1->SetUserData(this);
     m_revoluteJoint2->SetUserData(this);
@@ -165,6 +157,10 @@ void CarObjects::drawObjects(sf::RenderWindow &window) {
     window.draw(m_sprite);
     window.draw(m_tire1);
     window.draw(m_tire2);
+    window.draw(m_sprite);
+    drawHealthBar(window);
+    drawExplosion(window);
+    drawCarPlace(window);
 }
 
 //______________________________
@@ -177,9 +173,4 @@ void CarObjects::updateObjects() {
 
     float angle = 180 / b2_pi * m_body->GetAngle(); //body angle multiply by 180/pie
     m_sprite.setRotation(angle);
-}
-
-//_________________________________________
-void CarObjects::move(const sf::Event &event) {
-    moveCar(RIGHT); // move car
 }

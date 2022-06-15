@@ -14,19 +14,13 @@ public:
                const b2BodyType &,
                const int16 &);
 
-    ~CarObjects()override {
-        m_body->DestroyFixture(m_body->GetFixtureList());
-        m_bodyCircle1->DestroyFixture(m_bodyCircle1->GetFixtureList());
-        m_bodyCircle2->DestroyFixture(m_bodyCircle2->GetFixtureList());
-    }
-
     float getRotation() const { return m_sprite.getRotation(); }
 
     virtual void drawObjects(sf::RenderWindow &);
 
-    virtual void moveCar(const b2Vec2 &){}
+    virtual void move(const sf::Event &) {}
 
-    virtual void move(const sf::Event &);
+    virtual ~CarObjects() = default;
 
     void updateObjects() override;
 
@@ -44,7 +38,7 @@ public:
 
     void setCarPlace(const int place) { m_carPLace = place; }
 
-    int getCarPlace() { return m_carPLace; }
+    int getCarPlace() const { return m_carPLace; }
 
     void setCarInWater(const bool water) { m_carInWater = water; }
 
@@ -54,11 +48,11 @@ public:
 
     bool getCarAtFinishLine() const { return m_carAtFinishLine; }
 
-    void setCarOnGroundAngle(float carOnGround) { m_carOnGroundAngle = carOnGround; }
-
-    float getCarOnGroundAngle() { return m_carOnGroundAngle; }
-
     void setPosition(const b2Vec2 &pos) { m_body->SetTransform(pos, m_body->GetAngle()); }
+
+    void coinsCounter() { m_coins++; }
+
+    unsigned getCoins() const { return m_coins; }
 
     void restartCar();
 
@@ -70,15 +64,14 @@ protected:
     b2RevoluteJoint *m_revoluteJoint1;
     b2RevoluteJoint *m_revoluteJoint2;
 private:
-
     void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
+
     HealthBar m_carHealth;
     Explosion m_carExplosion;
     bool m_carAtFinishLine = false;
     float m_carOnGroundAngle = 0;
     bool m_carInWater = false;
-
     int m_carPLace;
-
     bool m_carOnGround = true;
+    unsigned m_coins = 0;
 };

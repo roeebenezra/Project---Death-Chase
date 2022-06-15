@@ -41,7 +41,6 @@ configure_file ("rcsMenu/PlayBackground.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/PlayBackground2.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/musicIcons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/Buttons.png" ${CMAKE_BINARY_DIR} COPYONLY)
-configure_file ("rcsMenu/OpenMenuButtons.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/HowToPlay.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsMenu/PauseMenu.png" ${CMAKE_BINARY_DIR} COPYONLY)
 

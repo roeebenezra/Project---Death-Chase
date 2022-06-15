@@ -15,8 +15,6 @@ public:
 
     void move(const sf::Event &) override;
 
-    void draw(sf::RenderWindow &) override;
-
 private:
     static bool m_registerRedCar;
     static bool m_registerYellowCar;

@@ -66,7 +66,7 @@ add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
                                         include/IncAnimation/HealthBar.h
 
                                         include/IncObjects/GameObject.h
-        include/IncObjects/CarObjects.h
+                                        include/IncObjects/CarObjects.h
                                         include/IncObjects/StaticObject.h
                                         include/IncObjects/UserCar.h
                                         include/IncObjects/ComputerCar.h

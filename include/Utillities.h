@@ -45,6 +45,10 @@ enum TextureRcs {
     HowToPlay,
     InGameMenuBackground,
     TexturesCount,
+    stone1,
+    stone2,
+    stone3,
+    stone4,
 };
 
 enum SoundRcs {

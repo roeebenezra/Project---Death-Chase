@@ -1,158 +1,184 @@
-mustang 1500 1700 0
-redCar 1000 1700 0
-yellowCar 2000 1700 0
-truck 2500 1700 0
-hummer 3000 1700 0
-ground_5 1000 1900 0
-ground_5 2900 1900 0
-ground_5 4800 1900 0
-ground_5 6700 1900 0
-ground_5 8600 1900 0
-ground_5 10500 1900 0
-ground_5 12400 2000 0
-ground_5 14300 2000 0
-ground_5 15300 1900 0
-ground_5 16200 1900 0
-ground_5 18100 1900 0
-ground_5 20000 1900 0
-ground_5 21900 1900 0
-ground_5 23800 1900 0
-ground_5 25700 1900 0
-ground_5 27600 1900 0
-ground_5 29500 1900 0
-ground_5 31400 1900 0
-ground_5 4000 1630 6
-ground_5 5400 1224 6
-ground_5 4700 1700 0
-ground_5 5400 1500 0
-ground_5 5400 1700 0
-ground_2 5600 1500 0
-ground_2 6000 1400 0
-ground_3 6430 1295 0
-ground_3 6730 1295 0
-ground_3 7030 1295 0
-ground_5 6229 1700 0
-water 7850 1655 0
-ground_9 11750 1800 6
-coin 3500 1700 0
-coin 3600 1700 0
-coin 3700 1700 0
-coin 3800 1700 0
-fence 10000 1500 0
-rock 12300 1730 0
-rock 12600 1730 0
-rock 12900 1730 0
-rock 13200 1730 0
-rock 13500 1730 0
-rock 13800 1730 0
-rock 14100 1730 0
-finishLine 20000 1700 0
-CheckPoint
-CheckPoint 9000 1700
+Object mustang 1600 1750 0
+Object redCar 2000 1700 0
+Object truck 2500 1700 0
+Object ground_5 1000 1900 0
+Object ground_5 2900 1900 0
+Object ground_5 4800 1900 0
+Object ground_5 6700 1900 0
+Object ground_5 8600 1900 0
+Object ground_5 6600 1300 18
+Object ground_5 7860 1300 7
+Object ground_5 10500 1900 0
+Object rock 8700 1730 0
+Object rock 9000 1730 0
+Object rock 9300 1730 0
+Object rock 9600 1730 0
+Object rock 9900 1730 0
+Object rock 10200 1730 0
+Object rock 10500 1730 0
+Object ground_5 11400 1300 18
+Object ground_5 12620 1300 7
+Object coin 3400 1690 0
+Object coin 3470 1670 0
+Object coin 3530 1640 0
+Object coin 3600 1630 0
+Object coin 12400 1700 0
+Object coin 12550 1700 0
+Object coin 12700 1700 0
+Object coin 12850 1700 0
+Object coin 13000 1700 0
+Object coin 13150 1700 0
+Object coin 13300 1700 0
+Object coin 13450 1700 0
+Object coin 13600 1700 0
+Object coin 13750 1700 0
+Object coin 13900 1700 0
+Object coin 14050 1700 0
+Object coin 14200 1700 0
+Object coin 14350 1700 0
+Object ground_5 12400 1900 0
+Object ground_5 14300 1900 0
+Object ground_5 15300 1900 0
+Object ground_5 16200 1900 0
+Object ground_5 18100 1900 0
+Object ground_5 20000 1900 0
+Object ground_5 21900 1900 0
+Object ground_5 23800 1900 0
+Object ground_5 25700 1900 0
+Object ground_5 27600 1900 0
+Object ground_5 29500 1900 0
+Object ground_5 31400 1900 0
+Object water 17000 1655 0
+Object ground_5 16600 1300 18
+Object finishLine 29000 1700 0
 CheckPoint 15000 1700
+CheckPoint 20000 1700
 EndLevel
-mustang 1500 1700 0
-ground_5 1000 1900 0
-ground_5 2900 1900 0
-ground_5 4800 1900 0
-ground_5 6700 1900 0
-ground_5 8600 1900 0
-ground_5 10500 1900 0
-ground_5 12400 2000 0
-ground_5 14300 2000 0
-ground_5 15300 1900 0
-ground_5 16200 1900 0
-ground_5 18100 1900 0
-ground_5 20000 1900 0
-ground_5 21900 1900 0
-ground_5 23800 1900 0
-ground_5 25700 1900 0
-ground_5 27600 1900 0
-ground_5 29500 1900 0
-ground_5 31400 1900 0
-ground_5 4000 1630 6
-ground_5 5400 1224 6
-ground_5 4700 1700 0
-ground_5 5400 1500 0
-ground_5 5400 1700 0
-ground_2 5600 1500 0
-ground_2 6000 1400 0
-ground_3 6430 1295 0
-ground_3 6730 1295 0
-ground_3 7030 1295 0
-ground_5 6229 1700 0
-water 7850 1655 0
-ground_9 11750 1800 6
-coin 3500 1700 0
-coin 3600 1700 0
-coin 3700 1700 0
-coin 3800 1700 0
-fence 10000 1500 0
-fence 10250 1500 0
-fence 10200 1100 0
-rock 12300 1730 0
-rock 12600 1730 0
-rock 12900 1730 0
-rock 13200 1730 0
-rock 13500 1730 0
-rock 13800 1730 0
-rock 14100 1730 0
-finishLine 11000 1700 0
-CheckPoint
-CheckPoint 9000 1700
-CheckPoint 15000 1700
+Object mustang 1600 1750 0
+Object redCar 2000 1700 0
+Object truck 2500 1700 0
+Object ground_5 1000 1900 0
+Object ground_5 2900 1900 0
+Object ground_5 4800 1900 0
+Object ground_5 6700 1900 0
+Object ground_5 8600 1900 0
+Object ground_5 5050 1800 18
+Object ground_5 6400 1500 13
+Object ground_2 5750 1600 0
+Object ground_2 6200 1800 0
+Object ground_9 5500 1700 0
+Object ground_9 6500 1700 0
+Object barrel 10000 1800 0
+Object ground_5 10500 1900 0
+Object ground_5 12400 1900 0
+Object ground_5 14300 1900 0
+Object ground_5 15300 1900 0
+Object ground_5 16200 1900 0
+Object ground_5 18100 1900 0
+Object ground_5 20000 1900 0
+Object ground_5 21900 1900 0
+Object ground_5 23800 1900 0
+Object ground_5 25700 1900 0
+Object ground_5 27600 1900 0
+Object ground_5 29500 1900 0
+Object ground_5 31400 1900 0
+Object coin 12400 1700 0
+Object coin 12550 1700 0
+Object coin 12700 1700 0
+Object coin 12850 1700 0
+Object coin 13000 1700 0
+Object coin 13150 1700 0
+Object coin 13300 1700 0
+Object coin 13450 1700 0
+Object coin 13600 1700 0
+Object coin 13750 1700 0
+Object coin 13900 1700 0
+Object coin 14050 1700 0
+Object coin 14200 1700 0
+Object coin 14350 1700 0
+Object fence 15000 1800 0
+Object fence 15300 1800 0
+Object fence 15200 1400 0
+Object ground_5 16600 1300 18
+Object ground_5 17860 1300 7
+Object water 17200 1655 0
+Object rock 18700 1730 0
+Object rock 19000 1730 0
+Object rock 19300 1730 0
+Object coin 18750 1550 0
+Object coin 18900 1550 0
+Object coin 19050 1550 0
+Object coin 19200 1550 0
+Object coin 19350 1550 0
+Object coin 19500 1550 0
+Object finishLine 23000 1700 0
+CheckPoint 5000 1700
+CheckPoint 10000 1700
 EndLevel
-mustang 1500 1700 0
-redCar 1250 1700 0
-yellowCar 1800 1700 0
-truck 2000 1700 0
-hummer 2200 1700 0
-ground_1 1000 1900 0
-ground_1 2900 1900 0
-ground_4 4020 1800 6
-ground_4 4374 1750 0
-ground_4 4750 1700 6
-ground_4 5104 1650 0
-ground_4 5480 1600 6
-ground_4 5843 1550 0
-ground_4 6210 1500 6
-ground_4 6564 1450 0
-ground_4 6940 1400 6
-ground_4 7291 1350 0
-ground_4 7670 1300 6
-ground_4 8024 1250 0
-ground_4 8400 1200 6
-ground_1 9400 1600 13
-ground_1 11000 1800 0
-rock 12170 1880 0
-rock 12570 1880 0
-rock 12970 1880 0
-rock 13370 1880 0
-rock 13770 1880 0
-rock 14170 1880 0
-rock 14570 1880 0
-ground_1 15800 1800 0
-ground_5 4800 1950 0
-ground_5 8600 1950 0
-ground_5 5900 1900 0
-ground_5 5100 1850 0
-ground_5 5650 1800 0
-coin 3500 1700 0
-coin 3600 1700 0
-coin 3700 1700 0
-coin 3800 1700 0
-fence 8600 1650 0
-fence 8900 1650 0
-fence 8800 1380 0
-ground_5 6500 1400 16
-ground_5 4700 1700 0
-ground_5 5400 1500 0
-ground_5 5400 1700 0
-ground_5 15000 1500 12
-fence 10000 1500 0
-fence 10250 1500 0
-fence 10200 1100 0
-CheckPoint
-CheckPoint 9000 1700
-CheckPoint 15000 1700
+Object mustang 1600 1750 0
+Object redCar 2000 1700 0
+Object truck 2500 1700 0
+Object ground_5 1000 1900 0
+Object ground_5 2900 1900 0
+Object ground_5 4800 1900 0
+Object ground_5 6700 1900 0
+Object ground_5 8600 1900 0
+Object ground_5 10500 1900 0
+Object ground_5 12400 2000 0
+Object ground_5 14300 2000 0
+Object ground_5 15300 1900 0
+Object ground_5 16200 1900 0
+Object ground_5 18100 1900 0
+Object ground_5 20000 1900 0
+Object ground_5 21900 1900 0
+Object ground_5 23800 1900 0
+Object ground_5 25700 1900 0
+Object ground_5 27600 1900 0
+Object ground_5 29500 1900 0
+Object ground_5 31400 1900 0
+Object ground_5 4000 1630 6
+Object ground_5 5400 1224 6
+Object ground_5 4700 1700 0
+Object ground_5 5400 1500 0
+Object ground_5 5400 1700 0
+Object ground_2 5600 1500 0
+Object ground_2 6000 1400 0
+Object ground_3 6430 1295 0
+Object ground_3 6730 1295 0
+Object ground_3 7030 1295 0
+Object ground_5 6229 1700 0
+Object ground_9 11750 1800 6
+Object coin 3400 1690 0
+Object coin 3470 1670 0
+Object coin 3530 1640 0
+Object coin 3600 1630 0
+Object fence 10000 1800 0
+Object fence 10250 1800 0
+Object fence 10200 1400 0
+Object rock 12300 1730 0
+Object rock 12600 1730 0
+Object rock 12900 1730 0
+Object rock 13200 1730 0
+Object rock 13500 1730 0
+Object rock 13800 1730 0
+Object rock 14100 1730 0
+Object coin 12400 1500 0
+Object coin 12550 1500 0
+Object coin 12700 1500 0
+Object coin 12850 1500 0
+Object coin 13000 1500 0
+Object coin 13150 1500 0
+Object coin 13300 1500 0
+Object coin 13450 1500 0
+Object coin 13600 1500 0
+Object coin 13750 1500 0
+Object coin 13900 1500 0
+Object coin 14050 1500 0
+Object coin 14200 1500 0
+Object coin 14350 1500 0
+Object water 17000 1655 0
+Object ground_5 16600 1300 18
+Object finishLine 21000 1700 0
+CheckPoint 5000 1700
+CheckPoint 10000 1700
 EndLevel

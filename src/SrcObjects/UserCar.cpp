@@ -10,7 +10,7 @@ UserCar::UserCar(const unsigned &name,
         CarObjects(name, world, position, rotation, bodyType, group),
         m_dust(getPosition(), regularScale) {}
 
-//_________________________
+//_____________________________________________________________________
 bool UserCar::m_registerIt = FactoryObject<CarObjects>::registerIt("mustang", [](std::unique_ptr<b2World> &world,
                                                                                  const sf::Vector2f &position,
                                                                                  const float rotation) -> std::unique_ptr<CarObjects> {
@@ -61,9 +61,8 @@ void UserCar::updateDust(const b2Vec2 &key) {
 
 //____________________________________________________
 void UserCar::setCarAngle(const sf::Keyboard::Key &key) {
-    /*if (getCarOnGround())
-        return;
-    else*/ if (key == sf::Keyboard::Right) {
+
+    if (key == sf::Keyboard::Right) {
         m_carAngle += carAngle;
         m_body->SetTransform(m_body->GetPosition(), m_carAngle);
     } else if (key == sf::Keyboard::Left) {
@@ -75,13 +74,8 @@ void UserCar::setCarAngle(const sf::Keyboard::Key &key) {
 
 //______________________________________
 void UserCar::moveCar(const b2Vec2 &dir) {
-//    if (!m_body->IsAwake())
-//        m_body->SetAwake(true);
-//    m_revoluteJoint1->EnableMotor(true);
-//    m_revoluteJoint2->EnableMotor(true);
-
     auto vel = m_body->GetLinearVelocity();
-    auto desireVel = 250.0f;
+    auto desireVel = 300.0f;
     auto velChange = desireVel - vel.x;
     float impulse = m_body->GetMass() * velChange;
 
@@ -90,22 +84,16 @@ void UserCar::moveCar(const b2Vec2 &dir) {
 
     m_body->ApplyAngularImpulse(0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity(), true);
 
-//    if (dir == b2Vec2(0, 0))
-//        m_body->SetAwake(false);
+    b2Vec2 currentForwardNormal = m_body->GetLinearVelocity();
+    float currentForwardSpeed = currentForwardNormal.Normalize();
+    float dragForceMagnitude = -2 * currentForwardSpeed;
+    m_body->ApplyForce(dragForceMagnitude * currentForwardNormal, m_body->GetWorldCenter(), true);
 
     float rotation1 = m_tire1.getRotation();
     float rotation2 = m_tire2.getRotation();
 
     m_tire1.setRotation(rotation1 + 20.0f);
     m_tire2.setRotation(rotation2 + 20.0f);
-
-    b2Vec2 currentForwardNormal = m_body->GetLinearVelocity();
-    float currentForwardSpeed = currentForwardNormal.Normalize();
-    float dragForceMagnitude = -2 * currentForwardSpeed;
-    m_body->ApplyForce(dragForceMagnitude * currentForwardNormal, m_body->GetWorldCenter(), true);
-
-//    m_revoluteJoint2->EnableMotor(false);
-//    m_revoluteJoint1->EnableMotor(false);
 }
 
 //_________________________________________
@@ -126,12 +114,4 @@ void UserCar::drawDust(sf::RenderWindow &window) {
         m_dust.draw(window);
     } else
         m_showDust = false;
-}
-
-//______________________________
-float UserCar::getCarZoomView() {
-    if (m_body->GetMass() * moveSpeed * m_carTimeDir.getElapsedTime().asSeconds() > 1.99818e+07) {
-        m_carZoomView == 0.5f ? m_carZoomView -= 0.01f : m_carZoomView = 0.5;
-    }
-    return m_carZoomView = 0.6f;
 }
