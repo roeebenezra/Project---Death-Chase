@@ -12,7 +12,7 @@ public:
     void getObjectsFromMapLevel(Data &, const unsigned &);
 
     b2Vec2 getPlayerCheckPoint(const unsigned &,
-                                     const float &) const;
+                               const float &) const;
 
 private:
     using OpenFile = std::ifstream;
@@ -25,7 +25,9 @@ private:
 
     void readFile(std::ifstream &);
 
-    void setCheckPoints(std::ifstream &file, const unsigned &);
+    void setCheckPoints(std::ifstream &, const unsigned &);
+
+    void setObjects(std::ifstream &, const unsigned &);
 
     std::vector<std::vector<std::string>> m_levelNames;
     std::vector<std::vector<sf::Vector2f>> m_levelPositions;

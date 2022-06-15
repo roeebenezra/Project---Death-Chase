@@ -37,7 +37,7 @@ const std::vector Textures = {"PlayBackground.png", "PlayBackground2.png", "truc
                               "seven.png", "explosion.png", "water.png", "finishLine.png", "rock.png",
                               "rollerCoaster.png", "fence.png", "letsGo.png", "1.png", "2.png", "3.png",
                               "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png",
-                              "HowToPlay.png", "PauseMenu.png"};
+                              "HowToPlay.png", "PauseMenu.png", "stone_1.png", "stone_2.png", "stone_3.png", "stone_4.png"};
 
 const std::string Sounds[] = {"MenuSound.wav", "PlaySound.wav", "Click.wav"};
 
@@ -101,10 +101,11 @@ const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1210, InGameMenuButtonWidt
 
 const int AmountOfLevels = 3;
 
-const std::string EndLevelMark = "EndLevel";
+const std::string Objects = "Object";
 const std::string CheckPointsMark  = "CheckPoint";
+const std::string EndLevelMark = "EndLevel";
 
-const int carPLaceStart = five; // by the amount of cars in the game
+const int carPLaceStart = three; // by the amount of cars in the game
 
 const float moveSpeed = 100.f;
 const b2Vec2 RIGHT = {1, 0};

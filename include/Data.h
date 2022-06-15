@@ -34,11 +34,13 @@ public:
 
     void setWorldStep();
 
-    void setIndexLevel(const unsigned& indexLevel) { m_indexLevel = indexLevel; }
+    int didPlayerWin() const { return m_moving[User]->getCarPlace(); }
+
+    unsigned getUserCoins() const { return m_moving[User]->getCoins(); }
 
     unsigned getIndexLevel() const { return m_indexLevel; }
 
-    void setNextLevel(const unsigned&);
+    void setNextLevel(const unsigned &);
 
     std::unique_ptr<b2World> &getWorld() { return m_world; }
 

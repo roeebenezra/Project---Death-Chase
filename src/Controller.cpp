@@ -7,7 +7,7 @@ Controller::Controller() : m_gui(m_gameWindow),
 
 //___________________
 void Controller::run() {
-    DebugDraw d(m_gameWindow);          //DebugDraw;
+    DebugDraw d(m_gameWindow); // DebugDraw
     uint32 flags = b2Draw::e_shapeBit;
     d.SetFlags(flags);
     m_data.getWorld()->SetDebugDraw(&d);
@@ -17,9 +17,12 @@ void Controller::run() {
     while (m_gameWindow.isOpen() && m_running) {
         box2dStep(&myContactListenerInstance);
         handleEvents();
-        handleData();
         handleReturnToMenu();
+        handleData();
         draw();
+        handleEndGame();
+        handleFinishLine();
+        m_gameWindow.display();
     }
 }
 
@@ -28,19 +31,38 @@ void Controller::handleData() {
     m_data.handlePlayerDead();
     m_data.removeObjects();
     m_data.setCarsPlace();
-    if (m_data.raceFinished()) {
+    m_gui.updateText(COINS, m_data.getUserCoins(), CoinsSetIndex);
+//    m_gui.();
+}
+
+//______________________________
+void Controller::handleEndGame() {
+    if((m_data.getIndexLevel()+ 1 == AmountOfLevels) && m_data.raceFinished()) {
+        m_running = false;
+        m_gui.drawEnd(m_gameWindow, m_data.getUserPosition(), "You win!", sf::Color::Red);
+    }
+}
+
+//_________________________________
+void Controller::handleFinishLine() {
+
+    if (m_data.raceFinished() && m_running) {
         // message end of level
-        m_gui.setStartDrawMessage(!m_gui.getStartDrawMessage());
+        m_gui.drawEnd(m_gameWindow, m_data.getUserPosition(), m_data.didPlayerWin() == one ? "You win!" :
+                      "You loose!", sf::Color::Red);
+        m_gui.resetStartMessage();
         m_data.setNextLevel(m_data.getIndexLevel() + 1);
+        m_gui.updateText(LEVEL, m_data.getIndexLevel()+1, LevelsSetIndex); // update level text
+        m_gui.updateText(COINS, 0, CoinsSetIndex); // update coins counter text
     }
 }
 
 //___________________________________
 void Controller::handleReturnToMenu() {
-    if (m_gui.isWindowInOpenGameMenu() && m_userMoved) {
+    if ((m_gui.isWindowInOpenGameMenu() && m_userMoved) || m_gui.isRestart()) {
+        m_gui.setRestart(!m_gui.isRestart());
         m_data.setNextLevel(m_data.getIndexLevel());
-        m_gui.setStartDrawMessage(true);
-        m_userMoved = false;
+        m_gui.resetStartMessage();
     }
 }
 
@@ -100,7 +122,6 @@ void Controller::draw() {
     drawPlay();
 
 //    m_data.getWorld()->DebugDraw();
-    m_gameWindow.display();
 }
 
 //________________________
@@ -108,7 +129,6 @@ void Controller::drawPlay() {
     if (m_gui.currWindowStatus(Play)) {
         m_data.drawData(m_gameWindow);
         m_gui.drawStartMessage(m_gameWindow);
-    }
-    else
+    } else
         m_gui.setView(m_gameWindow, 1600.0f, 900.0f);
 }

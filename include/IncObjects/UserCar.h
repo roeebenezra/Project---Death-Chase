@@ -14,10 +14,6 @@ public:
             const b2BodyType &,
             const int16 &);
 
-    void setB2d(std::unique_ptr<b2World> &world,
-                b2BodyType bodyType,
-                int16 group )override;
-
     void move(const sf::Event &) override;
 
     void draw(sf::RenderWindow &) override;
@@ -50,15 +46,5 @@ private:
     bool m_showDust = false;
     sf::Vector2f m_dustOffset;
     float m_groundAngle;
-
-    b2Vec2 m_Dir = {1, 0};
-
-    b2Body *m_bodyCircle1;
-    b2Body *m_bodyCircle2;
-
-    b2WheelJoint* m_joint;
-
-    b2RevoluteJoint* m_revoluteJoint1;
-    b2RevoluteJoint* m_revoluteJoint2;
 };
 

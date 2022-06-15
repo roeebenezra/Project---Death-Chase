@@ -1,9 +1,11 @@
 #include "StartMessage.h"
 
+//__________________________
 StartMessage::StartMessage() {
     setMessage();
 }
 
+//______________________________
 void StartMessage::setMessage() {
     auto message = startMessage;
     for (auto i = 0; i < amountOfMessages; ++i) {
@@ -15,6 +17,15 @@ void StartMessage::setMessage() {
     }
 }
 
+//_____________________________________
+void StartMessage::resetStartMessage() {
+    for(auto& message: m_messages)
+        message.setPosition(messagePosition);
+    m_messageIndex = 0;
+    m_drawMessage = true;
+}
+
+//_______________________________________________________
 void StartMessage::drawMessage(sf::RenderWindow &window) {
 
     if (m_messages[m_messageIndex].getPosition().x > 0) {
@@ -38,6 +49,7 @@ void StartMessage::drawMessage(sf::RenderWindow &window) {
         m_drawMessage = false;
 }
 
+//____________________________________________________
 void StartMessage::updateMessage(sf::Sprite &message) {
     auto posX = message.getPosition().x - 10;
     message.setPosition(posX, message.getPosition().y);

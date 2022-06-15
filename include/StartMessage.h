@@ -10,9 +10,9 @@ public:
 
     void drawMessage(sf::RenderWindow &);
 
-    void setDrawMessage(const bool draw) { m_drawMessage = draw; }
-
     bool getDrawMessage() const { return m_drawMessage; }
+
+    void resetStartMessage();
 
 private:
     void setMessage();
@@ -22,6 +22,6 @@ private:
     sf::Clock m_messageClock;
     std::vector<sf::Sprite> m_messages;
     bool m_drawMessage = true;
-    int m_messageIndex = 0;
+    unsigned m_messageIndex = 0;
     int m_currIndex = -1;
 };

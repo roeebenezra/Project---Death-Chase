@@ -39,9 +39,22 @@ public:
 
     bool getStartDrawMessage() { m_startMessageDraw.getDrawMessage(); }
 
-    void setStartDrawMessage(const bool &draw) { m_startMessageDraw.setDrawMessage(draw); }
-
     bool isWindowInOpenGameMenu() { return CurrMenu() == OpenGameMenu; }
+
+    bool isRestart();
+
+    void setRestart(const bool &restart) { m_menus[CurrMenu()]->setRestart(restart); }
+
+    void updateText(const TEXTS &text,
+                    const unsigned &num,
+                    const unsigned &indexOffset) { m_menus[CurrMenu()]->updateTextString(text, num, indexOffset); }
+
+    void resetStartMessage() { m_startMessageDraw.resetStartMessage(); }
+
+    void drawEnd(RenderWindow &window,
+                 const sf::Vector2f &pos,
+                 const std::string &text,
+                 const Color &color) { m_menus[CurrMenu()]->drawEnd(window, pos, text, color); }
 
 private:
     void setIcon(sf::RenderWindow &);

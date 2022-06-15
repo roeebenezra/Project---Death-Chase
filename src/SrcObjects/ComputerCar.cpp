@@ -1,11 +1,11 @@
 #include "IncObjects/ComputerCar.h"
 
-ComputerCar::ComputerCar(const unsigned& name,
+ComputerCar::ComputerCar(const unsigned &name,
                          std::unique_ptr<b2World> &world,
                          const sf::Vector2f &position,
-                         const float& rotation,
-                         const b2BodyType& bodyType,
-                         const int16& group) :
+                         const float &rotation,
+                         const b2BodyType &bodyType,
+                         const int16 &group) :
         CarObjects(name, world, position, rotation, bodyType, group) {
 
 }
@@ -40,9 +40,21 @@ bool ComputerCar::m_registerTruck =
 
 //_______________________________________
 void ComputerCar::move(const sf::Event &) {
-    b2Vec2 dir = b2Vec2(1, 0);
-    float impulse = m_body->GetMass() * 0.8f;
-    m_body->ApplyLinearImpulse(b2Vec2(impulse * dir.x, 0), m_body->GetWorldCenter(), true);
+    b2Vec2 dir = {1, 0};
+    auto vel = m_body->GetLinearVelocity();
+    auto desireVel = 80.0f;
+    auto velChange = desireVel - vel.x;
+    float impulse = m_body->GetMass() * velChange;
+
+    m_body->ApplyLinearImpulse(impulse / 2* dir, m_bodyCircle1->GetWorldCenter(), true);
+    m_body->ApplyLinearImpulse(impulse * dir, m_bodyCircle2->GetWorldCenter(), true);
+
+    m_body->ApplyAngularImpulse(0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity(), true);
+
+    b2Vec2 currentForwardNormal = m_body->GetLinearVelocity();
+    float currentForwardSpeed = currentForwardNormal.Normalize();
+    float dragForceMagnitude = -2 * currentForwardSpeed;
+    m_body->ApplyForce(dragForceMagnitude * currentForwardNormal, m_body->GetWorldCenter(), true);
 }
 
 //___________________________________________

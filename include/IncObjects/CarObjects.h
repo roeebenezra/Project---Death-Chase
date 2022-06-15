@@ -50,7 +50,15 @@ public:
 
     void setPosition(const b2Vec2 &pos) { m_body->SetTransform(pos, m_body->GetAngle()); }
 
+    void coinsCounter()  { m_coins++; }
+
+    unsigned getCoins() const { return m_coins; }
+
     void restartCar();
+
+protected:
+    b2Body *m_bodyCircle1;
+    b2Body *m_bodyCircle2;
 
 private:
     void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16) override;
@@ -62,4 +70,8 @@ private:
     bool m_carInWater = false;
     int m_carPLace;
     bool m_carOnGround = true;
+    unsigned m_coins = 0;
+
+    b2RevoluteJoint *m_revoluteJoint1;
+    b2RevoluteJoint *m_revoluteJoint2;
 };

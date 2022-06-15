@@ -68,10 +68,14 @@ void Gui::mouseEventPressed(sf::RenderWindow &window,
 
 //_______________________________________________________
 bool Gui::handlePauseButton(const sf::Keyboard::Key &key) {
-    auto curr = CurrMenu();
     if (key == sf::Keyboard::Escape)
-        m_menus.at(size_t(curr))->setPause(!m_menus.at(size_t(curr))->isPause());
-    return m_menus.at(size_t(curr))->isPause();
+        m_menus.at(size_t(CurrMenu()))->setPause(!m_menus.at(size_t(CurrMenu()))->isPause());
+    return m_menus.at(size_t(CurrMenu()))->isPause();
+}
+
+//____________________
+bool Gui::isRestart() {
+    return m_menus.at(size_t(CurrMenu()))->isRestart();
 }
 
 //_____________________________________________

@@ -82,16 +82,13 @@ void Data::handlePlayerDead() {
     }
 }
 
-//____________________________
-bool Data::raceFinished()const {
-    for (auto &moving: m_moving)
-        if (!moving->getCarAtFinishLine())
-            return false;
-    return true;
+//______________________________
+bool Data::raceFinished() const {
+    return m_moving[User]->getCarAtFinishLine();
 }
 
 //_________________________________________________
-void Data::setNextLevel(const unsigned& levelIndex) {
+void Data::setNextLevel(const unsigned &levelIndex) {
     for (auto &moving: m_moving)
         moving->setObjectDead(true);
     for (auto &statics: m_static)
@@ -99,8 +96,8 @@ void Data::setNextLevel(const unsigned& levelIndex) {
     removeObjects();
     m_indexLevel = levelIndex;
     setLevel();
-
 }
+
 //______________________
 void Data::removeObjects() {
     for (auto &moving: m_moving)

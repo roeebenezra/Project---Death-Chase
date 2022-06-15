@@ -19,7 +19,11 @@ private:
 
     void handleData();
 
+    void handleFinishLine();
+
     void handleReturnToMenu();
+
+    void handleEndGame();
 
     void keyboardPressed(const sf::Event &);
 

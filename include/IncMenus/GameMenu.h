@@ -30,13 +30,13 @@ public:
 
     void setPause(const bool &pause) { m_pressPause = pause; }
 
-    virtual void nextLevel() {}
+    bool isRestart() const { return m_pressRestart; }
 
-    virtual void coinsCounter() {}
-
-    virtual void resetCoins() {}
+    void setRestart(const bool &restart) { m_pressRestart = restart; }
 
     virtual void updateTextString(const TEXTS &, const unsigned &, const unsigned &) {}
+
+    virtual void drawEnd(RenderWindow &, const sf::Vector2f &, const std::string &, const Color &) {}
 
 protected:
     Sprite &getSprite() { return m_background; }
@@ -46,6 +46,7 @@ protected:
     vector<unique_ptr<Button>> m_buttons;
 
     bool m_pressPause = false;
+    bool m_pressRestart = false;
 private:
     Sprite m_background;
 };

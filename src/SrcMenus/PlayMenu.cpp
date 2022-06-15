@@ -15,11 +15,11 @@ PlayMenu::PlayMenu(unsigned playBackground, unsigned InGameMenuBackground, const
 //________________________________
 void PlayMenu::setPlayMenuTexts() {
     sf::Vector2f position;
-    for (auto & i : Texts) {
+    for (auto &i: Texts) {
         Text text = createText(position, FontSize, i, Color::Black);
         m_playMenuTexts.push_back(text);
     }
-    Texts[LEVEL] += std::to_string(m_level);
+    Texts[LEVEL] += std::to_string(1);
     m_playMenuTexts[LEVEL].setString(Texts[LEVEL]);
     Texts[COINS] += std::to_string(m_coins);
     m_playMenuTexts[COINS].setString(Texts[COINS]);
@@ -31,7 +31,6 @@ Text PlayMenu::createText(Vector2f pos, unsigned size,
     Text text(name, Resources::instance().getFontForText(), size);
     text.setFillColor(color);
     text.setPosition(pos);
-//    text.setOutlineThickness(2);
 
     return text;
 }
@@ -42,12 +41,6 @@ void PlayMenu::updateTextString(const TEXTS &text,
                                 const unsigned &index) {
     Texts[text].replace(index, std::to_string(num).size() + 1, std::to_string(num));
     m_playMenuTexts[text].setString(Texts[text]);
-}
-
-//_________________________
-void PlayMenu::resetCoins() {
-    m_coins = 0;
-    updateTextString(COINS, m_coins, CoinsSetIndex);
 }
 
 //_________________________________________________________________
@@ -73,6 +66,21 @@ void PlayMenu::draw(RenderTarget &window, const Vector2f &userCarPos) {
     }
 }
 
+//____________________________________________
+void PlayMenu::drawEnd(RenderWindow & window,
+                       const sf::Vector2f &position,
+                       const std::string & message,
+                     const Color& color)
+{
+    Text text = createText({position.x + 200, position.y - 1000}, 250, message, color);
+    text.setString(message);
+    Clock clock;
+    while (clock.getElapsedTime().asSeconds() < 2) {
+        window.draw(text);
+        window.display();
+    }
+}
+
 //___________________________________________________________________________________________________
 void PlayMenu::handleClick(const Vector2f &pos, vector<bool> &windows, size_t currWindow, bool *running) {
     int press = int(mousePressButton(pos)) - 1;
@@ -82,7 +90,7 @@ void PlayMenu::handleClick(const Vector2f &pos, vector<bool> &windows, size_t cu
     getButton(InGameRestart)->setClickOnButton(false);
 
     if (press == InGamePause)
-        handlePressPause();
+        setPause(!m_pressPause);
 
     if (press == InGamePlay)
         m_pressPause = false;
@@ -93,13 +101,9 @@ void PlayMenu::handleClick(const Vector2f &pos, vector<bool> &windows, size_t cu
     if (press == InGameMusic)
         handlePressMusic();
 
-    if (press == InGameRestart)
-        handlePressRestart();
-}
-
-//______________________________
-void PlayMenu::handlePressPause() {
-    m_pressPause = true;
+    if (press == InGameRestart){
+        setRestart(!m_pressRestart);
+    }
 }
 
 //_____________________________________________________________________
@@ -121,6 +125,4 @@ void PlayMenu::handlePressMusic() {
         getButton(InGameMusic)->setClickOnButton(false);
         Resources::instance().setLoopSound(GameSound, true);
     }
-}//______________________________
-void PlayMenu::handlePressRestart() {
 }

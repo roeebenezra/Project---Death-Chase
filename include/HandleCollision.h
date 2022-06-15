@@ -36,16 +36,6 @@ private:
 
     void groundUserCar(GameObject *, GameObject *);
 
-    void computerCarGround(GameObject *, GameObject *);
-
-    void groundComputerCar(GameObject *, GameObject *);
-
-    void userCarComputerCar(GameObject *, GameObject *);
-
-    void computerCarUserCar(GameObject *, GameObject *);
-
-    void computerCarComputerCar(GameObject *, GameObject *);
-
     void userCarCoin(GameObject *, GameObject *);
 
     void coinUserCar(GameObject *, GameObject *);
