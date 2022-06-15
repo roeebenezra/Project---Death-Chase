@@ -7,7 +7,7 @@ Controller::Controller() : m_gui(m_gameWindow),
 
 //___________________
 void Controller::run() {
-    DebugDraw d(m_gameWindow);          //DebugDraw;
+    DebugDraw d(m_gameWindow);    //DebugDraw;
     uint32 flags = b2Draw::e_shapeBit;
     d.SetFlags(flags);
     m_data.getWorld()->SetDebugDraw(&d);
@@ -35,7 +35,7 @@ void Controller::handleData() {
     }
 }
 
-//___________________________________
+//__________________________________
 void Controller::handleReturnToMenu() {
     if (m_gui.isWindowInOpenGameMenu() && m_userMoved) {
         m_data.setNextLevel(m_data.getIndexLevel());
@@ -76,11 +76,12 @@ void Controller::handleEvents() {
     }
     if (m_userMoved && !m_gui.handlePauseButton(event.key.code))
         m_data.moveComputerCars(event);
+
 }
 
 //_____________________________________________________
 void Controller::keyboardPressed(const sf::Event &event) {
-    if (!m_gui.getStartDrawMessage() && !m_gui.handlePauseButton(event.key.code)) {
+    if ((!m_gui.getStartDrawMessage()) && (!m_gui.handlePauseButton(event.key.code))) {\
         m_data.moveUserCar(event);
         m_userMoved = true;
     }

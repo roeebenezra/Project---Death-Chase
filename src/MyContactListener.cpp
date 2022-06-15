@@ -1,5 +1,6 @@
 #include "MyContactListener.h"
 
+//_____________________________________________________
 void MyContactListener::BeginContact(b2Contact *contact) {
     auto a = static_cast<GameObject *> (contact->GetFixtureA()->GetBody()->GetUserData());
     auto b = static_cast<GameObject *> (contact->GetFixtureB()->GetBody()->GetUserData());
@@ -30,6 +31,7 @@ void MyContactListener::setFixtureCollision(b2Contact *contact, const int16& col
     }
 }
 
+//________________________________________________________________________________
 b2Filter MyContactListener::getFilerSet(b2Contact *contact, int a, int16 collision) {
     if (a == 1) {
         b2Filter filter1 = contact->GetFixtureA()->GetFilterData();

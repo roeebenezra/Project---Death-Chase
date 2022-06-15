@@ -40,6 +40,12 @@ bool ComputerCar::m_registerTruck =
 
 //_______________________________________
 void ComputerCar::move(const sf::Event &) {
+    float rotation1 = m_tire1.getRotation();
+    float rotation2 = m_tire2.getRotation();
+
+    m_tire1.setRotation(rotation1 + 20.0f);
+    m_tire2.setRotation(rotation2 + 20.0f);
+
     b2Vec2 dir = b2Vec2(1, 0);
     float impulse = m_body->GetMass() * 0.8f;
     m_body->ApplyLinearImpulse(b2Vec2(impulse * dir.x, 0), m_body->GetWorldCenter(), true);

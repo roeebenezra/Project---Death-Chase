@@ -13,19 +13,17 @@ public:
                const b2BodyType&,
                const int16&);
 
-    explicit GameObject() = default;
+    GameObject() = default;
+
+    virtual ~GameObject() { m_body->DestroyFixture(m_body->GetFixtureList()); }
 
     virtual void draw(sf::RenderWindow &);
 
-    sf::Vector2f getPosition() const { return m_sprite.getPosition(); }
+    virtual void updateObjects();
 
     void setCanCollide(const bool collide) { m_canCollide = collide; }
 
     bool getCanCollide() const { return m_canCollide; }
-
-    virtual void updateObjects();
-
-    virtual ~GameObject() = default;
 
     void setObjectDead(const bool dead) { m_dead = dead; }
 
@@ -35,17 +33,19 @@ public:
 
     float getAngle() const { return m_body->GetAngle(); }
 
+    sf::Vector2f getPosition() const { return m_sprite.getPosition(); }
+
 protected:
     b2Body *m_body = nullptr;
     sf::Sprite m_sprite;
 
-    float getWidth() const { return m_sprite.getLocalBounds().width; }
+    int getWidth() const { return m_sprite.getTextureRect().width; }
 
-    float getHeight() const { return m_sprite.getLocalBounds().height; }
+    int getHeight() const { return m_sprite.getTextureRect().height; }
 private:
     void setSprite(const unsigned&, const sf::Vector2f &, const float&);
 
-    virtual void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
+    void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
 
     bool m_canCollide = true;
     bool m_dead = false;

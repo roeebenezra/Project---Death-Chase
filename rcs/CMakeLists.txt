@@ -6,6 +6,7 @@ configure_file ("rcsCars/hummer.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsCars/mustang.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsCars/redCar.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsCars/truck.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("rcsCars/Tires.png" ${CMAKE_BINARY_DIR} COPYONLY)
 
 configure_file ("rcsGameObjects/water.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("rcsGameObjects/finishLine.png" ${CMAKE_BINARY_DIR} COPYONLY)

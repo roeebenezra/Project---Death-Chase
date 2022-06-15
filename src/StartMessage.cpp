@@ -1,6 +1,6 @@
 #include "StartMessage.h"
 
-StartMessage::StartMessage() {
+StartMessage::StartMessage() : m_drawMessage(true) {
     setMessage();
 }
 
@@ -21,7 +21,7 @@ void StartMessage::drawMessage(sf::RenderWindow &window) {
 
         window.draw(m_messages[m_messageIndex]);
 
-        if (m_messages[m_messageIndex].getPosition().x == 2300) {
+        if (m_messages[m_messageIndex].getPosition().x == 1700) {
             if (m_currIndex != m_messageIndex) {
                 m_currIndex = m_messageIndex;
                 m_messageClock.restart();

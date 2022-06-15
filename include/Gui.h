@@ -14,8 +14,7 @@
 class Gui {
 
 public:
-    Gui(sf::RenderWindow &);
-
+    explicit Gui(sf::RenderWindow &);
 
     void drawStartMessage(sf::RenderWindow &);
 
@@ -37,7 +36,8 @@ public:
 
     bool handlePauseButton(const sf::Keyboard::Key &);
 
-    bool getStartDrawMessage() { m_startMessageDraw.getDrawMessage(); }
+    [[nodiscard]]
+    bool getStartDrawMessage() const { return m_startMessageDraw.getDrawMessage(); }
 
     void setStartDrawMessage(const bool &draw) { m_startMessageDraw.setDrawMessage(draw); }
 
@@ -49,6 +49,6 @@ private:
     void setMenus();
 
     StartMessage m_startMessageDraw;
-    vector<bool> m_windows = {false, true, false, false};
+    vector<bool> m_windows = {false, true};
     vector<unique_ptr<GameMenu>> m_menus;
 };

@@ -6,7 +6,6 @@
 #include "MyContactListener.h"
 
 class Controller {
-
 public:
     Controller();
 

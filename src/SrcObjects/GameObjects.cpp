@@ -1,28 +1,28 @@
 
 #include "IncObjects/GameObject.h"
 
-//__________________________________
-GameObject::GameObject(const unsigned& name,
+//________________________________________
+GameObject::GameObject(const unsigned &name,
                        std::unique_ptr<b2World> &world,
                        const sf::Vector2f &position,
-                       const float& rotation,
-                       const b2BodyType& bodyType,
-                       const int16& group) {
+                       const float &rotation,
+                       const b2BodyType &bodyType,
+                       const int16 &group) {
     setSprite(name, position, rotation);
     setB2d(world, bodyType, group);
 }
 
 //___________________________________________
-void GameObject::setSprite(const unsigned& name,
+void GameObject::setSprite(const unsigned &name,
                            const sf::Vector2f &position,
-                           const float& rotation) {
+                           const float &rotation) {
     m_sprite.setTexture(Resources::instance().getTexture(name));
     m_sprite.setPosition(position);
     m_sprite.setOrigin(m_sprite.getGlobalBounds().width / 2, m_sprite.getGlobalBounds().height / 2);
     m_sprite.setRotation(rotation);
 }
 
-//______________________________________________________
+//_____________________________________________________
 void GameObject::setB2d(std::unique_ptr<b2World> &world,
                         b2BodyType bodyType,
                         int16 group) {
@@ -34,7 +34,7 @@ void GameObject::setB2d(std::unique_ptr<b2World> &world,
     m_body = world->CreateBody(&bodyDef); // set Body to world
 
     b2PolygonShape BoxShape; // set BoxShape
-    BoxShape.SetAsBox(getWidth() / 2, getHeight() / 2);
+    BoxShape.SetAsBox(float(getWidth()) / 2, float(getHeight()) / 2);
 
     b2FixtureDef fixtureDef; // FixtureDef
     fixtureDef.shape = &BoxShape;

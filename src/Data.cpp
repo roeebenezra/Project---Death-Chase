@@ -11,13 +11,13 @@ void Data::setLevel() {
     setWorld();
     m_map.getObjectsFromMapLevel(*this, m_indexLevel);
     m_floor.setFloor(m_world);
-    m_boundaries.setBoundaries(m_world, {1200, 500});
+    m_boundaries.setBoundaries(m_world, {0, 500});
     setCarsPlace();
 }
 
 //__________________
 void Data::setWorld() {
-    b2Vec2 gravity(0.0f, 80.f); //set gravity
+    b2Vec2 gravity(0.0f, 20.f); //set gravity
     m_world = std::make_unique<b2World>(gravity);
 }
 
@@ -40,6 +40,7 @@ void Data::setObject(std::string &name,
     }
 }
 
+//______________________
 void Data::setCarsPlace() {
     int carPlace = carPLaceStart;
     std::vector<float> places;
@@ -67,11 +68,11 @@ void Data::moveUserCar(const sf::Event &event) {
 //_________________________________________________
 void Data::moveComputerCars(const sf::Event &event) {
     for (auto &moving: m_moving)
-        if (moving != m_moving[User] && !moving->getCarAtFinishLine())
+        if (!moving->getCarAtFinishLine())
             moving->move(event);
 }
 
-//____________________________
+//___________________________
 void Data::handlePlayerDead() {
     if (m_moving[User]->getObjectDead()) {
 //        set position
@@ -116,14 +117,14 @@ void Data::removeObjects() {
     std::erase_if(m_static, [](auto &statics) { return statics->getObjectDead(); });
 }
 
-//____________________________________________________________________________
+//__________________________________________
 void Data::drawData(sf::RenderWindow &window) {
 
     setView(window, 3500.0f, 2000.0f);
 
     for (auto &moving: m_moving) {
         moving->updateObjects();
-        moving->draw(window);
+        moving->drawObjects(window);
     }
 
     for (auto &statics: m_static) {
@@ -132,7 +133,7 @@ void Data::drawData(sf::RenderWindow &window) {
     }
 }
 
-//__________________________________________
+//____________________________________________________________________
 void Data::setView(sf::RenderWindow &window, float width, float height) const {
     auto view = window.getView();
     view.setCenter(getUserPosition().x + 500, 1000);

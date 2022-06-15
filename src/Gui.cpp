@@ -74,6 +74,7 @@ bool Gui::handlePauseButton(const sf::Keyboard::Key &key) {
     return m_menus.at(size_t(curr))->isPause();
 }
 
+
 //_____________________________________________
 void Gui::drawWindow(sf::RenderWindow &window,
                      const sf::Vector2f &playerPosition) {

@@ -1,12 +1,13 @@
 
 enum TextureRcs {
+    mustang,
+    redCar,
+    hummer,
+    yellowCar,
+    truck,
+    Tires,
     PlayBackground,
     PlayBackground2,
-    truck,
-    redCar,
-    yellowCar,
-    hummer,
-    mustang,
     ground_1,
     ground_2,
     ground_3,
@@ -56,7 +57,6 @@ enum SoundRcs {
 enum Menus {
     OpenGameMenu,
     Play,
-    ChooseCarMenu,
     MenusCount
 };
 

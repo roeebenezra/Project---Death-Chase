@@ -26,10 +26,11 @@ const int FontSize = 150;
 const unsigned CoinsSetIndex = 2;
 const unsigned LevelsSetIndex = 6;
 
-const std::vector<sf::Vector2f> PlayMenuTextPositions = {{-1100, 50}, {1900, 200}};
+const std::vector<sf::Vector2f> PlayMenuTextPositions = {{-1100, 50},
+                                                         {1900,  200}};
 
-const std::vector Textures = {"PlayBackground.png", "PlayBackground2.png", "truck.png", "redCar.png", "yellowCar.png",
-                              "hummer.png", "mustang.png",
+const std::vector Textures = {"mustang.png", "redCar.png", "hummer.png", "yellowCar.png",
+                              "truck.png", "Tires.png", "PlayBackground.png", "PlayBackground2.png",
                               "ground_1.png", "ground_2.png", "ground_3.png", "ground_4.png",
                               "ground_5.png", "ground_8.png", "ground_9.png", "barrel.png",
                               "coin.png", "icon.png", "dust.png", "box.png", "healthObjectBar.png",
@@ -76,8 +77,8 @@ const vector<Vector2f> OpenMenuMenuButtonPos{Vector2f{1100, 300},
                                              Vector2f{1100, 600}};
 
 const vector<IntRect> OpenMenuButtonsIntRect{IntRect(0, 0, MenuButtonWidth, MenuButtonHeight),
-                                             IntRect(0, MenuButtonHeight*2, MenuButtonWidth, MenuButtonHeight),
-                                             IntRect(0, MenuButtonHeight*4, MenuButtonWidth, MenuButtonHeight),};
+                                             IntRect(0, MenuButtonHeight * 2, MenuButtonWidth, MenuButtonHeight),
+                                             IntRect(0, MenuButtonHeight * 4, MenuButtonWidth, MenuButtonHeight),};
 
 
 const IntRect SoundButtonRect(0, 0, clicksButtonWidth, SoundButtonHeight);
@@ -98,11 +99,20 @@ const vector<IntRect> InGameButtonsIntRect{IntRect(0, 1210, InGameMenuButtonWidt
                                            IntRect(0, 1500, InGameMenuButtonWidth, InGameMenuButtonHeight),
                                            IntRect(0, 1650, InGameMenuButtonWidth, InGameMenuButtonHeight)};
 
+const vector<IntRect> TireRects{IntRect(110, 0, 90, 90),
+                                IntRect(230, 0, 90, 95),
+                                IntRect(347, 0, 100, 100),
+                                IntRect(0, 0, 90, 92),
+                                IntRect(465, 0, 102, 101)};
+
+const vector<std::pair<Vector2f ,Vector2f>> TireOffset {{{120,45},{130, 45}},{{140,55},{135,55}},
+                                                        {{150,70},{140,70}},{{140,80},{140,80}},
+                                                        {{110,70},{140,70}}};
 
 const int AmountOfLevels = 3;
 
 const std::string EndLevelMark = "EndLevel";
-const std::string CheckPointsMark  = "CheckPoint";
+const std::string CheckPointsMark = "CheckPoint";
 
 const int carPLaceStart = five; // by the amount of cars in the game
 

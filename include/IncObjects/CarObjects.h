@@ -14,11 +14,21 @@ public:
                const b2BodyType &,
                const int16 &);
 
+    ~CarObjects()override {
+        m_body->DestroyFixture(m_body->GetFixtureList());
+        m_bodyCircle1->DestroyFixture(m_bodyCircle1->GetFixtureList());
+        m_bodyCircle2->DestroyFixture(m_bodyCircle2->GetFixtureList());
+    }
+
     float getRotation() const { return m_sprite.getRotation(); }
 
-    virtual void move(const sf::Event &) {}
+    virtual void drawObjects(sf::RenderWindow &);
 
-//    void updateObjects() override;
+    virtual void moveCar(const b2Vec2 &){}
+
+    virtual void move(const sf::Event &);
+
+    void updateObjects() override;
 
     void setCarOnGround(const bool ground) { m_carOnGround = ground; }
 
@@ -52,14 +62,23 @@ public:
 
     void restartCar();
 
+protected:
+    Sprite m_tire1;
+    Sprite m_tire2;
+    b2Body *m_bodyCircle1;
+    b2Body *m_bodyCircle2;
+    b2RevoluteJoint *m_revoluteJoint1;
+    b2RevoluteJoint *m_revoluteJoint2;
 private:
-    void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16) override;
 
+    void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
     HealthBar m_carHealth;
     Explosion m_carExplosion;
     bool m_carAtFinishLine = false;
     float m_carOnGroundAngle = 0;
     bool m_carInWater = false;
+
     int m_carPLace;
+
     bool m_carOnGround = true;
 };
