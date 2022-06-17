@@ -1,4 +1,4 @@
-# Install script for directory: /Users/roeebenezra/Desktop/project/src
+# Install script for directory: /Users/roeebenezra/CLionProjects/project/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
