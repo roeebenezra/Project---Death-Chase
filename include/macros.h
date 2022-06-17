@@ -103,7 +103,7 @@ const vector<IntRect> TireRects{IntRect(110, 0, 90, 90),
                                 IntRect(0, 0, 90, 92),
                                 IntRect(465, 0, 102, 101)};
 
-const vector<std::pair<Vector2f ,Vector2f>> TireOffset {{{120,45},{130, 45}},{{140,55},{135,55}},
+const vector<std::pair<Vector2f ,Vector2f>> TireOffset {{{110,43},{130, 43}},{{140,55},{135,55}},
                                                         {{150,70},{140,70}},{{140,80},{140,80}},
                                                         {{110,70},{140,70}}};
 

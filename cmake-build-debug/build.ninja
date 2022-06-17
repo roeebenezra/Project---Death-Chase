@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/roeebenezra/Desktop/project/cmake-build-debug/
+cmake_ninja_workdir = /Users/roeebenezra/CLionProjects/project/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Project
 
@@ -49,269 +49,269 @@ cmake_ninja_workdir = /Users/roeebenezra/Desktop/project/cmake-build-debug/
 
 build cmake_object_order_depends_target_Project: phony || cmake_object_order_depends_target_box2d
 
-build CMakeFiles/Project.dir/src/Controller.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Controller.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/Controller.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/Controller.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Controller.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/SrcMenus/PlayMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/PlayMenu.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/PlayMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/PlayMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/PlayMenu.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/SrcMenus/PauseButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/PauseButton.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/PauseButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/PauseButton.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/PauseButton.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/SrcMenus/Button.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/Button.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/Button.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/Button.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/Button.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/main.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/main.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/main.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/main.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/Data.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Data.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/Data.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/Data.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Data.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/MyContactListener.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/MyContactListener.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/MyContactListener.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/MyContactListener.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/MyContactListener.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/HandleCollision.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/HandleCollision.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/HandleCollision.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/HandleCollision.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/HandleCollision.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/Gui.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/Gui.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/Gui.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/Gui.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/Gui.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/StartMessage.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/StartMessage.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/StartMessage.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/StartMessage.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/StartMessage.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src
 
-build CMakeFiles/Project.dir/src/SrcBuildGame/Map.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcBuildGame/Map.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcBuildGame/Map.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcBuildGame/Map.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcBuildGame/Map.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcBuildGame
 
-build CMakeFiles/Project.dir/src/SrcBuildGame/FactoryObject.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcBuildGame/FactoryObject.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcBuildGame/FactoryObject.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcBuildGame/FactoryObject.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcBuildGame/FactoryObject.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcBuildGame
 
-build CMakeFiles/Project.dir/src/SrcBuildGame/Resources.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcBuildGame/Resources.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcBuildGame/Resources.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcBuildGame/Resources.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcBuildGame/Resources.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcBuildGame
 
-build CMakeFiles/Project.dir/src/SrcObjects/GameObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/GameObjects.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/GameObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/GameObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/GameObjects.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/CarObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/CarObjects.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/CarObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/CarObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/CarObjects.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/StaticObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/StaticObjects.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/StaticObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/StaticObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/StaticObjects.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/UserCar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/UserCar.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/UserCar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/UserCar.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/UserCar.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/ComputerCar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/ComputerCar.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/ComputerCar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/ComputerCar.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/ComputerCar.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/Ground.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Ground.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/Ground.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/Ground.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Ground.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/Barrel.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Barrel.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/Barrel.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/Barrel.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Barrel.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/Water.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Water.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/Water.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/Water.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Water.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/Rock.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Rock.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/Rock.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/Rock.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Rock.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/Fence.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Fence.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/Fence.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/Fence.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Fence.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/FinishLine.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/FinishLine.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/FinishLine.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/FinishLine.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/FinishLine.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcObjects/Box.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcObjects/Box.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcObjects/Box.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcObjects/Box.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcObjects/Box.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcObjects
 
-build CMakeFiles/Project.dir/src/SrcAnimation/Direction.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Direction.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/Direction.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/Direction.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Direction.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/AnimationData.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/AnimationData.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/AnimationData.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/AnimationData.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/AnimationData.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/Animation.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Animation.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/Animation.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/Animation.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Animation.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/AnimationObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/AnimationObjects.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/AnimationObjects.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/AnimationObjects.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/AnimationObjects.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/Coin.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Coin.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/Coin.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/Coin.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Coin.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/HealthBar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/HealthBar.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/HealthBar.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/HealthBar.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/HealthBar.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/Explosion.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Explosion.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/Explosion.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/Explosion.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Explosion.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcAnimation/Dust.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcAnimation/Dust.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcAnimation/Dust.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcAnimation/Dust.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcAnimation/Dust.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcAnimation
 
-build CMakeFiles/Project.dir/src/SrcMenus/GameMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/GameMenu.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/GameMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/GameMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/GameMenu.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/SrcMenus/OpenMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/OpenMenu.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/OpenMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/OpenMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/OpenMenu.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/SrcMenus/OpenMenuButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/OpenMenuButton.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/OpenMenuButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/OpenMenuButton.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/OpenMenuButton.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/SrcMenus/ChooseVehicleMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/ChooseVehicleMenu.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/ChooseVehicleMenu.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/ChooseVehicleMenu.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/ChooseVehicleMenu.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
-build CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/Desktop/project/src/SrcMenus/MusicButton.cpp || cmake_object_order_depends_target_Project
+build CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o: CXX_COMPILER__Project_Debug /Users/roeebenezra/CLionProjects/project/src/SrcMenus/MusicButton.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles/Project.dir/src/SrcMenus/MusicButton.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++2a
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/include -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -isystem /usr/local/include
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Project.dir/src/SrcMenus
 
@@ -337,7 +337,7 @@ build Project: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/src/C
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -348,7 +348,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/Desktop/project -B/Users/roeebenezra/Desktop/project/cmake-build-debug
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/CLionProjects/project -B/Users/roeebenezra/CLionProjects/project/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -357,7 +357,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/roeebenezra/Desktop/project/CMakeLists.txt
+# /Users/roeebenezra/CLionProjects/project/CMakeLists.txt
 # =============================================================================
 
 
@@ -365,7 +365,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build include/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/include && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/include && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -376,7 +376,7 @@ build include/edit_cache: phony include/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build include/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/include && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/Desktop/project -B/Users/roeebenezra/Desktop/project/cmake-build-debug
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/include && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/CLionProjects/project -B/Users/roeebenezra/CLionProjects/project/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -385,7 +385,7 @@ build include/rebuild_cache: phony include/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/roeebenezra/Desktop/project/CMakeLists.txt
+# /Users/roeebenezra/CLionProjects/project/CMakeLists.txt
 # =============================================================================
 
 
@@ -393,7 +393,7 @@ build include/rebuild_cache: phony include/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -404,7 +404,7 @@ build src/edit_cache: phony src/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/Desktop/project -B/Users/roeebenezra/Desktop/project/cmake-build-debug
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/CLionProjects/project -B/Users/roeebenezra/CLionProjects/project/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -413,7 +413,7 @@ build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/roeebenezra/Desktop/project/CMakeLists.txt
+# /Users/roeebenezra/CLionProjects/project/CMakeLists.txt
 # =============================================================================
 
 
@@ -421,7 +421,7 @@ build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build rcs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/rcs && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/rcs && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -432,7 +432,7 @@ build rcs/edit_cache: phony rcs/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build rcs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/rcs && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/Desktop/project -B/Users/roeebenezra/Desktop/project/cmake-build-debug
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/rcs && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/CLionProjects/project -B/Users/roeebenezra/CLionProjects/project/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -441,7 +441,7 @@ build rcs/rebuild_cache: phony rcs/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/roeebenezra/Desktop/project/CMakeLists.txt
+# /Users/roeebenezra/CLionProjects/project/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -453,325 +453,325 @@ build rcs/rebuild_cache: phony rcs/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_box2d: phony || external/box2d/src/CMakeFiles/box2d.dir
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_broad_phase.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_broad_phase.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_broad_phase.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_broad_phase.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_broad_phase.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_chain_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_chain_shape.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_chain_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_chain_shape.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_chain_shape.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_circle_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_circle_shape.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_circle_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_circle_shape.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_circle_shape.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_circle.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_collide_circle.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_circle.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_collide_circle.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_circle.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_edge.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_collide_edge.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_edge.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_collide_edge.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_edge.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_polygon.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_collide_polygon.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_polygon.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_collide_polygon.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collide_polygon.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collision.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_collision.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collision.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_collision.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_collision.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_distance.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_distance.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_distance.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_distance.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_distance.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_dynamic_tree.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_dynamic_tree.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_dynamic_tree.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_dynamic_tree.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_dynamic_tree.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_edge_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_edge_shape.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_edge_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_edge_shape.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_edge_shape.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_polygon_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_polygon_shape.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_polygon_shape.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_polygon_shape.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_polygon_shape.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_time_of_impact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/collision/b2_time_of_impact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/collision/b2_time_of_impact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/collision/b2_time_of_impact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/collision/b2_time_of_impact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/collision
 
-build external/box2d/src/CMakeFiles/box2d.dir/common/b2_block_allocator.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/common/b2_block_allocator.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/common/b2_block_allocator.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/common/b2_block_allocator.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/common/b2_block_allocator.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/common
 
-build external/box2d/src/CMakeFiles/box2d.dir/common/b2_draw.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/common/b2_draw.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/common/b2_draw.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/common/b2_draw.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/common/b2_draw.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/common
 
-build external/box2d/src/CMakeFiles/box2d.dir/common/b2_math.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/common/b2_math.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/common/b2_math.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/common/b2_math.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/common/b2_math.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/common
 
-build external/box2d/src/CMakeFiles/box2d.dir/common/b2_settings.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/common/b2_settings.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/common/b2_settings.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/common/b2_settings.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/common/b2_settings.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/common
 
-build external/box2d/src/CMakeFiles/box2d.dir/common/b2_stack_allocator.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/common/b2_stack_allocator.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/common/b2_stack_allocator.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/common/b2_stack_allocator.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/common/b2_stack_allocator.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/common
 
-build external/box2d/src/CMakeFiles/box2d.dir/common/b2_timer.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/common/b2_timer.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/common/b2_timer.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/common/b2_timer.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/common/b2_timer.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/common
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_body.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_body.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_body.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_body.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_body.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_chain_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_chain_circle_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_chain_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_chain_circle_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_chain_circle_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_chain_polygon_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_chain_polygon_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_chain_polygon_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_chain_polygon_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_chain_polygon_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_circle_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_circle_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_circle_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact_manager.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_contact_manager.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact_manager.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_contact_manager.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact_manager.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact_solver.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_contact_solver.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact_solver.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_contact_solver.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_contact_solver.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_distance_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_distance_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_distance_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_distance_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_distance_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_edge_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_edge_circle_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_edge_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_edge_circle_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_edge_circle_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_edge_polygon_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_edge_polygon_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_edge_polygon_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_edge_polygon_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_edge_polygon_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_fixture.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_fixture.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_fixture.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_fixture.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_fixture.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_friction_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_friction_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_friction_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_friction_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_friction_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_gear_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_gear_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_gear_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_gear_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_gear_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_island.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_island.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_island.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_island.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_island.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_motor_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_motor_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_motor_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_motor_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_motor_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_mouse_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_mouse_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_mouse_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_mouse_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_mouse_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_polygon_circle_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_circle_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_polygon_circle_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_circle_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_polygon_contact.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_contact.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_polygon_contact.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_polygon_contact.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_prismatic_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_prismatic_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_prismatic_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_prismatic_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_prismatic_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_pulley_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_pulley_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_pulley_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_pulley_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_pulley_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_revolute_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_revolute_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_revolute_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_revolute_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_revolute_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_rope_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_rope_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_rope_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_rope_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_rope_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_weld_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_weld_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_weld_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_weld_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_weld_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_wheel_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_wheel_joint.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_wheel_joint.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_wheel_joint.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_wheel_joint.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_world.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_world.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_world.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_world.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_world.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_world_callbacks.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/dynamics/b2_world_callbacks.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_world_callbacks.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/dynamics/b2_world_callbacks.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/dynamics/b2_world_callbacks.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/dynamics
 
-build external/box2d/src/CMakeFiles/box2d.dir/rope/b2_rope.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/Desktop/project/external/box2d/src/rope/b2_rope.cpp || cmake_object_order_depends_target_box2d
+build external/box2d/src/CMakeFiles/box2d.dir/rope/b2_rope.cpp.o: CXX_COMPILER__box2d_Debug /Users/roeebenezra/CLionProjects/project/external/box2d/src/rope/b2_rope.cpp || cmake_object_order_depends_target_box2d
   DEP_FILE = external/box2d/src/CMakeFiles/box2d.dir/rope/b2_rope.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -std=c++11
-  INCLUDES = -I/Users/roeebenezra/Desktop/project/external/box2d/src/../include -I/Users/roeebenezra/Desktop/project/external/box2d/src
+  INCLUDES = -I/Users/roeebenezra/CLionProjects/project/external/box2d/src/../include -I/Users/roeebenezra/CLionProjects/project/external/box2d/src
   OBJECT_DIR = external/box2d/src/CMakeFiles/box2d.dir
   OBJECT_FILE_DIR = external/box2d/src/CMakeFiles/box2d.dir/rope
 
@@ -797,7 +797,7 @@ build external/box2d/src/libbox2d.a: CXX_STATIC_LIBRARY_LINKER__box2d_Debug exte
 # Utility command for edit_cache
 
 build external/box2d/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/external/box2d/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/external/box2d/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -808,7 +808,7 @@ build external/box2d/src/edit_cache: phony external/box2d/src/CMakeFiles/edit_ca
 # Utility command for rebuild_cache
 
 build external/box2d/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/roeebenezra/Desktop/project/cmake-build-debug/external/box2d/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/Desktop/project -B/Users/roeebenezra/Desktop/project/cmake-build-debug
+  COMMAND = cd /Users/roeebenezra/CLionProjects/project/cmake-build-debug/external/box2d/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/roeebenezra/CLionProjects/project -B/Users/roeebenezra/CLionProjects/project/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -828,35 +828,35 @@ build libbox2d.a: phony external/box2d/src/libbox2d.a
 # =============================================================================
 
 #############################################
-# Folder: /Users/roeebenezra/Desktop/project/cmake-build-debug
+# Folder: /Users/roeebenezra/CLionProjects/project/cmake-build-debug
 
 build all: phony Project include/all src/all rcs/all external/box2d/src/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/roeebenezra/Desktop/project/cmake-build-debug/external/box2d/src
+# Folder: /Users/roeebenezra/CLionProjects/project/cmake-build-debug/external/box2d/src
 
 build external/box2d/src/all: phony external/box2d/src/libbox2d.a
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/roeebenezra/Desktop/project/cmake-build-debug/include
+# Folder: /Users/roeebenezra/CLionProjects/project/cmake-build-debug/include
 
 build include/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/roeebenezra/Desktop/project/cmake-build-debug/rcs
+# Folder: /Users/roeebenezra/CLionProjects/project/cmake-build-debug/rcs
 
 build rcs/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/roeebenezra/Desktop/project/cmake-build-debug/src
+# Folder: /Users/roeebenezra/CLionProjects/project/cmake-build-debug/src
 
 build src/all: phony
 

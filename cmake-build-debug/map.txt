@@ -1,6 +1,8 @@
 Object mustang 1600 1750 0
 Object redCar 2000 1700 0
 Object truck 2500 1700 0
+Object yellowCar 1300 1700 0
+Object hummer 2700 1700 0
 Object ground_5 1000 1900 0
 Object ground_5 2900 1900 0
 Object ground_5 4800 1900 0
