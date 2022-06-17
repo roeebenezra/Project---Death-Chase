@@ -46,7 +46,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     )
 endif ()
 
-add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
+add_executable(${CMAKE_PROJECT_NAME}  "src/Controller.cpp"
                                         include/macros.h
                                         include/Data.h
                                         include/Controller.h
@@ -55,6 +55,10 @@ add_executable(${CMAKE_PROJECT_NAME}  src/Controller.cpp
                                         include/HandleCollision.h
                                         include/IncBuildGame/FactoryObject.h
                                         include/MyContactListener.h
+                                        include/StartMessage.h
+                                        include/Boundaries.h
+                                        include/Gui.h
+                                        include/Utillities.h
                                         
                                         include/IncAnimation/Animation.h
                                         include/IncAnimation/AnimationData.h

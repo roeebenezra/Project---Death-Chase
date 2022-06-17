@@ -37,7 +37,7 @@ const std::vector Textures = {"mustang.png", "redCar.png", "hummer.png", "yellow
                               "one.png", "two.png", "three.png", "four.png", "five.png", "six.png",
                               "seven.png", "explosion.png", "water.png", "finishLine.png", "rock.png",
                               "rollerCoaster.png", "fence.png", "letsGo.png", "1.png", "2.png", "3.png",
-                              "openMenu.png", "musicIcons.png", "Buttons.png", "OpenMenuButtons.png",
+                              "openMenu.png", "musicIcons.png", "Buttons.png",
                               "HowToPlay.png", "PauseMenu.png", "stone_1.png", "stone_2.png", "stone_3.png", "stone_4.png"};
 
 const std::string Sounds[] = {"MenuSound.wav", "PlaySound.wav", "Click.wav"};
