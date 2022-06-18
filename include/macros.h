@@ -113,7 +113,7 @@ const std::string Objects = "Object";
 const std::string CheckPointsMark  = "CheckPoint";
 const std::string EndLevelMark = "EndLevel";
 
-const int carPLaceStart = three; // by the amount of cars in the game
+const int carPLaceStart = five; // by the amount of cars in the game
 
 const b2Vec2 RIGHT = {1, 0};
 const b2Vec2 LEFT = {-1, 0};

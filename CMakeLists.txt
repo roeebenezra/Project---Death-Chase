@@ -46,49 +46,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     )
 endif ()
 
-add_executable(${CMAKE_PROJECT_NAME}  "src/Controller.cpp"
-                                        include/macros.h
-                                        include/Data.h
-                                        include/Controller.h
-                                        include/IncBuildGame/Resources.h
-                                        include/IncBuildGame/Map.h
-                                        include/HandleCollision.h
-                                        include/IncBuildGame/FactoryObject.h
-                                        include/MyContactListener.h
-                                        include/StartMessage.h
-                                        include/Boundaries.h
-                                        include/Gui.h
-                                        include/Utillities.h
-                                        
-                                        include/IncAnimation/Animation.h
-                                        include/IncAnimation/AnimationData.h
-                                        include/IncAnimation/AnimationObjects.h
-                                        include/IncAnimation/Coin.h
-                                        include/IncAnimation/Dust.h
-                                        include/IncAnimation/Direction.h
-                                        include/IncAnimation/Explosion.h
-                                        include/IncAnimation/HealthBar.h
-
-                                        include/IncObjects/GameObject.h
-                                        include/IncObjects/CarObjects.h
-                                        include/IncObjects/StaticObject.h
-                                        include/IncObjects/UserCar.h
-                                        include/IncObjects/ComputerCar.h
-                                        include/IncObjects/Box.h
-                                        include/IncObjects/Barrel.h
-                                        include/IncObjects/FinishLine.h
-                                        include/IncObjects/Ground.h
-                                        include/IncObjects/Water.h
-
-                                        include/IncMenus/GameMenu.h
-                                        include/IncMenus/OpenMenu.h
-                                        include/IncMenus/ChooseVehicleMenu.h
-                                        include/IncMenus/PlayMenu.h
-                                        include/IncMenus/Button.h
-                                        include/IncMenus/MusicButton.h
-                                        include/IncMenus/PauseButton.h
-                                        include/IncMenus/InGameMenuButton.h
-                                        include/IncMenus/OpenMenuButton.h "src/SrcMenus/PlayMenu.cpp" "src/SrcMenus/PauseButton.cpp" "src/SrcMenus/Button.cpp")
+add_executable(${CMAKE_PROJECT_NAME})
 
 
 #target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE $<$<CONFIG:DEBUG>:-fsanitize=address>)

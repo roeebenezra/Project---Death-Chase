@@ -1,6 +1,6 @@
 #include "IncObjects/UserCar.h"
 
-//____________________________________
+//____________________________________ 
 UserCar::UserCar(const unsigned &name,
                  std::unique_ptr<b2World> &world,
                  const sf::Vector2f &position,
@@ -75,12 +75,12 @@ void UserCar::setCarAngle(const sf::Keyboard::Key &key) {
 //______________________________________
 void UserCar::moveCar(const b2Vec2 &dir) {
     auto vel = m_body->GetLinearVelocity();
-    auto desireVel = 100.0f;
+    auto desireVel = 130.0f;
     auto velChange = desireVel - vel.x;
     float impulse = m_body->GetMass() * velChange;
 
     m_body->ApplyLinearImpulse(impulse / 2 * dir, m_bodyCircle1->GetWorldCenter(), true);
-    m_body->ApplyLinearImpulse(impulse / 2 * dir, m_bodyCircle2->GetWorldCenter(), true);
+    m_body->ApplyLinearImpulse(impulse * dir, m_bodyCircle2->GetWorldCenter(), true);
 
     m_body->ApplyAngularImpulse(0.1f * m_body->GetInertia() * -m_body->GetAngularVelocity(), true);
 
