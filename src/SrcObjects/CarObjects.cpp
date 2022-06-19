@@ -8,8 +8,16 @@ CarObjects::CarObjects(const unsigned &name,
                        const b2BodyType &bodyType,
                        const int16 &group)
         : GameObject(name, world, position, rotation, bodyType, group),
-          m_carHealth(getPosition(), oppositeScale), m_carExplosion(getPosition(), regularScale)
-{
+          m_carHealth(getPosition(), oppositeScale),
+          m_carExplosion(getPosition(), regularScale) {
+
+    setSprites(name);
+
+    setB2d(world, bodyType, group);
+}
+
+//_____________________________________________
+void CarObjects::setSprites(const unsigned &name) {
     m_tire1.setTexture(Resources::instance().getTexture(Tires));
     m_tire2.setTexture(Resources::instance().getTexture(Tires));
 
@@ -19,14 +27,15 @@ CarObjects::CarObjects(const unsigned &name,
     m_tire1.setOrigin(float(m_tire1.getTextureRect().width) / 2, float(m_tire1.getTextureRect().height) / 2);
     m_tire2.setOrigin(float(m_tire2.getTextureRect().width) / 2, float(m_tire2.getTextureRect().height) / 2);
 
-    m_tire1.setPosition(float(m_sprite.getPosition().x) - TireOffset[name].first.x, float(m_sprite.getPosition().y +TireOffset[name].first.y));
-    m_tire2.setPosition(float(m_sprite.getPosition().x) + TireOffset[name].second.x, float(m_sprite.getPosition().y + TireOffset[name].second.y));
+    m_tire1.setPosition(float(m_sprite.getPosition().x) - TireOffset[name].first.x,
+                        float(m_sprite.getPosition().y + TireOffset[name].first.y));
+    m_tire2.setPosition(float(m_sprite.getPosition().x) + TireOffset[name].second.x,
+                        float(m_sprite.getPosition().y + TireOffset[name].second.y));
 
-    if(name != yellowCar && name != hummer){
+    if (name != yellowCar && name != hummer) {
         m_tire1.setScale(0.7f, 0.7f);
         m_tire2.setScale(0.7f, 0.7f);
     }
-    setB2d(world, bodyType, group);
 }
 
 //______________________________________________________
@@ -44,21 +53,29 @@ void CarObjects::setB2d(std::unique_ptr<b2World> &world,
     m_body = world->CreateBody(&bodyDef); // set Body to world
 
     b2PolygonShape BoxShape; // set BoxShape
-    BoxShape.SetAsBox(getWidth() / 2, getHeight() / 6);
+    BoxShape.SetAsBox(float(getWidth()) / 2, float(getHeight()) / 6);
 
     b2FixtureDef fixtureDef; // FixtureDef
     fixtureDef.shape = &BoxShape;
     fixtureDef.density = 1;
     fixtureDef.friction = 1;
     fixtureDef.filter.groupIndex = group;
-    fixtureDef.isSensor= true;
+    fixtureDef.isSensor = true;
 
     m_body->CreateFixture(&fixtureDef);
     m_body->SetUserData(this);
 
-    //circles Def
-    b2BodyDef bodyDefCircle1; // BodyDef
-    b2BodyDef bodyDefCircle2; // BodyDef
+    //Circles Def
+    setCircles(world, group);
+
+    //Joints Def
+    setJoints(world);
+}
+
+//________________________________________________________
+void CarObjects::setCircles(std::unique_ptr<b2World> &world, int16& group) {
+    b2BodyDef bodyDefCircle1; // CircleBodyDef
+    b2BodyDef bodyDefCircle2; // CircleBodyDef
 
     bodyDefCircle1.type = b2_dynamicBody;
     bodyDefCircle2.type = b2_dynamicBody;
@@ -95,7 +112,10 @@ void CarObjects::setB2d(std::unique_ptr<b2World> &world,
 
     m_bodyCircle1->SetUserData(this);
     m_bodyCircle2->SetUserData(this);
+}
 
+//________________________________________________________
+void CarObjects::setJoints(std::unique_ptr<b2World> &world) {
     b2RevoluteJointDef revoluteJointDef1;
     b2RevoluteJointDef revoluteJointDef2;
 
@@ -109,7 +129,7 @@ void CarObjects::setB2d(std::unique_ptr<b2World> &world,
     m_revoluteJoint2->SetUserData(this);
 }
 
-//_________________________________
+//______________________________
 bool CarObjects::showHealthBar() {
     return (getCarOnGround() && getRotation() < 182 && getRotation() > 178 && m_carHealth.getAnimationIndex()) ||
            getCarInWater();

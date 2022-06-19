@@ -20,8 +20,6 @@ public:
 
     virtual void move(const sf::Event &) {}
 
-    virtual ~CarObjects() = default;
-
     void updateObjects() override;
 
     void setCarOnGround(const bool ground) { m_carOnGround = ground; }
@@ -36,9 +34,9 @@ public:
 
     void drawCarPlace(sf::RenderWindow &);
 
-    void setCarPlace(const int place) { m_carPLace = place; }
+    void setCarPlace(const unsigned place) { m_carPLace = place; }
 
-    int getCarPlace() const { return m_carPLace; }
+    unsigned getCarPlace() const { return m_carPLace; }
 
     void setCarInWater(const bool water) { m_carInWater = water; }
 
@@ -59,19 +57,25 @@ public:
 protected:
     Sprite m_tire1;
     Sprite m_tire2;
-    b2Body *m_bodyCircle1;
-    b2Body *m_bodyCircle2;
-    b2RevoluteJoint *m_revoluteJoint1;
-    b2RevoluteJoint *m_revoluteJoint2;
+    b2Body *m_bodyCircle1 = nullptr;
+    b2Body *m_bodyCircle2 = nullptr;
+    b2RevoluteJoint *m_revoluteJoint1 = nullptr;
+    b2RevoluteJoint *m_revoluteJoint2 = nullptr;
 private:
+    void setSprites(const unsigned &);
+
     void setB2d(std::unique_ptr<b2World> &, b2BodyType, int16);
+
+    void setCircles(std::unique_ptr<b2World> &, int16 &);
+
+    void setJoints(std::unique_ptr<b2World> &);
 
     HealthBar m_carHealth;
     Explosion m_carExplosion;
     bool m_carAtFinishLine = false;
     float m_carOnGroundAngle = 0;
     bool m_carInWater = false;
-    int m_carPLace;
+    unsigned m_carPLace = 1;
     bool m_carOnGround = true;
     unsigned m_coins = 0;
 };
