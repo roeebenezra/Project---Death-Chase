@@ -36,7 +36,7 @@ void Controller::handleData() {
 
 //______________________________
 void Controller::handleEndGame() {
-    if((m_data.getIndexLevel()+ 1 == AmountOfLevels) && m_data.raceFinished()) {
+    if((m_data.getIndexLevel()+ 1 == AmountOfLevels) && m_data.raceFinished() && m_data.didPlayerWin() == one) {
         m_running = false;
         m_gui.drawEnd(m_gameWindow, m_data.getUserPosition(), m_data.didPlayerWin() == one ? "You win!" :
                                                               "You loose!", sf::Color::Red);
@@ -51,7 +51,7 @@ void Controller::handleFinishLine() {
         m_gui.drawEnd(m_gameWindow, m_data.getUserPosition(), m_data.didPlayerWin() == one ? "You win!" :
                       "You loose!", sf::Color::Red);
         m_gui.resetStartMessage();
-        m_data.setNextLevel(m_data.getIndexLevel() + 1);
+        m_data.setNextLevel(m_data.didPlayerWin() == one ? m_data.getIndexLevel() + 1 : m_data.getIndexLevel());
         m_gui.updateText(LEVEL, m_data.getIndexLevel()+1, LevelsSetIndex); // update level text
         m_gui.updateText(COINS, 0, CoinsSetIndex); // update coins counter text
         m_userMoved = false;

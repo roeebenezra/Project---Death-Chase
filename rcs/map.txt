@@ -1,6 +1,7 @@
-Object mustang 1600 1750 0
-Object redCar 2000 1700 0
-Object truck 2500 1700 0
+Object mustang 1700 1750 0
+Object redCar 2200 1700 0
+Object truck 2700 1700 0
+Object yellowCar 1200 1700 0
 Object ground_5 1000 1900 0
 Object ground_5 2900 1900 0
 Object ground_5 4800 1900 0
@@ -18,18 +19,6 @@ Object rock 10200 1730 0
 Object rock 10500 1730 0
 Object ground_5 11400 1300 18
 Object ground_5 12620 1300 7
-Object coin 3400 1690 0
-Object coin 3470 1670 0
-Object coin 3530 1640 0
-Object coin 3600 1630 0
-Object coin 12400 1700 0
-Object coin 12550 1700 0
-Object coin 12700 1700 0
-Object coin 12850 1700 0
-Object coin 13000 1700 0
-Object coin 13150 1700 0
-Object coin 13300 1700 0
-Object coin 13450 1700 0
 Object coin 13600 1700 0
 Object coin 13750 1700 0
 Object coin 13900 1700 0
@@ -42,6 +31,15 @@ Object ground_5 15300 1900 0
 Object ground_5 16200 1900 0
 Object ground_5 18100 1900 0
 Object ground_5 20000 1900 0
+Object coin 20000 1700 0
+Object coin 20150 1700 0
+Object coin 20300 1700 0
+Object coin 20450 1700 0
+Object barrel 20600 1800 0
+Object coin 20900 1700 0
+Object coin 21050 1700 0
+Object coin 21200 1700 0
+Object coin 21350 1700 0
 Object ground_5 21900 1900 0
 Object ground_5 23800 1900 0
 Object ground_5 25700 1900 0
@@ -54,10 +52,10 @@ Object finishLine 29000 1700 0
 CheckPoint 15000 1700
 CheckPoint 20000 1700
 EndLevel
-Object mustang 1600 1750 0
-Object redCar 2000 1700 0
-Object truck 2500 1700 0
-Object yellowCar 1300 1700 0
+Object yellowCar 1700 1750 0
+Object truck 2200 1700 0
+Object redCar 2700 1700 0
+Object mustang 1200 1700 0
 Object ground_5 1000 1900 0
 Object ground_5 2900 1900 0
 Object ground_5 4800 1900 0
@@ -112,11 +110,10 @@ Object finishLine 23000 1700 0
 CheckPoint 5000 1700
 CheckPoint 10000 1700
 EndLevel
-Object mustang 1600 1750 0
-Object redCar 2000 1700 0
-Object truck 2500 1700 0
-Object hummer 2700 1700 0
-Object yellowCar 1300 1700 0
+Object mustang 1200 1750 0
+Object redCar 2200 1700 0
+Object yellowCar 2700 1700 0
+Object truck 1700 1700 0
 Object ground_5 1000 1900 0
 Object ground_5 2900 1900 0
 Object ground_5 4800 1900 0
